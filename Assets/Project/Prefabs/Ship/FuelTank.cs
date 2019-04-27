@@ -15,4 +15,6 @@ public class FuelTank: MonoBehaviour
     {
         
     }
+
+    public void DecrementFuel(float amount){}
 }
