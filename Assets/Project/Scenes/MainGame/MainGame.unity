@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0563124, g: 0.079850584, b: 0.12700294, a: 1}
+  m_IndirectSpecularColor: {r: 0.1496606, g: 0.22529386, b: 0.3638924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 1.39
+  displayLightIntensity: 13.49
   displayAreaLightEmissiveMesh: 0
   lightLayers: 1
   shadowNearPlane: 0.1
@@ -1573,7 +1573,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.5990566, g: 0.7531448, b: 1, a: 1}
-  m_Intensity: 1.39
+  m_Intensity: 13.49
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1840,6 +1840,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1329624098}
+    - target: {fileID: 3877114029541014847, guid: 1a10e806dce8b2b41af0e591342125d1,
+        type: 3}
+      propertyPath: distance
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a10e806dce8b2b41af0e591342125d1, type: 3}
 --- !u!4 &6791256498764691618 stripped
