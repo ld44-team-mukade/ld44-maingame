@@ -191,14 +191,23 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 934691b8ce5cb643bfbb5ea6b52796d3
     GuidInternal: 
-    m_lastTime: -8586453132232742700
-    List: []
+    m_lastTime: -8586452646345371726
+    List:
+    - name: SE
+      guid: a6a4aae9fc1a544ab57373c2ede49c7e
+      id: 1584861537
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SE
+        ObjectType: 7
+      Path: Default Work Unit\SE
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 01a2a7eeb2f29143ac2b0e5d7faf7782
     GuidInternal: 
-    m_lastTime: -8586453132232937866
+    m_lastTime: -8586452646345431773
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
