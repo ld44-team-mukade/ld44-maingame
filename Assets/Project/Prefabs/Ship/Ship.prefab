@@ -840,7 +840,7 @@ GameObject:
   - component: {fileID: 4927185980493171749}
   - component: {fileID: 6198306116052159656}
   - component: {fileID: 1329624091}
-  - component: {fileID: 6828216181750556501}
+  - component: {fileID: 3141964939303372097}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -938,6 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d90867f0d701514286bc7dd76f5af00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fuelAmount: 100
 --- !u!114 &6198306116052159656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,6 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e9abea52083c047875d0a179614518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fuelTank: {fileID: 0}
   _targetHeight: 150
   _targetAgentPrefab: {fileID: 7567926646010355796, guid: 5b96d7c6df2eec54197775aecb2252fd,
     type: 3}
@@ -972,8 +974,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!136 &6828216181750556501
-CapsuleCollider:
+--- !u!64 &3141964939303372097
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -982,10 +984,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 4.17
-  m_Height: 37.2
-  m_Direction: 2
-  m_Center: {x: 0, y: -0.2, z: 7.2}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: ce8c212a98b60e3488d5e04c41323591, type: 3}
 --- !u!1 &8637581347704697917
 GameObject:
   m_ObjectHideFlags: 0

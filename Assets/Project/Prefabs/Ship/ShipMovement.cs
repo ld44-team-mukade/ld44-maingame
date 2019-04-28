@@ -27,11 +27,12 @@ public class ShipMovement : MonoBehaviour
 
     [SerializeField]
     private float verticalMovementDamper = 1f;
-
+    private Vector3 _latestAgentPosition;
     void Awake(){
         _rigidbody = GetComponent<Rigidbody>();
         _targetAgentInstance = Instantiate(_targetAgentPrefab, transform.position, transform.rotation) as NavMeshAgent;
         _targetAgentInstance.transform.parent = null;
+        _latestAgentPosition = _targetAgentInstance.transform.position;
         // _targetAgentInstance.transform.parent = transform.
     }
     public void MoveTo(Vector3 target){
@@ -58,9 +59,10 @@ public class ShipMovement : MonoBehaviour
     }
 
     void Move(){
-        var diff = transform.position - _targetAgentInstance.transform.position;
+        var diff = transform.position - _targetAgentInstance.transform.position;;
         _rigidbody.AddForce(-diff*Time.fixedDeltaTime * verticalMovementPower);
         _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
+
 
         var toAgent = (_targetAgentInstance.transform.position - transform.position);
         if(20.0f < _rigidbody.velocity.magnitude){
