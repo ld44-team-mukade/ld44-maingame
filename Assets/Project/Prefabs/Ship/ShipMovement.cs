@@ -66,8 +66,8 @@ public class ShipMovement : MonoBehaviour
             Debug.DrawLine(transform.position,transform.position + _rigidbody.velocity.normalized*100f, Color.blue);
             Debug.DrawLine(transform.position,transform.position + torque*100f);
             Debug.Log(torque);
-            _rigidbody.AddTorque(0, torque.y*Time.fixedDeltaTime*100000f, 0);
-            _rigidbody.AddTorque(-_rigidbody.angularVelocity*Time.fixedDeltaTime*10000f);
+            _rigidbody.AddTorque(0, torque.y*Time.fixedDeltaTime*1000f, 0);
+            _rigidbody.AddTorque(-_rigidbody.angularVelocity*Time.fixedDeltaTime*100f);
             // MoveTo(transform.position + Vector3.forward*Time.fixedDeltaTime*10f);
         }
     }
