@@ -25,7 +25,7 @@ public class CameraRigController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if(!target) return;
         var direction = _camera.transform.rotation * Vector3.forward;
