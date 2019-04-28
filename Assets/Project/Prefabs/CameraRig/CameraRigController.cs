@@ -25,11 +25,12 @@ public class CameraRigController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(!target) return;
         var direction = _camera.transform.rotation * Vector3.forward;
         // _camera.transform.position = target.position - direction * distance;
         _camera.transform.position = Vector3.SmoothDamp(_camera.transform.position, target.position - direction * distance, ref _velocity, _smoothTime);
+        // _camera.transform.position = target.position - direction * distance;
     }
 }
