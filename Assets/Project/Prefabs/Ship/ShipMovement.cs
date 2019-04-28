@@ -14,6 +14,9 @@ public class ShipMovement : MonoBehaviour
     private float _targetHeight = 0f;
 
     [SerializeField]
+    private float _maxDifference = 30.0f;
+
+    [SerializeField]
     private NavMeshAgent _targetAgentPrefab;
 
     [SerializeField]
@@ -44,12 +47,12 @@ public class ShipMovement : MonoBehaviour
     void Start()
     {
         
-        _targetAgentInstance.SetDestination(_agentTargetPosition);
     }
 
     // Update is called once per frame
     void Update()
     {
+        ChangeTargetAgentPosition(_agentTargetPosition);
     }
 
     void FixedUpdate(){
@@ -61,6 +64,7 @@ public class ShipMovement : MonoBehaviour
     void Move(){
         // transform.position = _targetAgentInstance.transform.position;
         var diff = transform.position - _targetAgentInstance.transform.position;;
+        diff = Vector3.ClampMagnitude(diff, _maxDifference);
         _rigidbody.AddForce(-diff*Time.fixedDeltaTime * verticalMovementPower);
         _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
 
@@ -70,7 +74,6 @@ public class ShipMovement : MonoBehaviour
             var torque = Vector3.Cross(transform.forward, toAgent.normalized);
             Debug.DrawLine(transform.position,transform.position + _rigidbody.velocity.normalized*100f, Color.blue);
             Debug.DrawLine(transform.position,transform.position + torque*100f);
-            Debug.Log(torque);
             _rigidbody.AddTorque(0, torque.y*Time.fixedDeltaTime*100000f, 0);
             _rigidbody.AddTorque(-_rigidbody.angularVelocity*Time.fixedDeltaTime*10000f);
         }
@@ -86,5 +89,18 @@ public class ShipMovement : MonoBehaviour
         Debug.Log("Exploded");
         Destroy(gameObject);
         Destroy(_targetAgentInstance);
+    }
+
+    public void ChangeCurrentAgentPosition(Vector3 position){
+        // _targetAgentInstance.transform.position = position;
+        _targetAgentInstance.Warp(position);
+    }
+
+    public Vector3 CurrentAgentPosition(){
+        return _targetAgentInstance.transform.position;
+    }
+
+    public void ChangeTargetAgentPosition(Vector3 position){
+        _targetAgentInstance.SetDestination(_agentTargetPosition);
     }
 }
