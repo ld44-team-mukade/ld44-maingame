@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	61313377	BGMmaingame_out			\Default Work Unit\BGMmaingame_out	
+	506861093	BGMtitle_in			\Default Work Unit\BGMtitle_in	
+	1959420478	BGMmaingame_in			\Default Work Unit\BGMmaingame_in	
+	2566031842	ambient_wind_in			\Default Work Unit\ambient_wind_in	
+	2999521181	ambient_wind_out			\Default Work Unit\ambient_wind_out	
+	3375630252	BGMtitle_out			\Default Work Unit\BGMtitle_out	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	664104795	ld44-title	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\ld44-title_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music Playlist-title\ld44-title\ld44-title		10176064
+	939029829	ld44-battle	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\ld44-battle_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music Playlist-maingame\ld44-battle\ld44-battle		9216068
+	966066674	wind	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\wind_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music playlist-wind\wind\wind		994740
+
