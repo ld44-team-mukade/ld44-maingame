@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBIENT_WIND_IN = 2566031842U;
+        static const AkUniqueID AMBIENT_WIND_OUT = 2999521181U;
         static const AkUniqueID BGMMAINGAME_IN = 1959420478U;
         static const AkUniqueID BGMMAINGAME_OUT = 61313377U;
         static const AkUniqueID BGMTITLE_IN = 506861093U;
