@@ -11,10 +11,16 @@ public class PlayerShipContriller : MonoBehaviour
 
     [SerializeField]
     public List<int> heights;
-    // Start is called before the first frame update
+
+    [SerializeField]
+    private Transform _cursorPrefab;
+    private Transform _cursorInstance;
+
+    void Awake(){
+        _cursorInstance = Instantiate(_cursorPrefab);
+    }
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -32,6 +38,17 @@ public class PlayerShipContriller : MonoBehaviour
             }
             Debug.Log(currentHeightIndex);
         }
+
+        var cursorPositionOnPlane = CursorPosition(heights[currentHeightIndex]);
+        _cursorInstance.transform.position = cursorPositionOnPlane;
+        if(Input.GetMouseButtonDown(0)){
+            var isReachable = _shipMovement.IsReachable(cursorPositionOnPlane);
+            if(isReachable){
+                Debug.Log("Change Agent Target Point");
+                _shipMovement.ChangeTargetAgentPosition(cursorPositionOnPlane);
+            }
+        };
+        // Debug.DrawLine(Camera.main.transform.position,cursorPositionOnPlane, Color.red);
     }
 
     bool TryToChangeHeight(int index){
@@ -50,5 +67,18 @@ public class PlayerShipContriller : MonoBehaviour
         _shipMovement.ChangeCurrentAgentPosition(targetPosition);
         // Debug.Log(targetPosition);
         return true;
+    }
+
+    Vector3 CursorPosition(float planeHeight){
+        Vector2 cursorScreenPosition = Input.mousePosition;
+        Camera  gameCamera           = Camera.main;
+        Vector3 cursorWorldPosition  = gameCamera.ScreenToWorldPoint( new Vector3(cursorScreenPosition.x, cursorScreenPosition.y, 10f));
+        var n = Vector3.up;
+        var x = new Vector3(0, planeHeight, 0);
+        var x0 = gameCamera.transform.position;
+        var m = (cursorWorldPosition - x0).normalized;
+        var h = Vector3.Dot(n, x);
+        var intersectPoint = x0 + ((h - Vector3.Dot(n, x0)) / (Vector3.Dot(n, m))) * m;
+        return intersectPoint;
     }
 }

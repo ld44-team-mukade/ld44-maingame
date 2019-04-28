@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbc852cd8c597b4b8fa5b75ee467938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _shipMovement: {fileID: 2596070688006617541}
+  currentHeightIndex: 0
+  heights: 2effffffbaffffff46000000
+  _cursorPrefab: {fileID: 1293643080560051617, guid: 26537b133ec52b5468492768f324a2bf,
+    type: 3}
 --- !u!1001 &8215645560231409005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32,7 +37,7 @@ PrefabInstance:
     - target: {fileID: 2098109497502316081, guid: 53679f1f6bcf44849adbbfdc85c71248,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.39
+      value: -210
       objectReference: {fileID: 0}
     - target: {fileID: 2098109497502316081, guid: 53679f1f6bcf44849adbbfdc85c71248,
         type: 3}
@@ -94,6 +99,46 @@ PrefabInstance:
       propertyPath: _agentTargetPosition.y
       value: -210
       objectReference: {fileID: 0}
+    - target: {fileID: 4259010314776366740, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 159154.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259010314776366740, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259010314776366740, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668422674440401410, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: displayLightIntensity
+      value: 2000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120333123505512703, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 159154.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120333123505512703, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120333123505512703, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416187238142970530, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: displayLightIntensity
+      value: 2000000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53679f1f6bcf44849adbbfdc85c71248, type: 3}
 --- !u!1 &2073857827204243539 stripped
@@ -112,5 +157,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d90867f0d701514286bc7dd76f5af00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2596070688006617541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
+    type: 3}
+  m_PrefabInstance: {fileID: 8215645560231409005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073857827204243539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e9abea52083c047875d0a179614518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
