@@ -99,15 +99,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 20
+    agentRadius: 60
     agentHeight: 50
-    agentSlope: 22.8
+    agentSlope: 0
     agentClimb: 5
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 100
     manualCellSize: 0
-    cellSize: 6.6666665
+    cellSize: 20
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -2124,18 +2124,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864c82a86f3116b4e9f8c650039ef6cd, type: 3}
---- !u!114 &2596070688006617541 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2596070688006617541, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-    type: 3}
-  m_PrefabInstance: {fileID: 8215645560617224096}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e9abea52083c047875d0a179614518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3127451698282517685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2380,7 +2368,7 @@ PrefabInstance:
     - target: {fileID: 3877114029541014847, guid: 1a10e806dce8b2b41af0e591342125d1,
         type: 3}
       propertyPath: distance
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3877114029541014847, guid: 1a10e806dce8b2b41af0e591342125d1,
         type: 3}
@@ -2646,30 +2634,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: heights.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: heights.Array.data[0]
-      value: -210
-      objectReference: {fileID: 0}
-    - target: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: heights.Array.data[1]
-      value: -70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: heights.Array.data[2]
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: _shipMovement
-      value: 
-      objectReference: {fileID: 2596070688006617541}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467bb976f5083e9499cd0bde19f3b7b1, type: 3}

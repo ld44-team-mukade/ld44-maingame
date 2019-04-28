@@ -52,7 +52,7 @@ public class ShipMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeTargetAgentPosition(_agentTargetPosition);
+        // ChangeTargetAgentPosition(_agentTargetPosition);
     }
 
     void FixedUpdate(){
@@ -101,6 +101,12 @@ public class ShipMovement : MonoBehaviour
     }
 
     public void ChangeTargetAgentPosition(Vector3 position){
-        _targetAgentInstance.SetDestination(_agentTargetPosition);
+        _targetAgentInstance.Resume();
+        Debug.Log(_targetAgentInstance.SetDestination(position));
+    }
+
+    public bool IsReachable(Vector3 position){
+        NavMeshPath path = new NavMeshPath();
+        return _targetAgentInstance.CalculatePath(transform.position, path);
     }
 }
