@@ -11,9 +11,22 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID BGMMAINGAME_IN = 1959420478U;
+        static const AkUniqueID BGMMAINGAME_OUT = 61313377U;
+        static const AkUniqueID BGMTITLE_IN = 506861093U;
+        static const AkUniqueID BGMTITLE_OUT = 3375630252U;
+        static const AkUniqueID CANNON = 2393348022U;
+        static const AkUniqueID DAMAGE = 1786804762U;
+        static const AkUniqueID EINGINE = 71235304U;
+        static const AkUniqueID GETFUEL = 1825690395U;
+    } // namespace EVENTS
+
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
+        static const AkUniqueID POWER = 2391494160U;
         static const AkUniqueID RPM = 796049864U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
@@ -30,6 +43,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID BGM = 412724365U;
         static const AkUniqueID SE = 1584861537U;
     } // namespace BANKS
 
