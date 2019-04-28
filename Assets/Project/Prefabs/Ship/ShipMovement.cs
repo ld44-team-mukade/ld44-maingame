@@ -44,12 +44,12 @@ public class ShipMovement : MonoBehaviour
     void Start()
     {
         
+        _targetAgentInstance.SetDestination(_agentTargetPosition);
     }
 
     // Update is called once per frame
     void Update()
     {
-        _targetAgentInstance.SetDestination(_agentTargetPosition);
     }
 
     void FixedUpdate(){
@@ -59,6 +59,7 @@ public class ShipMovement : MonoBehaviour
     }
 
     void Move(){
+        // transform.position = _targetAgentInstance.transform.position;
         var diff = transform.position - _targetAgentInstance.transform.position;;
         _rigidbody.AddForce(-diff*Time.fixedDeltaTime * verticalMovementPower);
         _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
