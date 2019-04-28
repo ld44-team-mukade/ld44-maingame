@@ -6,16 +6,16 @@ public class BulletAttack : MonoBehaviour
 {
     //unityから直接値を変更できるように
     public float fuelparam;
-    GameObject fuel;
 
     //相手のShipにあたった時にShipの「DecrementFuel」を呼び出す
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Ship")
+
+        var ship = collision.gameObject.GetComponent<FuelTank>();
+
+        if (ship != null)
         {
-            //
-            fuel = GameObject.Find("Ship");
-            fuel.GetComponent<FuelTank>().DecrementFuel(fuelparam);
+            ship.DecrementFuel(fuelparam);
         }
     }
 
