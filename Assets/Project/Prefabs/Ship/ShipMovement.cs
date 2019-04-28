@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class ShipMovement : MonoBehaviour
 {
+    [SerializeField]
+    private FuelTank _fuelTank;
+
     private Rigidbody _rigidbody;
 
     [SerializeField]
@@ -49,13 +52,12 @@ public class ShipMovement : MonoBehaviour
     }
 
     void FixedUpdate(){
-        // var fixedTarget = _targetAgentInstance.transform.position;
-        // fixedTarget.y = transform.position.y;
-        // _rigidbody.MovePosition(fixedTarget);
-        // var heightDiff = transform.position.y - _targetAgentInstance.transform.position.y;
-        // _rigidbody.AddForce(-Vector3.up * heightDiff*Time.fixedDeltaTime * verticalMovementPower);
-        // _rigidbody.AddForce(-Vector3.up * _rigidbody.velocity.y*Time.fixedDeltaTime * verticalMovementDamper);
+        if(0f < _fuelTank.Remaining()){
+            Move();
+        }
+    }
 
+    void Move(){
         var diff = transform.position - _targetAgentInstance.transform.position;
         _rigidbody.AddForce(-diff*Time.fixedDeltaTime * verticalMovementPower);
         _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
@@ -66,9 +68,20 @@ public class ShipMovement : MonoBehaviour
             Debug.DrawLine(transform.position,transform.position + _rigidbody.velocity.normalized*100f, Color.blue);
             Debug.DrawLine(transform.position,transform.position + torque*100f);
             Debug.Log(torque);
-            _rigidbody.AddTorque(0, torque.y*Time.fixedDeltaTime*1000f, 0);
-            _rigidbody.AddTorque(-_rigidbody.angularVelocity*Time.fixedDeltaTime*100f);
-            // MoveTo(transform.position + Vector3.forward*Time.fixedDeltaTime*10f);
+            _rigidbody.AddTorque(0, torque.y*Time.fixedDeltaTime*100000f, 0);
+            _rigidbody.AddTorque(-_rigidbody.angularVelocity*Time.fixedDeltaTime*10000f);
         }
+    }
+
+    void OnTriggerEnter (Collider other){
+        if(other.tag == "Ground"){
+            Explode();
+        }
+    }
+
+    void Explode(){
+        Debug.Log("Exploded");
+        Destroy(gameObject);
+        Destroy(_targetAgentInstance);
     }
 }
