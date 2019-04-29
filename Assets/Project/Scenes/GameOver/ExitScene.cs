@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+public class ExitScene : MonoBehaviour
 {
+
+    public void ButtonClicked()
+    {
+        SceneManager.LoadScene("Title");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +20,6 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("Title");
-        }
+ 
     }
 }
