@@ -5,6 +5,10 @@ using UnityEngine.AI;
 
 public class ShipMovement : MonoBehaviour
 {
+    public bool isManualControll = false;
+
+    public Vector3 manualForce= Vector3.zero;
+
     [SerializeField]
     private FuelTank _fuelTank;
 
@@ -62,36 +66,37 @@ public class ShipMovement : MonoBehaviour
     }
 
     void Move(){
-        // transform.position = _targetAgentInstance.transform.position;
-        var diff = transform.position - _targetAgentInstance.transform.position;
-        diff = Vector3.ClampMagnitude(diff, _maxDifference);
-        _rigidbody.AddForce(-diff*Time.fixedDeltaTime * verticalMovementPower);
-        _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
+        Vector3 target = Vector3.zero;
+        if(isManualControll){
+            _rigidbody.AddForce(manualForce* Time.fixedDeltaTime * verticalMovementPower);
+            _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
 
-        var toAgent = (_targetAgentInstance.transform.position - transform.position);
-        // if(20.0f < _rigidbody.velocity.magnitude){
+        }else{
+            target = _targetAgentInstance.transform.position;
+            // transform.position = _targetAgentInstance.transform.position;
+            var diff = transform.position - target;
+            diff = Vector3.ClampMagnitude(diff, _maxDifference);
+            _rigidbody.AddForce(-diff * Time.fixedDeltaTime * verticalMovementPower);
+            _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
+
+            // var toAgent = (_targetAgentInstance.transform.position - transform.position);
+            // if(20.0f < _rigidbody.velocity.magnitude){
             // var torque = Vector3.Cross(transform.forward, toAgent.normalized);
             // Debug.DrawLine(transform.position,transform.position + _rigidbody.velocity.normalized*100f, Color.blue);
             // Debug.DrawLine(transform.position,transform.position + torque*100f);
             // _rigidbody.AddTorque(0, torque.y*Time.fixedDeltaTime*100000f, 0);
             // _rigidbody.AddTorque(-_rigidbody.angularVelocity*Time.fixedDeltaTime*10000f);
-            var velocityOnPlane = _rigidbody.velocity; 
-            velocityOnPlane.y = velocityOnPlane.y*0.5f;
-            Quaternion targetRot = Quaternion.LookRotation (velocityOnPlane);
-            var q = Quaternion.RotateTowards(_rigidbody.rotation, targetRot, 50f*Time.fixedDeltaTime);
-            _rigidbody.MoveRotation(q);
-        // }
-    }
-
-    void OnTriggerEnter (Collider other){
-        if(other.tag == "Ground"){
-            Explode();
+            // }
         }
+
+        var velocityOnPlane = _rigidbody.velocity;
+        velocityOnPlane.y = velocityOnPlane.y * 0.5f;
+        Quaternion targetRot = Quaternion.LookRotation(velocityOnPlane);
+        var q = Quaternion.RotateTowards(_rigidbody.rotation, targetRot, 50f * Time.fixedDeltaTime);
+        _rigidbody.MoveRotation(q);
     }
 
-    void Explode(){
-        Debug.Log("Exploded");
-        Destroy(gameObject);
+    public void DestroyAgent(){
         Destroy(_targetAgentInstance);
     }
 

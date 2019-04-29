@@ -314,6 +314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e9abea52083c047875d0a179614518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isManualControll: 0
+  manualForce: {x: 0, y: 0, z: 0}
   _fuelTank: {fileID: 6412123716481675959}
   _targetHeight: 150
   _maxDifference: 30
@@ -352,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fuelAmount: 100
   _durationTimeToDestroy: 5
+  _shipMovement: {fileID: 3284278664849623251}
 --- !u!114 &9137083530515733374
 MonoBehaviour:
   m_ObjectHideFlags: 0

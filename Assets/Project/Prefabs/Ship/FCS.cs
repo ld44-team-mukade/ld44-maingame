@@ -47,6 +47,7 @@ public class FCS : MonoBehaviour
 
     public void Fire(){
         foreach(var cannon in _cannons){
+            if(_fuelTank.Remaining() <= 0f) return;
             cannon.Fire(tag);
             _fuelTank.DecrementFuel(cannon.Cost());
         }

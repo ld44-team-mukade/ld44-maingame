@@ -252,7 +252,7 @@ SphereCollider:
   m_GameObject: {fileID: 8353421320209072540}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -321,3 +321,5 @@ MonoBehaviour:
   fuelparam: 50
   lifeTime: 4
   cost: 5
+  collider: {fileID: 6128592624049304216}
+  age: 0

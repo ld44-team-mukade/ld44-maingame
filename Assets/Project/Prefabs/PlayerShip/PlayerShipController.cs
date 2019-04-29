@@ -21,6 +21,7 @@ public class PlayerShipController : MonoBehaviour
 
     void Awake(){
         _cursorInstance = Instantiate(_cursorPrefab);
+        _shipMovement.isManualControll = true;
     }
     void Start()
     {
@@ -29,6 +30,11 @@ public class PlayerShipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _fcs.Fire();
+        }
+
         int direction = 0;
         if(Input.GetKeyDown(KeyCode.Q)){direction += 1;};
         if(Input.GetKeyDown(KeyCode.E)){direction -= 1;};
@@ -42,20 +48,19 @@ public class PlayerShipController : MonoBehaviour
             Debug.Log(currentHeightIndex);
         }
 
-        var cursorPositionOnPlane = CursorPosition(gameSpace.heights[currentHeightIndex]);
-        _cursorInstance.transform.position = cursorPositionOnPlane;
-        if(Input.GetMouseButtonDown(0)){
-            var isReachable = _shipMovement.IsReachable(cursorPositionOnPlane);
-            if(isReachable){
-                _shipMovement.ChangeTargetAgentPosition(cursorPositionOnPlane);
-            }
-        };
+        float planeHeight = transform.position.y;
+        Vector2 upOnScreen = new Vector2(Screen.width*0.5f,0);
+        Vector2 rightOnScreen = new Vector2(Screen.width,Screen.height*0.5f);
+        var upOnWorld = ScreenSpaceToPlaneSpace(upOnScreen, planeHeight);
+        var rightOnWorld = ScreenSpaceToPlaneSpace(rightOnScreen, planeHeight);
+
+        Vector3 input = -(upOnWorld - transform.position).normalized*Input.GetAxis("Vertical") + (rightOnWorld - transform.position).normalized*Input.GetAxis("Horizontal");
+        
+        var targetPosition = input*50f;
+        targetPosition.y = gameSpace.heights[currentHeightIndex] - transform.position.y;
+        _shipMovement.manualForce = targetPosition;
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            _fcs.Fire();
-        }
     }
 
     bool TryToChangeHeight(int index){
@@ -77,6 +82,11 @@ public class PlayerShipController : MonoBehaviour
 
     Vector3 CursorPosition(float planeHeight){
         Vector2 cursorScreenPosition = Input.mousePosition;
+        return ScreenSpaceToPlaneSpace(cursorScreenPosition, planeHeight);
+    }
+
+    Vector3 ScreenSpaceToPlaneSpace(Vector2 screenPosition, float planeHeight){
+        Vector2 cursorScreenPosition = screenPosition;
         Camera  gameCamera           = Camera.main;
         Vector3 cursorWorldPosition  = gameCamera.ScreenToWorldPoint( new Vector3(cursorScreenPosition.x, cursorScreenPosition.y, 10f));
         var n = Vector3.up;
