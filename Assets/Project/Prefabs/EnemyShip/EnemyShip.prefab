@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 4743455460974824929}
   - component: {fileID: 7323161438733379017}
   - component: {fileID: 6813769297165667257}
+  - component: {fileID: 7050011374324138616}
   m_Layer: 0
   m_Name: EnemyShip
   m_TagString: Enermy
@@ -432,6 +433,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _radar: {fileID: 4743455460974824929}
   _fuelTank: {fileID: 6412123716481675959}
+--- !u!114 &7050011374324138616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284278664849623250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b5049f86eb81143a9029f7bfd02811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelTankItem: {fileID: 3871382199100320476, guid: 76336c2bc52ea334cb73f601e18cb95d,
+    type: 3}
+  dropPos: 20
 --- !u!1 &3441433449806954135
 GameObject:
   m_ObjectHideFlags: 0
