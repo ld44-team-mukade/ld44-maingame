@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3206425184441581483}
   - component: {fileID: 1334764783607135356}
   - component: {fileID: 5927704510344363548}
+  - component: {fileID: 937525390504109617}
   m_Layer: 0
   m_Name: FuelTankItem
   m_TagString: Untagged
@@ -105,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d12ca64e1e70054daf22ac5a870e972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
-  speed: 0
+  range: 5
+  speed: 1
 --- !u!114 &5927704510344363548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +123,16 @@ MonoBehaviour:
   particle: {fileID: 8205944732457833177, guid: d695876096558b541b93f809f401ce5b,
     type: 3}
   deltime: 2
+--- !u!114 &937525390504109617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871382199100320476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d0f6ec1f351274d83c10e4122357b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelCapacity: 100

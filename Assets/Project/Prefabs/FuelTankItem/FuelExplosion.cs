@@ -10,15 +10,13 @@ public class FuelExplosion : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        var bullet = collision.gameObject.GetComponent<BulletAttack>();
 
-        if (collision.gameObject.tag == "Bullet")
+        if (bullet != null)
         {
- 
-            Destroy(this.gameObject);
-            GameObject particle1 = Instantiate(particle, transform.position, transform.rotation);
-
-            Destroy(particle1, deltime);
-
+            bullet.BulletDestroy();
+            ItemExplosion();
+            
         }
     }
 
@@ -32,5 +30,13 @@ public class FuelExplosion : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ItemExplosion()
+    {
+        Destroy(this.gameObject);
+        GameObject particle1 = Instantiate(particle, transform.position, transform.rotation);
+
+        Destroy(particle1, deltime);
     }
 }

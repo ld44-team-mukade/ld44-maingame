@@ -15,7 +15,10 @@ public class BulletAttack : MonoBehaviour
 
         if (ship != null)
         {
+            //Shipの燃料減らす
             ship.DecrementFuel(fuelparam);
+            //砲弾の削除
+            BulletDestroy();
         }
     }
 
@@ -28,5 +31,9 @@ public class BulletAttack : MonoBehaviour
     void Update()
     {
         
+    }
+    public void BulletDestroy()
+    {
+        Destroy(this.gameObject);
     }
 }
