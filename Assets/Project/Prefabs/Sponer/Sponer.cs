@@ -16,7 +16,13 @@ public class Sponer : MonoBehaviour
     private float timeElapsed;
 
     [SerializeField]
+    private int _sponelimit;
+
+    [SerializeField]
     private GameSpace _gameSpace;
+
+    [SerializeField]
+    private GameObject shipObj;
 
     void Awake(){
 
@@ -34,11 +40,23 @@ public class Sponer : MonoBehaviour
 
         if(timeElapsed >= _sponetime)
         {
-            Spone();
-            Debug.Log("Spone");
+            SponeCheck();
+
+            if(SponeCheck() < _sponelimit)
+            {
+                Spone();
+            }
             timeElapsed = 0.0f;
         }
 
+
+    }
+
+    public int SponeCheck()
+    {
+        int ObjCount = shipObj.transform.childCount - 1;
+
+        return ObjCount;
 
     }
 

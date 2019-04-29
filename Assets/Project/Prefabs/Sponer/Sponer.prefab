@@ -46,4 +46,6 @@ MonoBehaviour:
   _sponed: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
   _sponeInto: {fileID: 0}
   _sponetime: 120
+  _sponelimit: 7
   _gameSpace: {fileID: 0}
+  shipObj: {fileID: 0}
