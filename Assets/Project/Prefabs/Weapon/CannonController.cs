@@ -24,6 +24,7 @@ public class CannonController : MonoBehaviour
     [SerializeField]
     private Transform _muzzle;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -62,9 +63,11 @@ public class CannonController : MonoBehaviour
     void RotateTurret(Vector3 targetDirection){
         var localDirection = transform.InverseTransformDirection(targetDirection);
         Vector3 localDirectionOnXZ = localDirection; localDirectionOnXZ.y = 0;
+        localDirectionOnXZ.z = Mathf.Max(0, localDirectionOnXZ.z);
         var qY = Quaternion.LookRotation (localDirectionOnXZ);
         _turret.localRotation = qY;
         Vector3 localDirectionOnWY = new Vector3(0, localDirection.y, localDirectionOnXZ.magnitude);
+        localDirectionOnWY.y = Mathf.Max(0, localDirectionOnWY.y);
         var qX = Quaternion.LookRotation (localDirectionOnWY);
         _barrel.localRotation = qX;
     }

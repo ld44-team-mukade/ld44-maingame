@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radar: {fileID: 8311068337390897518}
-  _fuelTank: {fileID: 0}
+  _fuelTank: {fileID: 3919037196376422728}
 --- !u!114 &2032121256693859085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,6 +1495,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
         type: 3}
+      propertyPath: isManualControll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
       propertyPath: _fuelTank
       value: 
       objectReference: {fileID: 3919037196376422728}
@@ -1518,6 +1523,11 @@ PrefabInstance:
       propertyPath: _durationTimeToDestroy
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _shipMovement
+      value: 
+      objectReference: {fileID: 2596070688006617541}
     - target: {fileID: 6416187238142970530, guid: 53679f1f6bcf44849adbbfdc85c71248,
         type: 3}
       propertyPath: displayLightIntensity

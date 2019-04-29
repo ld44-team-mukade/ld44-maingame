@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0013787271, g: 0.0019462395, b: 0.003085515, a: 1}
+  m_IndirectSpecularColor: {r: 0.040113796, g: 0.04034251, b: 0.024518568, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3732,15 +3732,5 @@ PrefabInstance:
       propertyPath: gameSpace
       value: 
       objectReference: {fileID: 1716380639}
-    - target: {fileID: 5641341468597221809, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: m_positionOffsetData.positionOffset.x
-      value: -71.20056
-      objectReference: {fileID: 0}
-    - target: {fileID: 5641341468597221809, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: m_positionOffsetData.positionOffset.y
-      value: 12.829712
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467bb976f5083e9499cd0bde19f3b7b1, type: 3}

@@ -9,6 +9,10 @@ public class BulletAttack : MonoBehaviour
     public float lifeTime = 4f;
     public float cost = 1f;
 
+    [SerializeField]
+    private Collider collider;
+
+    public int age = 0;
     //相手のShipにあたった時にShipの「DecrementFuel」を呼び出す
     private void OnCollisionEnter(Collision collision)
     {
@@ -22,6 +26,7 @@ public class BulletAttack : MonoBehaviour
         BulletDestroy();
     }
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +35,8 @@ public class BulletAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(5 < age) collider.enabled = true;
+        age++;
     }
     public void BulletDestroy()
     {
