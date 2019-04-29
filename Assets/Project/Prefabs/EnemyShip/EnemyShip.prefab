@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 9137083530515733374}
   - component: {fileID: 4374441151256380647}
   - component: {fileID: 4743455460974824929}
+  - component: {fileID: 7323161438733379017}
   m_Layer: 0
   m_Name: EnemyShip
   m_TagString: Untagged
@@ -265,6 +266,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearShips: []
   _distance: 200
+--- !u!114 &7323161438733379017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284278664849623250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79b1195fd7917148ade58a2c29feb58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5380837345273879694
 GameObject:
   m_ObjectHideFlags: 0

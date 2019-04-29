@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShipContriller : MonoBehaviour
+public class PlayerShipController : MonoBehaviour
 {
     [SerializeField]
     ShipMovement _shipMovement;
@@ -10,7 +10,7 @@ public class PlayerShipContriller : MonoBehaviour
     int currentHeightIndex = 0;
 
     [SerializeField]
-    public List<int> heights;
+    public GameSpace gameSpace;
 
     [SerializeField]
     private Transform _cursorPrefab;
@@ -30,7 +30,7 @@ public class PlayerShipContriller : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q)){direction += 1;};
         if(Input.GetKeyDown(KeyCode.E)){direction -= 1;};
 
-        var targetHeightIndex = Mathf.Clamp(currentHeightIndex+direction, 0, heights.Count-1);
+        var targetHeightIndex = Mathf.Clamp(currentHeightIndex+direction, 0, gameSpace.heights.Count-1);
         if(targetHeightIndex != currentHeightIndex){
             var isSuccessed = TryToChangeHeight(targetHeightIndex);
             if(isSuccessed){
@@ -39,21 +39,19 @@ public class PlayerShipContriller : MonoBehaviour
             Debug.Log(currentHeightIndex);
         }
 
-        var cursorPositionOnPlane = CursorPosition(heights[currentHeightIndex]);
+        var cursorPositionOnPlane = CursorPosition(gameSpace.heights[currentHeightIndex]);
         _cursorInstance.transform.position = cursorPositionOnPlane;
         if(Input.GetMouseButtonDown(0)){
             var isReachable = _shipMovement.IsReachable(cursorPositionOnPlane);
             if(isReachable){
-                Debug.Log("Change Agent Target Point");
                 _shipMovement.ChangeTargetAgentPosition(cursorPositionOnPlane);
             }
         };
-        // Debug.DrawLine(Camera.main.transform.position,cursorPositionOnPlane, Color.red);
     }
 
     bool TryToChangeHeight(int index){
         var currentAgentPosition = _shipMovement.CurrentAgentPosition();
-        var targetPosition = currentAgentPosition; targetPosition.y = heights[index];
+        var targetPosition = currentAgentPosition; targetPosition.y = gameSpace.heights[index];
         var direction = (targetPosition - currentAgentPosition).normalized;
 
         var ray = new Ray(currentAgentPosition, Vector3.up * direction.y);
@@ -65,7 +63,6 @@ public class PlayerShipContriller : MonoBehaviour
         
         if(!changeable)return false;
         _shipMovement.ChangeCurrentAgentPosition(targetPosition);
-        // Debug.Log(targetPosition);
         return true;
     }
 
