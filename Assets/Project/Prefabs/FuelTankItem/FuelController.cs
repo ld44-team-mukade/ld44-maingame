@@ -9,7 +9,7 @@ public class FuelController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         var ship = collision.gameObject.GetComponent<FuelTank>();
-
+        if(!ship)return;
         if (collision.gameObject.tag == "Player")
         {
             ship.IncrementFuel(fuelCapacity);

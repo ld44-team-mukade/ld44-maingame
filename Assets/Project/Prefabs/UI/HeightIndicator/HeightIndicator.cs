@@ -28,6 +28,7 @@ public class HeightIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!shipController)return;
         transform.position = shipController.transform.position;
         // shipController.currentHeightIndex;
         foreach(var renderer in _ringRenderers){
