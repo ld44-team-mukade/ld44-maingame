@@ -24,6 +24,13 @@ public class Radar : MonoBehaviour
         
     }
 
+    public List<ShipId> NearHostileShips(){
+        return nearShips.Where((ship) => ship.tag != tag)
+                        .Where((ship) => ship.GetInstanceID() != GetInstanceID())
+                        .ToList();
+
+    }
+
     // Update is called once per frame
     void Update()
     {

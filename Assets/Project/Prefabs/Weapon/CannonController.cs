@@ -12,7 +12,8 @@ public class CannonController : MonoBehaviour
 
     // 狙う相手(まだ何も使ってない)
     [SerializeField]
-    private Transform _target;
+    public Transform target;
+    public Vector3 targetPosition;
 
     [SerializeField]
     private Transform _turret;
@@ -31,7 +32,12 @@ public class CannonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var targetDirection = _target.position - _turret.transform.position;
+        Vector3 targetDirection;
+        if(target){
+            targetDirection = target.position - _turret.transform.position;
+        }else{
+            targetDirection = targetPosition - _turret.transform.position;
+        }
         RotateTurret(targetDirection);
         Test();
     }
