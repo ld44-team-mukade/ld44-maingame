@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13385183, g: 0.15575035, b: 0.16672537, a: 1}
+  m_IndirectSpecularColor: {r: 0.040113796, g: 0.04034251, b: 0.024518568, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -193,7 +193,6 @@ GameObject:
   m_Component:
   - component: {fileID: 331116814}
   - component: {fileID: 331116813}
-  - component: {fileID: 331116815}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2231,7 +2230,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 7.69
+  displayLightIntensity: 29.91
   displayAreaLightEmissiveMesh: 0
   lightLayers: 1
   shadowNearPlane: 0.1
@@ -2250,7 +2249,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.97724086, g: 1, b: 0.8160377, a: 1}
-  m_Intensity: 7.69
+  m_Intensity: 29.91
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2606,6 +2605,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1856918826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2615839518847805897, guid: 1a10e806dce8b2b41af0e591342125d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3877114029932236199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1880126505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3195,6 +3200,31 @@ PrefabInstance:
       propertyPath: _smoothTime
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3877114029541014847, guid: 1a10e806dce8b2b41af0e591342125d1,
+        type: 3}
+      propertyPath: rcamera
+      value: 
+      objectReference: {fileID: 1856918826}
+    - target: {fileID: 3877114029541014847, guid: 1a10e806dce8b2b41af0e591342125d1,
+        type: 3}
+      propertyPath: _rotatespeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877114029541014847, guid: 1a10e806dce8b2b41af0e591342125d1,
+        type: 3}
+      propertyPath: scrollSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877114029541014847, guid: 1a10e806dce8b2b41af0e591342125d1,
+        type: 3}
+      propertyPath: scrollMin
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877114029541014847, guid: 1a10e806dce8b2b41af0e591342125d1,
+        type: 3}
+      propertyPath: scrollMax
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 3877114030789376110, guid: 1a10e806dce8b2b41af0e591342125d1,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -3620,7 +3650,7 @@ PrefabInstance:
     - target: {fileID: 8006887091011322716, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -210
+      value: 41.4
       objectReference: {fileID: 0}
     - target: {fileID: 8006887091011322716, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}
