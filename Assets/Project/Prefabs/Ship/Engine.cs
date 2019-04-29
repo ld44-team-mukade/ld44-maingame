@@ -18,6 +18,9 @@ public class Engine : MonoBehaviour
     void Update()
     {
         currentPower = Mathf.MoveTowards(currentPower, targetPower, powerDelta);
-        EnginePowerRTPC.SetGlobalValue(currentPower);
+        if(EnginePowerRTPC != null)
+        {
+            EnginePowerRTPC.SetGlobalValue(currentPower);
+        }
     }
 }
