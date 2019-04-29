@@ -7,6 +7,9 @@ public class FuelTank: MonoBehaviour
     [SerializeField]
     private float _fuelAmount = 100f;
 
+    [SerializeField]
+    private float _durationTimeToDestroy = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +23,13 @@ public class FuelTank: MonoBehaviour
     }
 
     public void DecrementFuel(float amount){
-        _fuelAmount -= amount;
+        _fuelAmount -= Mathf.Max(0f, amount);
+        if(_fuelAmount <= 0f){
+            Destroy(gameObject, _durationTimeToDestroy);
+        }
     }
     public void IncrementFuel(float amount){
-        _fuelAmount += amount;
+        _fuelAmount += Mathf.Max(0f, amount);
     }
 
     public float Remaining(){

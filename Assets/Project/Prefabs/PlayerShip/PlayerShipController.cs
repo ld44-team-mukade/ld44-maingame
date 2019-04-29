@@ -16,6 +16,9 @@ public class PlayerShipController : MonoBehaviour
     private Transform _cursorPrefab;
     private Transform _cursorInstance;
 
+    [SerializeField]
+    private FCS _fcs;
+
     void Awake(){
         _cursorInstance = Instantiate(_cursorPrefab);
     }
@@ -47,6 +50,12 @@ public class PlayerShipController : MonoBehaviour
                 _shipMovement.ChangeTargetAgentPosition(cursorPositionOnPlane);
             }
         };
+
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _fcs.Fire();
+        }
     }
 
     bool TryToChangeHeight(int index){
