@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: b4e6fa8e4c9eeeb4080bc45e36498878
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BezierCurve_low
+    100002: Circle_low
+    100004: Cube.003_low
+    100006: Cube.004_low
+    100008: Cube.005_low
+    100010: Cube.006_low
+    100012: Cylinder.001_low
+    100014: Cylinder.002_low
+    100016: Cylinder.003_low
+    100018: //RootNode
+    100020: Plane_low
+    100022: Sphere.001_low
+    100024: Sphere.002_low
+    100026: Sphere.003_low
+    100028: Sphere.004_low
+    100030: Sphere_low
+    400000: BezierCurve_low
+    400002: Circle_low
+    400004: Cube.003_low
+    400006: Cube.004_low
+    400008: Cube.005_low
+    400010: Cube.006_low
+    400012: Cylinder.001_low
+    400014: Cylinder.002_low
+    400016: Cylinder.003_low
+    400018: //RootNode
+    400020: Plane_low
+    400022: Sphere.001_low
+    400024: Sphere.002_low
+    400026: Sphere.003_low
+    400028: Sphere.004_low
+    400030: Sphere_low
+    2100000: Keel
+    2100002: Baloon
+    2100004: Floor
+    2100006: Rope
+    2100008: Engine
+    2100010: Hull
+    2100012: Tank
+    2100014: Hook
+    2100016: Hose
+    2300000: BezierCurve_low
+    2300002: Circle_low
+    2300004: Cube.003_low
+    2300006: Cube.004_low
+    2300008: Cube.005_low
+    2300010: Cube.006_low
+    2300012: Cylinder.001_low
+    2300014: Cylinder.002_low
+    2300016: Cylinder.003_low
+    2300018: Plane_low
+    2300020: Sphere.001_low
+    2300022: Sphere.002_low
+    2300024: Sphere.003_low
+    2300026: Sphere.004_low
+    2300028: Sphere_low
+    3300000: BezierCurve_low
+    3300002: Circle_low
+    3300004: Cube.003_low
+    3300006: Cube.004_low
+    3300008: Cube.005_low
+    3300010: Cube.006_low
+    3300012: Cylinder.001_low
+    3300014: Cylinder.002_low
+    3300016: Cylinder.003_low
+    3300018: Plane_low
+    3300020: Sphere.001_low
+    3300022: Sphere.002_low
+    3300024: Sphere.003_low
+    3300026: Sphere.004_low
+    3300028: Sphere_low
+    4300000: Cube.003_low
+    4300002: Sphere_low
+    4300004: Circle_low
+    4300006: Cube.004_low
+    4300008: Sphere.002_low
+    4300010: Sphere.004_low
+    4300012: Plane_low
+    4300014: Cylinder.003_low
+    4300016: Cube.005_low
+    4300018: Cube.006_low
+    4300020: Sphere.001_low
+    4300022: Sphere.003_low
+    4300024: Cylinder.002_low
+    4300026: Cylinder.001_low
+    4300028: BezierCurve_low
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Baloon
+    second: {fileID: 2100000, guid: eae1b04c573d12d45ab7905862153828, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engine
+    second: {fileID: 2100000, guid: c355c7dc621b95f47bfa49c2dcba1ab0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 933c6acfd10b8ab409ce9ddad3e31625, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hook
+    second: {fileID: 2100000, guid: 6e2ea0b4e7f118349a0a07eb6d50e72a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hose
+    second: {fileID: 2100000, guid: 33d454a8f7343cb41b05761cca941110, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hull
+    second: {fileID: 2100000, guid: a8a7505d55461f14cbf469fdf36445d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keel
+    second: {fileID: 2100000, guid: d025fb4828ef4674bbf25b5c39c2e24e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rope
+    second: {fileID: 2100000, guid: cdbe33e6907b74c45b8672a7dc6e88f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tank
+    second: {fileID: 2100000, guid: 5152f9f8f06811b458bd3fc65f7df588, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
