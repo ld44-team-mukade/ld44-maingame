@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f0cbcd1d0469948a920ad366621dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate: 200
+  rotate: 50
   lightObj: {fileID: 275895946077772624}
 --- !u!1 &2559386463642713934
 GameObject:
