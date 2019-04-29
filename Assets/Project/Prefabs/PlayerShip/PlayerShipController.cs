@@ -14,13 +14,11 @@ public class PlayerShipController : MonoBehaviour
 
     [SerializeField]
     private Transform _cursorPrefab;
-    private Transform _cursorInstance;
 
     [SerializeField]
     private FCS _fcs;
 
     void Awake(){
-        _cursorInstance = Instantiate(_cursorPrefab);
         _shipMovement.isManualControll = true;
     }
     void Start()

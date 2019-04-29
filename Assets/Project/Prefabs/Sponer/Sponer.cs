@@ -15,6 +15,9 @@ public class Sponer : MonoBehaviour
 
     private float timeElapsed;
 
+    [SerializeField]
+    private GameSpace _gameSpace;
+
     void Awake(){
 
     }
@@ -46,5 +49,6 @@ public class Sponer : MonoBehaviour
         }else{
             sponedInstance.transform.parent = null;
         }
+        sponedInstance.GetComponent<EnemyShipController>().gameSpace = _gameSpace;
     }
 }
