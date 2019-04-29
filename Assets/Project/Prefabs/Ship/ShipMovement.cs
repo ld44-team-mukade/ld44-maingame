@@ -109,7 +109,11 @@ public class ShipMovement : MonoBehaviour
         return _targetAgentInstance.CalculatePath(transform.position, path);
     }
 
-    public NavMeshPathStatus pathStatus(){
+    public NavMeshPathStatus PathStatus(){
         return _targetAgentInstance.pathStatus;
+    }
+
+    public bool IsMovingWithAgent(float distance){
+        return _targetAgentInstance.remainingDistance > distance;
     }
 }

@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
         {
             shipId.Id = _idCounter;
             _shipIdDict[_idCounter] = shipId;
+            var enemyShipController = shipId.GetComponent<EnemyShipController>();
+            if(enemyShipController){
+                enemyShipController.gameSpace = _gameSpace;
+            }
             _idCounter++;
         }
     }
