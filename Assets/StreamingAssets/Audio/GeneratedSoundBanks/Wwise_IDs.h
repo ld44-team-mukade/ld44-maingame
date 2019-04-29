@@ -15,10 +15,13 @@ namespace AK
     {
         static const AkUniqueID AMBIENT_WIND_IN = 2566031842U;
         static const AkUniqueID AMBIENT_WIND_OUT = 2999521181U;
+        static const AkUniqueID BGMGAMEOVER_IN = 1750617197U;
+        static const AkUniqueID BGMGAMEOVER_OUT = 3037581172U;
         static const AkUniqueID BGMMAINGAME_IN = 1959420478U;
         static const AkUniqueID BGMMAINGAME_OUT = 61313377U;
         static const AkUniqueID BGMTITLE_IN = 506861093U;
         static const AkUniqueID BGMTITLE_OUT = 3375630252U;
+        static const AkUniqueID BUTTON1 = 203100670U;
         static const AkUniqueID CANNON = 2393348022U;
         static const AkUniqueID DAMAGE = 1786804762U;
         static const AkUniqueID EINGINE = 71235304U;
@@ -46,7 +49,10 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID BGM = 412724365U;
+        static const AkUniqueID GAMEOVER = 4158285989U;
+        static const AkUniqueID MAINGAME = 1731745708U;
         static const AkUniqueID SE = 1584861537U;
+        static const AkUniqueID TITLE = 3705726509U;
     } // namespace BANKS
 
     namespace BUSSES
