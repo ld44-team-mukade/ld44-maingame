@@ -11,6 +11,9 @@ public class FCS : MonoBehaviour
     private Radar _radar;
 
     private Transform _currentTarget;
+
+    [SerializeField]
+    private FuelTank _fuelTank;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,11 @@ public class FCS : MonoBehaviour
 
         if(_currentTarget){
             SetTarget(_currentTarget.position);
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                Fire();
+            }
         }
     }
 
@@ -40,5 +48,12 @@ public class FCS : MonoBehaviour
 
     public Transform currentTarget(){
         return _currentTarget;
+    }
+
+    public void Fire(){
+        foreach(var cannon in _cannons){
+            cannon.Fire(tag);
+            _fuelTank.DecrementFuel(cannon.Cost());
+        }
     }
 }

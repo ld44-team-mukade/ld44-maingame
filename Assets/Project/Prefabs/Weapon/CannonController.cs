@@ -39,20 +39,21 @@ public class CannonController : MonoBehaviour
             targetDirection = targetPosition - _turret.transform.position;
         }
         RotateTurret(targetDirection);
-        Test();
+        // Test();
     }
 
     private void Test()
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
-            Fire();
+            Fire("");
         }
     }
 
-    public Rigidbody Fire()
+    public Rigidbody Fire(string tag)
     {
         var bulletInstance = Instantiate(bulletPrefab, _muzzle.transform) as Rigidbody;
+        bulletInstance.tag = tag;
         bulletInstance.velocity = _muzzle.transform.forward * initSpeed;
         bulletInstance.transform.parent = null;
         return bulletInstance;
@@ -70,5 +71,9 @@ public class CannonController : MonoBehaviour
 
     public Vector3 BulletCenter(){
         return _turret.position;
+    }
+
+    public float Cost(){
+        return bulletPrefab.GetComponent<BulletAttack>().cost;
     }
 }
