@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\</ProjectRoot>
-		<SourceFilesRoot>C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\nobut\git\ld44-maingame-wwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\nobut\git\ld44-maingame-wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\nobut\git\ld44-maingame-wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\nobut\git\ld44-maingame-wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -17,11 +17,11 @@
 			<Path>BGM.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2566031842" Name="ambient_wind_in" ObjectPath="\Events\Default Work Unit\ambient_wind_in"/>
-				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out" MaxAttenuation="0.000000"/>
+				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out"/>
 				<Event Id="1959420478" Name="BGMmaingame_in" ObjectPath="\Events\Default Work Unit\BGMmaingame_in"/>
-				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out" MaxAttenuation="0.000000"/>
+				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out"/>
 				<Event Id="506861093" Name="BGMtitle_in" ObjectPath="\Events\Default Work Unit\BGMtitle_in"/>
-				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out" MaxAttenuation="0.000000"/>
+				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="664104795" Language="SFX">
@@ -48,6 +48,7 @@
 			<ShortName>SE</ShortName>
 			<Path>SE.bnk</Path>
 			<IncludedEvents>
+				<Event Id="203100670" Name="button1" ObjectPath="\Events\Default Work Unit\button1"/>
 				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
 				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
@@ -74,9 +75,211 @@
 					<ShortName>Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick.wav</ShortName>
 					<Path>SFX\Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick_10C4C929.wem</Path>
 				</File>
+				<File Id="931475437" Language="SFX">
+					<ShortName>ok.wav</ShortName>
+					<Path>SFX\ok_10C4C929.wem</Path>
+				</File>
 				<File Id="934814011" Language="SFX">
 					<ShortName>getfuel.wav</ShortName>
 					<Path>SFX\getfuel_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1731745708" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\maingame</ObjectPath>
+			<ShortName>maingame</ShortName>
+			<Path>maingame.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2566031842" Name="ambient_wind_in" ObjectPath="\Events\Default Work Unit\ambient_wind_in"/>
+				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out"/>
+				<Event Id="1750617197" Name="BGMgameover_in" ObjectPath="\Events\Default Work Unit\BGMgameover_in"/>
+				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out"/>
+				<Event Id="1959420478" Name="BGMmaingame_in" ObjectPath="\Events\Default Work Unit\BGMmaingame_in"/>
+				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out"/>
+				<Event Id="506861093" Name="BGMtitle_in" ObjectPath="\Events\Default Work Unit\BGMtitle_in"/>
+				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out"/>
+				<Event Id="203100670" Name="button1" ObjectPath="\Events\Default Work Unit\button1"/>
+				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon"/>
+				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
+				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
+				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="150300601" Language="SFX">
+					<ShortName>engine idle.wav</ShortName>
+					<Path>SFX\engine idle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="244845627" Language="SFX">
+					<ShortName>engine middle.wav</ShortName>
+					<Path>SFX\engine middle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="357058105" Language="SFX">
+					<ShortName>ld44-damage1.wav</ShortName>
+					<Path>SFX\ld44-damage1_10C4C929.wem</Path>
+				</File>
+				<File Id="474180362" Language="SFX">
+					<ShortName>ld44-gameover.wav</ShortName>
+					<Path>SFX\ld44-gameover_D79FB2B7.wem</Path>
+				</File>
+				<File Id="629988404" Language="SFX">
+					<ShortName>engine high.wav</ShortName>
+					<Path>SFX\engine high_D79FB2B7.wem</Path>
+				</File>
+				<File Id="664104795" Language="SFX">
+					<ShortName>ld44-title.wav</ShortName>
+					<Path>SFX\ld44-title_D79FB2B7.wem</Path>
+				</File>
+				<File Id="745958935" Language="SFX">
+					<ShortName>Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick.wav</ShortName>
+					<Path>SFX\Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick_10C4C929.wem</Path>
+				</File>
+				<File Id="931475437" Language="SFX">
+					<ShortName>ok.wav</ShortName>
+					<Path>SFX\ok_10C4C929.wem</Path>
+				</File>
+				<File Id="934814011" Language="SFX">
+					<ShortName>getfuel.wav</ShortName>
+					<Path>SFX\getfuel_10C4C929.wem</Path>
+				</File>
+				<File Id="939029829" Language="SFX">
+					<ShortName>ld44-battle.wav</ShortName>
+					<Path>SFX\ld44-battle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="966066674" Language="SFX">
+					<ShortName>wind.wav</ShortName>
+					<Path>SFX\wind_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3705726509" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\title</ObjectPath>
+			<ShortName>title</ShortName>
+			<Path>title.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2566031842" Name="ambient_wind_in" ObjectPath="\Events\Default Work Unit\ambient_wind_in"/>
+				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out"/>
+				<Event Id="1750617197" Name="BGMgameover_in" ObjectPath="\Events\Default Work Unit\BGMgameover_in"/>
+				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out"/>
+				<Event Id="1959420478" Name="BGMmaingame_in" ObjectPath="\Events\Default Work Unit\BGMmaingame_in"/>
+				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out"/>
+				<Event Id="506861093" Name="BGMtitle_in" ObjectPath="\Events\Default Work Unit\BGMtitle_in"/>
+				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out"/>
+				<Event Id="203100670" Name="button1" ObjectPath="\Events\Default Work Unit\button1"/>
+				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon"/>
+				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
+				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
+				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="150300601" Language="SFX">
+					<ShortName>engine idle.wav</ShortName>
+					<Path>SFX\engine idle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="244845627" Language="SFX">
+					<ShortName>engine middle.wav</ShortName>
+					<Path>SFX\engine middle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="357058105" Language="SFX">
+					<ShortName>ld44-damage1.wav</ShortName>
+					<Path>SFX\ld44-damage1_10C4C929.wem</Path>
+				</File>
+				<File Id="474180362" Language="SFX">
+					<ShortName>ld44-gameover.wav</ShortName>
+					<Path>SFX\ld44-gameover_D79FB2B7.wem</Path>
+				</File>
+				<File Id="629988404" Language="SFX">
+					<ShortName>engine high.wav</ShortName>
+					<Path>SFX\engine high_D79FB2B7.wem</Path>
+				</File>
+				<File Id="664104795" Language="SFX">
+					<ShortName>ld44-title.wav</ShortName>
+					<Path>SFX\ld44-title_D79FB2B7.wem</Path>
+				</File>
+				<File Id="745958935" Language="SFX">
+					<ShortName>Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick.wav</ShortName>
+					<Path>SFX\Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick_10C4C929.wem</Path>
+				</File>
+				<File Id="931475437" Language="SFX">
+					<ShortName>ok.wav</ShortName>
+					<Path>SFX\ok_10C4C929.wem</Path>
+				</File>
+				<File Id="934814011" Language="SFX">
+					<ShortName>getfuel.wav</ShortName>
+					<Path>SFX\getfuel_10C4C929.wem</Path>
+				</File>
+				<File Id="939029829" Language="SFX">
+					<ShortName>ld44-battle.wav</ShortName>
+					<Path>SFX\ld44-battle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="966066674" Language="SFX">
+					<ShortName>wind.wav</ShortName>
+					<Path>SFX\wind_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4158285989" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\gameover</ObjectPath>
+			<ShortName>gameover</ShortName>
+			<Path>gameover.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2566031842" Name="ambient_wind_in" ObjectPath="\Events\Default Work Unit\ambient_wind_in"/>
+				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out"/>
+				<Event Id="1750617197" Name="BGMgameover_in" ObjectPath="\Events\Default Work Unit\BGMgameover_in"/>
+				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out"/>
+				<Event Id="1959420478" Name="BGMmaingame_in" ObjectPath="\Events\Default Work Unit\BGMmaingame_in"/>
+				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out"/>
+				<Event Id="506861093" Name="BGMtitle_in" ObjectPath="\Events\Default Work Unit\BGMtitle_in"/>
+				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out"/>
+				<Event Id="203100670" Name="button1" ObjectPath="\Events\Default Work Unit\button1"/>
+				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon"/>
+				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
+				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
+				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="150300601" Language="SFX">
+					<ShortName>engine idle.wav</ShortName>
+					<Path>SFX\engine idle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="244845627" Language="SFX">
+					<ShortName>engine middle.wav</ShortName>
+					<Path>SFX\engine middle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="357058105" Language="SFX">
+					<ShortName>ld44-damage1.wav</ShortName>
+					<Path>SFX\ld44-damage1_10C4C929.wem</Path>
+				</File>
+				<File Id="474180362" Language="SFX">
+					<ShortName>ld44-gameover.wav</ShortName>
+					<Path>SFX\ld44-gameover_D79FB2B7.wem</Path>
+				</File>
+				<File Id="629988404" Language="SFX">
+					<ShortName>engine high.wav</ShortName>
+					<Path>SFX\engine high_D79FB2B7.wem</Path>
+				</File>
+				<File Id="664104795" Language="SFX">
+					<ShortName>ld44-title.wav</ShortName>
+					<Path>SFX\ld44-title_D79FB2B7.wem</Path>
+				</File>
+				<File Id="745958935" Language="SFX">
+					<ShortName>Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick.wav</ShortName>
+					<Path>SFX\Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick_10C4C929.wem</Path>
+				</File>
+				<File Id="931475437" Language="SFX">
+					<ShortName>ok.wav</ShortName>
+					<Path>SFX\ok_10C4C929.wem</Path>
+				</File>
+				<File Id="934814011" Language="SFX">
+					<ShortName>getfuel.wav</ShortName>
+					<Path>SFX\getfuel_10C4C929.wem</Path>
+				</File>
+				<File Id="939029829" Language="SFX">
+					<ShortName>ld44-battle.wav</ShortName>
+					<Path>SFX\ld44-battle_D79FB2B7.wem</Path>
+				</File>
+				<File Id="966066674" Language="SFX">
+					<ShortName>wind.wav</ShortName>
+					<Path>SFX\wind_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
