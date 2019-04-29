@@ -24,6 +24,12 @@ public class CannonController : MonoBehaviour
     [SerializeField]
     private Transform _muzzle;
 
+    private AkAmbient akAmbient;
+
+    void Awake()
+    {
+        akAmbient = GetComponent<AkAmbient>();
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -53,6 +59,10 @@ public class CannonController : MonoBehaviour
 
     public Rigidbody Fire(string tag)
     {
+        if(akAmbient != null)
+        {
+            akAmbient.HandleEvent(gameObject);
+        }
         var bulletInstance = Instantiate(bulletPrefab, _muzzle.transform) as Rigidbody;
         bulletInstance.tag = tag;
         bulletInstance.velocity = _muzzle.transform.forward * initSpeed;

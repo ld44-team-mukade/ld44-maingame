@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4764299069713921057}
   - component: {fileID: 4764299069713921061}
+  - component: {fileID: 2221500933137723656}
+  - component: {fileID: 4075934879802438835}
+  - component: {fileID: 7472439796733639406}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -52,6 +55,89 @@ MonoBehaviour:
   _turret: {fileID: 6100532643478594775}
   _barrel: {fileID: 4045303744048006237}
   _muzzle: {fileID: 8422063109347829739}
+--- !u!114 &2221500933137723656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764299069713921060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8a90b96b5a9f448acf83859826b823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &4075934879802438835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764299069713921060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378b012654ed3a0439259f43d4824635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectAuxBus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  reflectionMaxPathLength: 1000
+  reflectionsAuxBusGain: 1
+  reflectionsOrder: 1
+  roomReverbAuxBusGain: 1
+  diffractionMaxEdges: 0
+  diffractionMaxPaths: 0
+  diffractionMaxPathLength: 0
+  drawFirstOrderReflections: 0
+  drawSecondOrderReflections: 0
+  drawHigherOrderReflections: 0
+  drawDiffractionPaths: 0
+--- !u!114 &7472439796733639406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764299069713921060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e613cf30c61b24aa1f676d0aa6fe71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2fe05ef94371c334dbb43cffa213e095,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
 --- !u!1 &5595429987316740438
 GameObject:
   m_ObjectHideFlags: 0
