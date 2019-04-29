@@ -32,11 +32,6 @@ public class FCS : MonoBehaviour
 
         if(_currentTarget){
             SetTarget(_currentTarget.position);
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                Fire();
-            }
         }
     }
 
@@ -46,7 +41,7 @@ public class FCS : MonoBehaviour
         }
     }
 
-    public Transform currentTarget(){
+    public Transform CurrentTarget(){
         return _currentTarget;
     }
 

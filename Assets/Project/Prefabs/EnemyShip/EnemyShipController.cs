@@ -11,15 +11,24 @@ public class EnemyShipController : MonoBehaviour
     [HideInInspector]
     public GameSpace gameSpace;
     // Start is called before the first frame update
+
+    [SerializeField]
+    private FCS _fcs;
+
+    [SerializeField]
+    private float _shootableRange = 100f;
+
+    [SerializeField]
+    private float _shotRate = 0.5f;
+
     void Start()
     {
-
+        StartCoroutine(TryShotCoroutine());
     }
 
     // Update is called once per frame
     void Update()
     {
-
         // if(_shipMovement.PathStatus() != NavMeshPathStatus.PathComplete){
         //     SetTargetPositionRandomly();
         // }
@@ -27,6 +36,21 @@ public class EnemyShipController : MonoBehaviour
             Debug.Log("Search Path");
             SetTargetPositionRandomly();
         }
+
+    }
+
+    IEnumerator TryShotCoroutine(){
+        while(true){
+            TryShot();
+            yield return new WaitForSeconds(_shotRate);
+        }
+    }
+    void TryShot(){
+        if(!_fcs.CurrentTarget()) return;
+        var distance = Vector3.Distance(_fcs.CurrentTarget().transform.position, transform.position);
+        if(_shootableRange < distance) return;
+
+        _fcs.Fire();
     }
 
     void SetTargetPositionRandomly(){

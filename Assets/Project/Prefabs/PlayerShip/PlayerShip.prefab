@@ -673,6 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radar: {fileID: 8311068337390897518}
+  _fuelTank: {fileID: 0}
 --- !u!114 &2032121256693859085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +691,7 @@ MonoBehaviour:
   gameSpace: {fileID: 0}
   _cursorPrefab: {fileID: 1293643080560051617, guid: 26537b133ec52b5468492768f324a2bf,
     type: 3}
+  _fcs: {fileID: 545420157}
 --- !u!114 &5765629682670731526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1505,6 +1507,16 @@ PrefabInstance:
         type: 3}
       propertyPath: _agentTargetPosition.y
       value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _fuelAmount
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _durationTimeToDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6416187238142970530, guid: 53679f1f6bcf44849adbbfdc85c71248,
         type: 3}

@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 4374441151256380647}
   - component: {fileID: 4743455460974824929}
   - component: {fileID: 7323161438733379017}
+  - component: {fileID: 6813769297165667257}
   m_Layer: 0
   m_Name: EnemyShip
   m_TagString: Enermy
@@ -349,7 +350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d90867f0d701514286bc7dd76f5af00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fuelAmount: 500
+  _fuelAmount: 100
+  _durationTimeToDestroy: 5
 --- !u!114 &9137083530515733374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +412,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shipMovement: {fileID: 3284278664849623251}
   gameSpace: {fileID: 0}
+  _fcs: {fileID: 6813769297165667257}
+  _shootableRange: 300
+  _shotRate: 1
+--- !u!114 &6813769297165667257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284278664849623250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c735781b6d45449848c04e3e0112f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radar: {fileID: 4743455460974824929}
+  _fuelTank: {fileID: 6412123716481675959}
 --- !u!1 &3441433449806954135
 GameObject:
   m_ObjectHideFlags: 0
