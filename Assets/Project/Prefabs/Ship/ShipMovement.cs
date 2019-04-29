@@ -69,13 +69,18 @@ public class ShipMovement : MonoBehaviour
         _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
 
         var toAgent = (_targetAgentInstance.transform.position - transform.position);
-        if(20.0f < _rigidbody.velocity.magnitude){
-            var torque = Vector3.Cross(transform.forward, toAgent.normalized);
-            Debug.DrawLine(transform.position,transform.position + _rigidbody.velocity.normalized*100f, Color.blue);
-            Debug.DrawLine(transform.position,transform.position + torque*100f);
-            _rigidbody.AddTorque(0, torque.y*Time.fixedDeltaTime*100000f, 0);
-            _rigidbody.AddTorque(-_rigidbody.angularVelocity*Time.fixedDeltaTime*10000f);
-        }
+        // if(20.0f < _rigidbody.velocity.magnitude){
+            // var torque = Vector3.Cross(transform.forward, toAgent.normalized);
+            // Debug.DrawLine(transform.position,transform.position + _rigidbody.velocity.normalized*100f, Color.blue);
+            // Debug.DrawLine(transform.position,transform.position + torque*100f);
+            // _rigidbody.AddTorque(0, torque.y*Time.fixedDeltaTime*100000f, 0);
+            // _rigidbody.AddTorque(-_rigidbody.angularVelocity*Time.fixedDeltaTime*10000f);
+            var velocityOnPlane = _rigidbody.velocity; 
+            velocityOnPlane.y = velocityOnPlane.y*0.5f;
+            Quaternion targetRot = Quaternion.LookRotation (velocityOnPlane);
+            var q = Quaternion.RotateTowards(_rigidbody.rotation, targetRot, 50f*Time.fixedDeltaTime);
+            _rigidbody.MoveRotation(q);
+        // }
     }
 
     void OnTriggerEnter (Collider other){
