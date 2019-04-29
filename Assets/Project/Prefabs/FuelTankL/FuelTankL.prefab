@@ -107,7 +107,7 @@ Transform:
   - {fileID: 25285829964005817}
   - {fileID: 25285829964005821}
   m_Father: {fileID: 1598748851300558551}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -0.96800005, y: -83.94501, z: 9.202001}
 --- !u!1 &25285829964111261
 GameObject:
@@ -195,6 +195,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1598748851300558551}
+  - component: {fileID: 964010647765618855}
+  - component: {fileID: 2097357199869717884}
+  - component: {fileID: 6514528912786695365}
+  - component: {fileID: 1913890675949036301}
+  - component: {fileID: 7972462229905538741}
   m_Layer: 0
   m_Name: FuelTankL
   m_TagString: Untagged
@@ -213,6 +218,7 @@ Transform:
   m_LocalPosition: {x: -1233.0409, y: -67.49437, z: 18.833105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 3099162410668314756}
   - {fileID: 25285829964005819}
   - {fileID: 2442889031688490837}
   - {fileID: 7936798110589438152}
@@ -220,6 +226,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964010647765618855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330727313457562471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc73cccf4345f2a4a9872507305b75f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 8205944732457833177, guid: d695876096558b541b93f809f401ce5b,
+    type: 3}
+  deltime: 3
+--- !u!114 &2097357199869717884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330727313457562471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d0f6ec1f351274d83c10e4122357b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelCapacity: 200
+--- !u!114 &6514528912786695365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330727313457562471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d12ca64e1e70054daf22ac5a870e972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  speed: 1
+--- !u!136 &1913890675949036301
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330727313457562471}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 4, y: -1, z: 0}
+--- !u!136 &7972462229905538741
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330727313457562471}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 4
+  m_Height: 10
+  m_Direction: 1
+  m_Center: {x: -3, y: 2, z: 0.3}
 --- !u!1 &733229944771491858
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +403,7 @@ Transform:
   - {fileID: 733229944771912758}
   - {fileID: 733229944771912754}
   m_Father: {fileID: 1598748851300558551}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 2.3140001, y: 75.312004, z: 6.5490003}
 --- !u!1 &733229944771491862
 GameObject:
@@ -513,7 +589,7 @@ Transform:
   - {fileID: 2442889031688490839}
   - {fileID: 2442889031688490835}
   m_Father: {fileID: 1598748851300558551}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -0.96800005, y: -83.94501, z: 9.202001}
 --- !u!1 &2442889031688262519
 GameObject:
@@ -592,6 +668,50 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &3179901559527652356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3099162410668314756}
+  - component: {fileID: 1792042215830242171}
+  m_Layer: 0
+  m_Name: TankColllider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3099162410668314756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179901559527652356}
+  m_LocalRotation: {x: -0.09548099, y: -0.008353508, z: -0.08675454, w: 0.99160844}
+  m_LocalPosition: {x: 1.76, y: -0.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1598748851300558551}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -11, y: 0, z: -10}
+--- !u!65 &1792042215830242171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179901559527652356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.5, y: 3, z: 2.5}
+  m_Center: {x: -0.5, y: -3.4, z: 0}
 --- !u!1 &7936798110589342952
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +742,7 @@ Transform:
   - {fileID: 7936798110589438156}
   - {fileID: 7936798110589438158}
   m_Father: {fileID: 1598748851300558551}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -8.295, y: 1.534, z: -10.5060005}
 --- !u!1 &7936798110589342956
 GameObject:
