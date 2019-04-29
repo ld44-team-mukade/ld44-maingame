@@ -39,10 +39,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         UpdateShipDict();
-        foreach (var key in _shipIdDict)
-        {
-            Debug.Log(key);
-        }
+        UpdateShipRadar();
 
         if(!_playerShip){
             GoToGameOver();
@@ -54,6 +51,14 @@ public class GameManager : MonoBehaviour
         foreach (var nullelemKey in nullElemKeys)
         {
             _shipIdDict.Remove(nullelemKey);
+        }
+    }
+
+    void UpdateShipRadar(){
+        foreach(var shipId in _shipIdDict.Values)
+        {
+            var radar = shipId.GetComponent<Radar>();
+            radar.nearShips = GetNearestShip(radar.transform.position, radar.GetDistance());
         }
     }
 
