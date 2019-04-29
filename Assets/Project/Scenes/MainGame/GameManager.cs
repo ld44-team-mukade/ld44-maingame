@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -58,5 +59,12 @@ public class GameManager : MonoBehaviour
 
     void GoToGameOver(){
         SceneManager.LoadScene("GameOver");
+    }
+
+    public List<ShipId> GetNearestShip(Vector3 center, float maxDistance){
+        Func<Vector3, bool> isNear = (Vector3 position) => (position-center).magnitude < maxDistance;
+        return _shipIdDict.Values.Select(shipId => shipId)
+                                 .Where(shipId=> isNear(shipId.transform.position))
+                                 .ToList();
     }
 }
