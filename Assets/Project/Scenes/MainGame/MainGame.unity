@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.040113796, g: 0.04034251, b: 0.024518568, a: 1}
+  m_IndirectSpecularColor: {r: 0.0014649758, g: 0.0020513877, b: 0.0031636597, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3052,11 +3052,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 65231252}
     m_Modifications:
-    - target: {fileID: 5691634695538095646, guid: a1cd885729d69ac44938efd27446772a,
-        type: 3}
-      propertyPath: m_Name
-      value: HeightIndicator
-      objectReference: {fileID: 0}
     - target: {fileID: 1255596553538727765, guid: a1cd885729d69ac44938efd27446772a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3111,6 +3106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5691634695538095646, guid: a1cd885729d69ac44938efd27446772a,
+        type: 3}
+      propertyPath: m_Name
+      value: HeightIndicator
       objectReference: {fileID: 0}
     - target: {fileID: 7425900394882652014, guid: a1cd885729d69ac44938efd27446772a,
         type: 3}
@@ -3468,6 +3468,18 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &3877114029932236202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3877114029932236200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b083bcb18e4c0b545b0a79e69539911c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4886426490247583157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3700,11 +3712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 65231252}
     m_Modifications:
-    - target: {fileID: 8016262386780267074, guid: 1a7d044ad06d1c54dbf7f06aba8a04c3,
-        type: 3}
-      propertyPath: m_Name
-      value: LockonCursor
-      objectReference: {fileID: 0}
     - target: {fileID: 6670461688250490792, guid: 1a7d044ad06d1c54dbf7f06aba8a04c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3759,6 +3766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016262386780267074, guid: 1a7d044ad06d1c54dbf7f06aba8a04c3,
+        type: 3}
+      propertyPath: m_Name
+      value: LockonCursor
       objectReference: {fileID: 0}
     - target: {fileID: 8016262386780267075, guid: 1a7d044ad06d1c54dbf7f06aba8a04c3,
         type: 3}
