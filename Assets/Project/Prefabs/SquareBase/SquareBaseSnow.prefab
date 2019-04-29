@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4612366774807189530}
   - component: {fileID: 1149478600351557133}
   m_Layer: 0
-  m_Name: SquareBaseGreen 1
+  m_Name: SquareBaseSnow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4612366774804989658}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1177.1185, y: 689.0712, z: 187.9093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 65ad780772982ea44ba27d63afa189fb, type: 2}
+  - {fileID: 2100000, guid: befeea88e427267408eccc17d211b2cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
