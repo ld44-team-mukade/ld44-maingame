@@ -193,6 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331116814}
   - component: {fileID: 331116813}
+  - component: {fileID: 331116815}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -213,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerShip: {fileID: 1329624098}
+  shipPool: {fileID: 0}
   _planes:
   - {fileID: 1543310776}
   - {fileID: 907376098}
@@ -231,6 +233,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331116815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331116812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a061c5a5b8b98d44891bb33893f7d5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c517872daba81094791e6c05dd5534a5,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!4 &434689695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6065830455087890634, guid: d328b6ae516795c418909c933a067a41,
@@ -2153,6 +2180,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1788729123}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1918239397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3877114029541014832, guid: 1a10e806dce8b2b41af0e591342125d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3877114029932236199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1918239400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918239397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a061c5a5b8b98d44891bb33893f7d5bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &2094205056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2612,6 +2669,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121745b05b9417d4c9bddf3bc3d4a492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPower: 0
+  EnginePowerRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  currentPower: 0
+  powerDelta: 0.005
 --- !u!54 &3284278664849623254
 Rigidbody:
   m_ObjectHideFlags: 0
