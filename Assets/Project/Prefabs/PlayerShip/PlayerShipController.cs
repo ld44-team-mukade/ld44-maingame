@@ -7,7 +7,7 @@ public class PlayerShipController : MonoBehaviour
     [SerializeField]
     ShipMovement _shipMovement;
     [SerializeField]
-    int currentHeightIndex = 0;
+    public int currentHeightIndex = 0;
 
     [SerializeField]
     public GameSpace gameSpace;

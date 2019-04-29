@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 993458795952875121, guid: 5a88dd332f3d81e4397e4db90cfb7628,
     type: 3}
-  initSpeed: 100
+  initSpeed: 150
   target: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   _turret: {fileID: 6100532643478594775}
