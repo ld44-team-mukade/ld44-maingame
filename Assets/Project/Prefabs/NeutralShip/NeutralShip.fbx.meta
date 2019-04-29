@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: 0d0c6fdfc452603489bf0863add9356d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cube.002_low
+    100002: Cube.004_low
+    100004: Cube.005_low
+    100006: Cube.006_low
+    100008: Cube.007_low
+    100010: Cube.008_low
+    100012: Cylinder.001_low
+    100014: Cylinder.002_low
+    100016: Cylinder.003_low
+    100018: Cylinder.004_low
+    100020: Cylinder.005_low
+    100022: Cylinder.006_low
+    100024: Cylinder.007_low
+    100026: Cylinder.008_low
+    100028: Cylinder.009_low
+    100030: Cylinder_low
+    100032: //RootNode
+    100034: Sphere_low
+    100036: Untitled
+    100038: Untitled.001
+    400000: Cube.002_low
+    400002: Cube.004_low
+    400004: Cube.005_low
+    400006: Cube.006_low
+    400008: Cube.007_low
+    400010: Cube.008_low
+    400012: Cylinder.001_low
+    400014: Cylinder.002_low
+    400016: Cylinder.003_low
+    400018: Cylinder.004_low
+    400020: Cylinder.005_low
+    400022: Cylinder.006_low
+    400024: Cylinder.007_low
+    400026: Cylinder.008_low
+    400028: Cylinder.009_low
+    400030: Cylinder_low
+    400032: //RootNode
+    400034: Sphere_low
+    400036: Untitled
+    400038: Untitled.001
+    2100000: MainHull
+    2100002: Net
+    2300000: Cube.002_low
+    2300002: Cube.004_low
+    2300004: Cube.005_low
+    2300006: Cube.006_low
+    2300008: Cube.007_low
+    2300010: Cube.008_low
+    2300012: Cylinder.001_low
+    2300014: Cylinder.002_low
+    2300016: Cylinder.003_low
+    2300018: Cylinder.004_low
+    2300020: Cylinder.005_low
+    2300022: Cylinder.006_low
+    2300024: Cylinder.007_low
+    2300026: Cylinder.008_low
+    2300028: Cylinder.009_low
+    2300030: Cylinder_low
+    2300032: Sphere_low
+    2300034: Untitled
+    2300036: Untitled.001
+    3300000: Cube.002_low
+    3300002: Cube.004_low
+    3300004: Cube.005_low
+    3300006: Cube.006_low
+    3300008: Cube.007_low
+    3300010: Cube.008_low
+    3300012: Cylinder.001_low
+    3300014: Cylinder.002_low
+    3300016: Cylinder.003_low
+    3300018: Cylinder.004_low
+    3300020: Cylinder.005_low
+    3300022: Cylinder.006_low
+    3300024: Cylinder.007_low
+    3300026: Cylinder.008_low
+    3300028: Cylinder.009_low
+    3300030: Cylinder_low
+    3300032: Sphere_low
+    3300034: Untitled
+    3300036: Untitled.001
+    4300000: Cylinder.002_low
+    4300002: Cylinder.003_low
+    4300004: Cylinder.004_low
+    4300006: Cylinder.005_low
+    4300008: Cylinder.006_low
+    4300010: Cylinder.007_low
+    4300012: Cylinder.008_low
+    4300014: Cube.005_low
+    4300016: Sphere_low
+    4300018: Cube.004_low
+    4300020: Cube.008_low
+    4300022: Cube.002_low
+    4300024: Cylinder_low
+    4300026: Cylinder.001_low
+    4300028: Cylinder.009_low
+    4300030: Cube.006_low
+    4300032: Cube.007_low
+    4300034: Untitled.001
+    4300036: Untitled
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainHull
+    second: {fileID: 2100000, guid: c8157e1157fb4b14c8b707b17d39e12f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Net
+    second: {fileID: 2100000, guid: 88018b11b81f17d4085e7c66aefa7e16, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
