@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private Dictionary<int, ShipId> _shipIdDict;
 
     [SerializeField]
-    private List<Transform> _planes;
+    private GameSpace _gameSpace;
     private List<Transform> _sponer;
     // Start is called before the first frame update
     private int _idCounter = 0;
@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
         {
             shipId.Id = _idCounter;
             _shipIdDict[_idCounter] = shipId;
+            var enemyShipController = shipId.GetComponent<EnemyShipController>();
+            if(enemyShipController){
+                enemyShipController.gameSpace = _gameSpace;
+            }
             _idCounter++;
         }
     }

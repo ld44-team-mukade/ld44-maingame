@@ -63,11 +63,10 @@ public class ShipMovement : MonoBehaviour
 
     void Move(){
         // transform.position = _targetAgentInstance.transform.position;
-        var diff = transform.position - _targetAgentInstance.transform.position;;
+        var diff = transform.position - _targetAgentInstance.transform.position;
         diff = Vector3.ClampMagnitude(diff, _maxDifference);
         _rigidbody.AddForce(-diff*Time.fixedDeltaTime * verticalMovementPower);
         _rigidbody.AddForce(-_rigidbody.velocity * Time.fixedDeltaTime * verticalMovementDamper);
-
 
         var toAgent = (_targetAgentInstance.transform.position - transform.position);
         if(20.0f < _rigidbody.velocity.magnitude){
@@ -100,13 +99,21 @@ public class ShipMovement : MonoBehaviour
         return _targetAgentInstance.transform.position;
     }
 
-    public void ChangeTargetAgentPosition(Vector3 position){
+    public bool ChangeTargetAgentPosition(Vector3 position){
         _targetAgentInstance.Resume();
-        Debug.Log(_targetAgentInstance.SetDestination(position));
+        return _targetAgentInstance.SetDestination(position);
     }
 
     public bool IsReachable(Vector3 position){
         NavMeshPath path = new NavMeshPath();
         return _targetAgentInstance.CalculatePath(transform.position, path);
+    }
+
+    public NavMeshPathStatus PathStatus(){
+        return _targetAgentInstance.pathStatus;
+    }
+
+    public bool IsMovingWithAgent(float distance){
+        return _targetAgentInstance.remainingDistance > distance;
     }
 }
