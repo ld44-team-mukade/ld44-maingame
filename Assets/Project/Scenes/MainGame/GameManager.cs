@@ -20,11 +20,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private int _idCounter = 0;
 
+    private float _startTime;
+
     void Awake(){
         _shipIdDict = new Dictionary<int, ShipId>();
     }
     void Start()
     {
+        _startTime = Time.time;
         _idCounter = 0;
         var shipIds = shipPool.GetComponentsInChildren<ShipId>().ToList();
         foreach (var shipId in shipIds)
@@ -46,6 +49,7 @@ public class GameManager : MonoBehaviour
         UpdateShipRadar();
 
         if(!_playerShip){
+            ScoreBoard.score = Mathf.FloorToInt((Time.time - _startTime)*25f);
             GoToGameOver();
         }
     }
