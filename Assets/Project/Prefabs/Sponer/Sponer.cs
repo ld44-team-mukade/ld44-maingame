@@ -10,18 +10,33 @@ public class Sponer : MonoBehaviour
     [SerializeField]
     private Transform _sponeInto;
 
+    [SerializeField]
+    private float _sponetime;
+
+    private float timeElapsed;
+
     void Awake(){
 
     }
 
     void Start()
     {
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timeElapsed += Time.deltaTime;
+
+        if(timeElapsed >= _sponetime)
+        {
+            Spone();
+            Debug.Log("Spone");
+            timeElapsed = 0.0f;
+        }
+
+
     }
 
     public void Spone(){
