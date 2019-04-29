@@ -20,14 +20,14 @@ public class BillBoard : MonoBehaviour
         Vector3 cameraPos = Camera.main.transform.position;
         Vector3 objPos = this.transform.position;
 
-        cameraPos.y = transform.position.y;
+        // cameraPos.y = transform.position.y;
         transform.LookAt(cameraPos);
 
         float dis = Vector3.Distance(cameraPos, objPos);
 
-        dis = dis / size;
+        // dis = dis / size;
 
-        transform.localScale = objScale + (Vector3.one * dis);
+        transform.localScale = objScale + (Vector3.one * dis * size);
     }
 
 
