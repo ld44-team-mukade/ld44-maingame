@@ -6,6 +6,7 @@ public class FuelTank: MonoBehaviour
 {
     [SerializeField]
     private float _fuelAmount = 100f;
+    private float _initialfuelAmount;
 
     [SerializeField]
     private float _durationTimeToDestroy = 5f;
@@ -16,7 +17,7 @@ public class FuelTank: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _initialfuelAmount = _fuelAmount;
     }
 
     // Update is called once per frame
@@ -38,6 +39,9 @@ public class FuelTank: MonoBehaviour
 
     public float Remaining(){
         return _fuelAmount;
+    }
+    public float InitialfuelAmount(){
+        return _initialfuelAmount;
     }
 
 }

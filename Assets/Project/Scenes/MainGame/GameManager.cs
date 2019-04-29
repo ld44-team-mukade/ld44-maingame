@@ -80,4 +80,8 @@ public class GameManager : MonoBehaviour
                                  .Where(shipId=> isNear(shipId.transform.position))
                                  .ToList();
     }
+
+    public float CurrentDuration(){
+        return Mathf.FloorToInt((Time.time - _startTime));
+    }
 }
