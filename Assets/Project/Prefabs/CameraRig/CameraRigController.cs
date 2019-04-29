@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraRigController : MonoBehaviour
 {
     public Transform target;
+    //回転カメラ用
+    public GameObject rcamera;
 
     [SerializeField]
     private Camera _camera;
@@ -14,6 +16,18 @@ public class CameraRigController : MonoBehaviour
 
     [SerializeField]
     private float _smoothTime = 0.5f;
+
+    [SerializeField]
+    private float _rotatespeed;
+
+    [SerializeField]
+    private float scrollSpeed;
+
+    [SerializeField]
+    private float scrollMin;
+
+    [SerializeField]
+    private float scrollMax;
 
     private Vector3 _velocity;
 
@@ -27,10 +41,27 @@ public class CameraRigController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!target) return;
+
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+        if (!target) return;
         var direction = _camera.transform.rotation * Vector3.forward;
         // _camera.transform.position = target.position - direction * distance;
         _camera.transform.position = Vector3.SmoothDamp(_camera.transform.position, target.position - direction * distance, ref _velocity, _smoothTime);
         // _camera.transform.position = target.position - direction * distance;
+
+        rcamera.GetComponent<CameraRotate>().CameraMove(target,_rotatespeed);
+
+        distance -= scroll * scrollSpeed;
+
+        if (distance > scrollMax)
+        {
+            distance = scrollMax;
+        }
+        else if (distance < scrollMin)
+        {
+            distance = scrollMin;
+        }
+
     }
 }
