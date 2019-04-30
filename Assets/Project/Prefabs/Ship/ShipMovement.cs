@@ -124,6 +124,7 @@ public class ShipMovement : MonoBehaviour
     }
 
     public bool IsMovingWithAgent(float distance){
+        if(!_targetAgentInstance)return false;
         return _targetAgentInstance.remainingDistance > distance;
     }
 }
