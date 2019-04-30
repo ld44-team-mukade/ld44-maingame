@@ -25,6 +25,7 @@ namespace AK
         static const AkUniqueID CANNON = 2393348022U;
         static const AkUniqueID DAMAGE = 1786804762U;
         static const AkUniqueID EINGINE = 71235304U;
+        static const AkUniqueID EINGINE_OFF = 1535604910U;
         static const AkUniqueID ENGINE_ENEMY = 3234335490U;
         static const AkUniqueID GETFUEL = 1825690395U;
     } // namespace EVENTS
