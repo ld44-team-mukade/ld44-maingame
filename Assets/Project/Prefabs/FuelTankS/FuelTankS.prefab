@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3142620609866285867}
-  - component: {fileID: 951209568200646708}
   - component: {fileID: 1677084990244069056}
   - component: {fileID: 3100405655100625680}
   - component: {fileID: 7286043538476596867}
@@ -37,21 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &951209568200646708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383650889173326468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc73cccf4345f2a4a9872507305b75f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particle: {fileID: 8205944732457833177, guid: d695876096558b541b93f809f401ce5b,
-    type: 3}
-  deltime: 3
 --- !u!114 &1677084990244069056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuelCapacity: 50
+  delTime: 8
 --- !u!114 &3100405655100625680
 MonoBehaviour:
   m_ObjectHideFlags: 0

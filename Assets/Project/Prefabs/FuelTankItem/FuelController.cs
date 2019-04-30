@@ -5,6 +5,9 @@ using UnityEngine;
 public class FuelController : MonoBehaviour
 {
     public float fuelCapacity;
+    
+    [SerializeField]
+    private float delTime;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -20,7 +23,7 @@ public class FuelController : MonoBehaviour
         // Start is called before the first frame update
         void Start()
     {
-        
+        Destroy(this.gameObject, delTime);
     }
 
     // Update is called once per frame
