@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b0915ca9a67c44d9ce5c076d4b83d2, type: 3}
+  m_Name: 2A554CA9-6885-4C5B-9570-B7A1F721980C
+  m_EditorClassIdentifier: 
+  objectName: damage
+  id: 1786804762
+  guid: 2A554CA9-6885-4C5B-9570-B7A1F721980C

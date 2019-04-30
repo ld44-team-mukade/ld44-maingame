@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 7050011374324138616}
   - component: {fileID: 5676639436331943616}
   - component: {fileID: 6995036259490436226}
+  - component: {fileID: 41559206730782590}
   m_Layer: 0
   m_Name: EnemyShip
   m_TagString: Enermy
@@ -523,6 +524,36 @@ MonoBehaviour:
   multiPositionTypeLabel: 0
   LargeModePositions: []
   multiPositionArray: []
+--- !u!114 &41559206730782590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284278664849623250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309afe6598442234893bf1b87de31c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: d1bbb3b5
+  useOtherObject: 1
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 540ca1a7e8706414db8df42293a68fe0,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1 &3441433449806954135
 GameObject:
   m_ObjectHideFlags: 0
