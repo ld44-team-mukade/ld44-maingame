@@ -3575,7 +3575,7 @@ PrefabInstance:
     - target: {fileID: 3877114030789376107, guid: 1a10e806dce8b2b41af0e591342125d1,
         type: 3}
       propertyPath: m_listeners.useDefaultListeners
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a10e806dce8b2b41af0e591342125d1, type: 3}
