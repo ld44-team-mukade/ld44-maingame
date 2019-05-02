@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04008615, g: 0.0403148, b: 0.02450079, a: 1}
+  m_IndirectSpecularColor: {r: 0.040113796, g: 0.04034251, b: 0.024518568, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1465,7 +1465,6 @@ MonoBehaviour:
   _sponetime: 45
   _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 1660628178}
 --- !u!1001 &1511714334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1839,7 +1838,6 @@ MonoBehaviour:
   _sponetime: 45
   _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 1660628178}
 --- !u!1 &1550758675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,7 +2651,6 @@ MonoBehaviour:
   _sponetime: 45
   _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 1660628178}
 --- !u!1 &1803209995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3987,7 +3984,7 @@ PrefabInstance:
     - target: {fileID: 6670461688250490792, guid: 1a7d044ad06d1c54dbf7f06aba8a04c3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6670461688250490792, guid: 1a7d044ad06d1c54dbf7f06aba8a04c3,
         type: 3}
@@ -4186,6 +4183,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 3919037196376422728, guid: 467bb976f5083e9499cd0bde19f3b7b1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8006887091011322716, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4240,11 +4242,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3919037196376422728, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FuelExplosion : MonoBehaviour
+public class Explosion : MonoBehaviour
 {
 
-    public GameObject particle;
+    public ParticleSystem particle;
     public float deltime;
 
     private void OnCollisionEnter(Collision collision)
@@ -35,7 +35,7 @@ public class FuelExplosion : MonoBehaviour
     public void ItemExplosion()
     {
         Destroy(this.gameObject);
-        GameObject particle1 = Instantiate(particle, transform.position, transform.rotation);
+        var particle1 = Instantiate(particle, transform.position, transform.rotation) as ParticleSystem;
 
     }
 }
