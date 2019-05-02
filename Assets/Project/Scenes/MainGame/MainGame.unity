@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerShip: {fileID: 1329624098}
+  spawnerPool: {fileID: 536525815}
   shipPool: {fileID: 1660628179}
   _gameSpace: {fileID: 1716380639}
 --- !u!4 &331116814
@@ -772,6 +773,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShip (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6464846717655395977, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -912,6 +918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShip (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6464846717655395977, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
         type: 3}
@@ -1460,11 +1471,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sponed: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
+  _sponed: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
   _sponeInto: {fileID: 1660628179}
   _sponetime: 45
   _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
+  shipObj: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1001 &1511714334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1671,6 +1684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShip (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6464846717655395977, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1833,11 +1851,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sponed: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
+  _sponed: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
   _sponeInto: {fileID: 1660628179}
   _sponetime: 45
   _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
+  shipObj: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &1550758675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,6 +2404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShip (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6464846717655395977, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2646,11 +2671,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sponed: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
+  _sponed: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
   _sponeInto: {fileID: 1660628179}
   _sponetime: 45
   _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
+  shipObj: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &1803209995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3790,6 +3817,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShip
       objectReference: {fileID: 0}
+    - target: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6464846717655395977, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4169,6 +4201,12 @@ PrefabInstance:
       propertyPath: _sponelimit
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: _sponed
+      value: 
+      objectReference: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
 --- !u!1001 &8215645560617224096
