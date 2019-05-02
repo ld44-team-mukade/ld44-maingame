@@ -37,6 +37,5 @@ public class FuelExplosion : MonoBehaviour
         Destroy(this.gameObject);
         GameObject particle1 = Instantiate(particle, transform.position, transform.rotation);
 
-        Destroy(particle1, deltime);
     }
 }

@@ -24,6 +24,9 @@ public class CannonController : MonoBehaviour
     [SerializeField]
     private Transform _muzzle;
 
+    [SerializeField]
+    private GameObject particle;
+
     private AkAmbient akAmbient;
 
     void Awake()
@@ -54,6 +57,7 @@ public class CannonController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.A))
         {
             Fire("");
+            StartParticle();
         }
     }
 
@@ -68,6 +72,11 @@ public class CannonController : MonoBehaviour
         bulletInstance.velocity = _muzzle.transform.forward * initSpeed;
         bulletInstance.transform.parent = null;
         return bulletInstance;
+    }
+
+    public void StartParticle()
+    {
+        GameObject particle1 = Instantiate(particle, transform.position, transform.rotation);
     }
 
     void RotateTurret(Vector3 targetDirection){

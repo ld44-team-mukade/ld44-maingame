@@ -10,6 +10,9 @@ public class BulletAttack : MonoBehaviour
     public float cost = 1f;
 
     [SerializeField]
+    private GameObject particle;
+
+    [SerializeField]
     private Collider collider;
 
     public int age = 0;
@@ -24,6 +27,7 @@ public class BulletAttack : MonoBehaviour
         ship.DecrementFuel(fuelparam);
         //砲弾の削除
         BulletDestroy();
+        StartParticle(collision);
     }
 
 
@@ -37,6 +41,10 @@ public class BulletAttack : MonoBehaviour
     {
         if(5 < age) collider.enabled = true;
         age++;
+    }
+    public void StartParticle(Collision col)
+    {
+        GameObject particle1 = Instantiate(particle, col.transform.position, transform.rotation);
     }
     public void BulletDestroy()
     {

@@ -14,6 +14,9 @@ public class FuelTank: MonoBehaviour
     [SerializeField]
     private ShipMovement _shipMovement;
 
+    [SerializeField]
+    private GameObject particle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +32,16 @@ public class FuelTank: MonoBehaviour
     public void DecrementFuel(float amount){
         _fuelAmount -= Mathf.Max(0f, amount);
         if(_fuelAmount <= 0f){
+            StartParticle();
             Destroy(gameObject, _durationTimeToDestroy);
             _shipMovement.DestroyAgent();
         }
     }
+    public void StartParticle()
+    {
+        GameObject particle1 = Instantiate(particle, transform.position, transform.rotation);
+    }
+
     public void IncrementFuel(float amount){
         _fuelAmount += Mathf.Max(0f, amount);
     }
