@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     private Transform _playerShip;
 
     [SerializeField]
+    private Transform spawnerPool;
+
+    [SerializeField]
     private Transform shipPool;
     private Dictionary<int, ShipId> _shipIdDict;
 
@@ -28,17 +31,25 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _startTime = Time.time;
+        SetupShips();
+        SetUpSpawners();
+    }
+
+    void SetupShips(){
         _idCounter = 0;
         var shipIds = shipPool.GetComponentsInChildren<ShipId>().ToList();
         foreach (var shipId in shipIds)
         {
-            shipId.Id = _idCounter;
-            _shipIdDict[_idCounter] = shipId;
-            var enemyShipController = shipId.GetComponent<EnemyShipController>();
-            if(enemyShipController){
-                enemyShipController.gameSpace = _gameSpace;
-            }
+            RegisterShip(shipId);
             _idCounter++;
+        }
+    }
+
+    void SetUpSpawners(){
+        var spawners = spawnerPool.GetComponentsInChildren<Sponer>().ToList();
+        foreach (var spawner in spawners)
+        {
+            SetupSpawner(spawner);
         }
     }
 
@@ -83,5 +94,18 @@ public class GameManager : MonoBehaviour
 
     public float CurrentDuration(){
         return Mathf.FloorToInt((Time.time - _startTime));
+    }
+
+    public void RegisterShip(ShipId shipId){
+        shipId.Id = _idCounter;
+        _shipIdDict[_idCounter] = shipId;
+        var enemyShipController = shipId.GetComponent<EnemyShipController>();
+        if (enemyShipController)
+        {
+            enemyShipController.gameSpace = _gameSpace;
+        }
+    }
+    public void SetupSpawner(Sponer sponer){
+        sponer.gameManager = this;
     }
 }
