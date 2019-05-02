@@ -5,11 +5,12 @@ using UnityEngine;
 public class FuelDrop : MonoBehaviour
 {
     [SerializeField]
-    private GameObject fuelTankItem;
+    private GameObject[] fuelTankItem;
 
     [SerializeField]
     private float dropPos;
 
+    private int num;
     private bool dropItem = false ;
 
     // Start is called before the first frame update
@@ -23,17 +24,25 @@ public class FuelDrop : MonoBehaviour
     {
 
         float _remaining = this.gameObject.GetComponent<FuelTank>().Remaining();
-        Vector3 itemPos = transform.position;
 
         if (_remaining <= 0 && dropItem == false)
         {
-            Debug.Log("OK");
-            itemPos.x += dropPos;
-
-            Instantiate(fuelTankItem, itemPos, transform.rotation);
-
-            dropItem = true;
+            ItemSpone();
         }
 
+    }
+
+    void ItemSpone()
+    {
+
+        Vector3 itemPos = transform.position;
+
+        Debug.Log("OK");
+        itemPos.x += dropPos;
+
+        num = Random.Range(0, fuelTankItem.Length);
+        Instantiate(fuelTankItem[num], itemPos, transform.rotation);
+
+        dropItem = true;
     }
 }

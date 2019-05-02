@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.040113796, g: 0.04034251, b: 0.024518568, a: 1}
+  m_IndirectSpecularColor: {r: 0.04008615, g: 0.0403148, b: 0.02450079, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1462,10 +1462,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sponed: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
   _sponeInto: {fileID: 1660628179}
-  _sponetime: 120
-  _sponelimit: 0
+  _sponetime: 45
+  _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 0}
+  shipObj: {fileID: 1660628178}
 --- !u!1001 &1511714334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1836,10 +1836,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sponed: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
   _sponeInto: {fileID: 1660628179}
-  _sponetime: 120
-  _sponelimit: 0
+  _sponetime: 45
+  _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 0}
+  shipObj: {fileID: 1660628178}
 --- !u!1 &1550758675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,10 +2650,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sponed: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
   _sponeInto: {fileID: 1660628179}
-  _sponetime: 120
-  _sponelimit: 0
+  _sponetime: 45
+  _sponelimit: 10
   _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 0}
+  shipObj: {fileID: 1660628178}
 --- !u!1 &1803209995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4157,21 @@ PrefabInstance:
       propertyPath: _gameSpace
       value: 
       objectReference: {fileID: 1716380639}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: shipObj
+      value: 
+      objectReference: {fileID: 1660628178}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: _sponetime
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: _sponelimit
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
 --- !u!1001 &8215645560617224096
@@ -4225,6 +4240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3919037196376422728, guid: 467bb976f5083e9499cd0bde19f3b7b1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}

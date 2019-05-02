@@ -465,9 +465,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b5049f86eb81143a9029f7bfd02811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuelTankItem: {fileID: 330727313457562471, guid: 86bc896481a68ac4f82332bcc3cc8165,
-    type: 3}
-  dropPos: 20
+  fuelTankItem:
+  - {fileID: 330727313457562471, guid: 86bc896481a68ac4f82332bcc3cc8165, type: 3}
+  - {fileID: 8491911881635374556, guid: fc1a1a93ad084ff4ea73b00f434add81, type: 3}
+  - {fileID: 8383650889173326468, guid: c20ea4891dc9cd942aac0385f315ee16, type: 3}
+  delTime: 5
+  dropPos: 100
 --- !u!114 &5676639436331943616
 MonoBehaviour:
   m_ObjectHideFlags: 0
