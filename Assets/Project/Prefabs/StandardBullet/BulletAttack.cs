@@ -16,18 +16,23 @@ public class BulletAttack : MonoBehaviour
     private Collider collider;
 
     public int age = 0;
-    //相手のShipにあたった時にShipの「DecrementFuel」を呼び出す
     private void OnCollisionEnter(Collision collision)
     {
+        //相手のShipにあたった時にShipの「DecrementFuel」を呼び出す
+        TryOnCollisionEnterShip(collision);
+
+        //砲弾の削除
+        BulletDestroy();
+        StartParticle(collision);
+    }
+
+    private void TryOnCollisionEnterShip(Collision collision){
         var ship = collision.gameObject.GetComponent<FuelTank>();
         if (ship == null) return;
         if (ship.tag == tag) return;
 
         //Shipの燃料減らす
         ship.DecrementFuel(fuelparam);
-        //砲弾の削除
-        BulletDestroy();
-        StartParticle(collision);
     }
 
 

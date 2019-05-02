@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelCapacity: 50
   delTime: 8
+  explosionPrefab: {fileID: 8205944732457833177, guid: d695876096558b541b93f809f401ce5b,
+    type: 3}
 --- !u!114 &3100405655100625680
 MonoBehaviour:
   m_ObjectHideFlags: 0

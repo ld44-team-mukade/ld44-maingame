@@ -1468,6 +1468,47 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: isManualControll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _fuelTank
+      value: 
+      objectReference: {fileID: 3919037196376422728}
+    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _agentTargetPosition.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _agentTargetPosition.y
+      value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _fuelAmount
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _durationTimeToDestroy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: _shipMovement
+      value: 
+      objectReference: {fileID: 2596070688006617541}
+    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
+        type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 8205944732457833177, guid: 001b4e63aba7feb4da95b832aa4e2366,
+        type: 3}
     - target: {fileID: 2098109497502316081, guid: 53679f1f6bcf44849adbbfdc85c71248,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1523,41 +1564,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
-        type: 3}
-      propertyPath: isManualControll
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
-        type: 3}
-      propertyPath: _fuelTank
-      value: 
-      objectReference: {fileID: 3919037196376422728}
-    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
-        type: 3}
-      propertyPath: _agentTargetPosition.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 6198306116052159656, guid: 53679f1f6bcf44849adbbfdc85c71248,
-        type: 3}
-      propertyPath: _agentTargetPosition.y
-      value: -210
-      objectReference: {fileID: 0}
-    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
-        type: 3}
-      propertyPath: _fuelAmount
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
-        type: 3}
-      propertyPath: _durationTimeToDestroy
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4927185980493171749, guid: 53679f1f6bcf44849adbbfdc85c71248,
-        type: 3}
-      propertyPath: _shipMovement
-      value: 
-      objectReference: {fileID: 2596070688006617541}
     - target: {fileID: 4344219055649017052, guid: 53679f1f6bcf44849adbbfdc85c71248,
         type: 3}
       propertyPath: m_listeners.useDefaultListeners

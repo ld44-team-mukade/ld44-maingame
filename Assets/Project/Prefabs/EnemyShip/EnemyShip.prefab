@@ -376,6 +376,8 @@ MonoBehaviour:
   _fuelAmount: 100
   _durationTimeToDestroy: 5
   _shipMovement: {fileID: 3284278664849623251}
+  particle: {fileID: 8205944732457833177, guid: 001b4e63aba7feb4da95b832aa4e2366,
+    type: 3}
 --- !u!114 &9137083530515733374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +471,6 @@ MonoBehaviour:
   - {fileID: 330727313457562471, guid: 86bc896481a68ac4f82332bcc3cc8165, type: 3}
   - {fileID: 8491911881635374556, guid: fc1a1a93ad084ff4ea73b00f434add81, type: 3}
   - {fileID: 8383650889173326468, guid: c20ea4891dc9cd942aac0385f315ee16, type: 3}
-  delTime: 5
   dropPos: 100
 --- !u!114 &5676639436331943616
 MonoBehaviour:
@@ -1059,10 +1060,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4811688304718281157}
     m_Modifications:
-    - target: {fileID: 100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
-      propertyPath: m_Name
-      value: Prop
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1119,6 +1116,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
+      propertyPath: m_Name
+      value: Prop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
 --- !u!1 &1229170383791134233 stripped
@@ -1134,10 +1135,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6464846717655395977}
     m_Modifications:
-    - target: {fileID: 100018, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
-      propertyPath: m_Name
-      value: EnemyShip1
-      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1193,6 +1190,10 @@ PrefabInstance:
     - target: {fileID: 400018, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Name
+      value: EnemyShip1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
