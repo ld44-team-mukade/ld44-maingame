@@ -24,16 +24,12 @@ public class Sponer : MonoBehaviour
     [SerializeField]
     private GameObject shipObj;
 
-    [HideInInspector]
-    public GameManager gameManager;
-
     void Awake(){
 
     }
 
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -71,6 +67,6 @@ public class Sponer : MonoBehaviour
             sponedInstance.transform.parent = null;
         }
         sponedInstance.GetComponent<EnemyShipController>().gameSpace = _gameSpace;
-        gameManager.RegisterShip(sponedInstance);
+        GameManager.main.RegisterShip(sponedInstance);
     }
 }

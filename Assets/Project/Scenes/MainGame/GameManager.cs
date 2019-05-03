@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    static public GameManager main;
+
     [SerializeField]
     private Transform _playerShip;
 
@@ -26,13 +28,13 @@ public class GameManager : MonoBehaviour
     private float _startTime;
 
     void Awake(){
+        main = this;
         _shipIdDict = new Dictionary<int, ShipId>();
     }
     void Start()
     {
         _startTime = Time.time;
         SetupShips();
-        SetUpSpawners();
     }
 
     void SetupShips(){
@@ -42,14 +44,6 @@ public class GameManager : MonoBehaviour
         {
             RegisterShip(shipId);
             _idCounter++;
-        }
-    }
-
-    void SetUpSpawners(){
-        var spawners = spawnerPool.GetComponentsInChildren<Sponer>().ToList();
-        foreach (var spawner in spawners)
-        {
-            SetupSpawner(spawner);
         }
     }
 
@@ -105,8 +99,5 @@ public class GameManager : MonoBehaviour
         {
             enemyShipController.gameSpace = _gameSpace;
         }
-    }
-    public void SetupSpawner(Sponer sponer){
-        sponer.gameManager = this;
     }
 }
