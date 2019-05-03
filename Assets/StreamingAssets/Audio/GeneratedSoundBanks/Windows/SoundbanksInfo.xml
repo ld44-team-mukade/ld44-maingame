@@ -52,7 +52,7 @@
 				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon" MaxAttenuation="5000.000000"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
 				<Event Id="3729271750" Name="damage_player" ObjectPath="\Events\Default Work Unit\damage_player"/>
-				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
+				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine" MaxAttenuation="2000.000000"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -84,10 +84,6 @@
 					<ShortName>getfuel.wav</ShortName>
 					<Path>SFX\getfuel_10C4C929.wem</Path>
 				</File>
-				<File Id="1007660806" Language="SFX">
-					<ShortName>ld44-test-bgm-fix.wav</ShortName>
-					<Path>SFX\ld44-test-bgm-fix_D79FB2B7.wem</Path>
-				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="1731745708" Language="SFX">
@@ -107,9 +103,10 @@
 				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon" MaxAttenuation="5000.000000"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
 				<Event Id="3729271750" Name="damage_player" ObjectPath="\Events\Default Work Unit\damage_player"/>
-				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
+				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine" MaxAttenuation="2000.000000"/>
 				<Event Id="1535604910" Name="eingine_off" ObjectPath="\Events\Default Work Unit\eingine_off" MaxAttenuation="0.000000"/>
 				<Event Id="3234335490" Name="engine_enemy" ObjectPath="\Events\Default Work Unit\engine_enemy" MaxAttenuation="2000.000000"/>
+				<Event Id="1143111560" Name="engine_enemy_off" ObjectPath="\Events\Default Work Unit\engine_enemy_off" MaxAttenuation="0.000000"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -176,7 +173,7 @@
 				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon" MaxAttenuation="5000.000000"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
 				<Event Id="3729271750" Name="damage_player" ObjectPath="\Events\Default Work Unit\damage_player"/>
-				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
+				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine" MaxAttenuation="2000.000000"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -243,7 +240,7 @@
 				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon" MaxAttenuation="5000.000000"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
 				<Event Id="3729271750" Name="damage_player" ObjectPath="\Events\Default Work Unit\damage_player"/>
-				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
+				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine" MaxAttenuation="2000.000000"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>

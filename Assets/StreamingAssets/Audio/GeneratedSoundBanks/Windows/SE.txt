@@ -20,5 +20,4 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	745958935	cannons	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\cannons		848452
 	931475437	ok	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\ok_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\ok		384064
 	934814011	getfuel	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\getfuel_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\getfuel		384064
-	1007660806	ld44-test-bgm-fix	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\ld44-test-bgm-fix_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music Playlist-maingame\ld44-test-bgm-fix\ld44-test-bgm-fix		9216068
 
