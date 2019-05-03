@@ -9,13 +9,13 @@ public class FuelController : MonoBehaviour
     [SerializeField]
     private float delTime;
 
-    [SerializeField]
-    private GameObject explosionPrefab;
+    //[SerializeField]
+    //private GameObject explosionPrefab;
 
     private void OnCollisionEnter(Collision collision)
     {
         TryOnCollisionEnterPlayer(collision);
-        TryOnCollisionEnterBullet(collision);
+        //TryOnCollisionEnterBullet(collision);
     }
 
     private void TryOnCollisionEnterPlayer(Collision collision)
@@ -28,7 +28,7 @@ public class FuelController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
+/*
     private void TryOnCollisionEnterBullet(Collision collision)
     {
         var bullet = collision.gameObject.GetComponent<BulletAttack>();
@@ -36,7 +36,8 @@ public class FuelController : MonoBehaviour
         Destroy(this.gameObject);
         var explosionInstance = Instantiate(explosionPrefab, transform);
     }
-        // Start is called before the first frame update
+ */
+    // Start is called before the first frame update
         void Start()
     {
         Destroy(this.gameObject, delTime);

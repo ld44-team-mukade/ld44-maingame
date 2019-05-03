@@ -57,7 +57,7 @@ public class CannonController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.A))
         {
             Fire("");
-            StartParticle();
+            //StartParticle();
         }
     }
 
@@ -72,12 +72,13 @@ public class CannonController : MonoBehaviour
         bulletInstance.velocity = _muzzle.transform.forward * initSpeed;
         bulletInstance.transform.parent = null;
         ChangeLayersRecursively(bulletInstance.transform, tag + "Bullet");
+        StartParticle();
         return bulletInstance;
     }
 
     public void StartParticle()
     {
-        GameObject particle1 = Instantiate(particle, transform.position, transform.rotation);
+        GameObject particle1 = Instantiate(particle, _muzzle.transform.position, transform.rotation);
     }
 
     void RotateTurret(Vector3 targetDirection){
