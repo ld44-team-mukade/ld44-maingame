@@ -6,9 +6,8 @@ public class Explosion : MonoBehaviour
 {
 
     public ParticleSystem particle;
-    public float deltime;
 
-    private void OnCollisionEnter(Collision collision)
+ /*   private void OnCollisionEnter(Collision collision)
     {
         var bullet = collision.gameObject.GetComponent<BulletAttack>();
 
@@ -16,14 +15,15 @@ public class Explosion : MonoBehaviour
         {
             bullet.BulletDestroy();
             ItemExplosion();
-            
-        }
-    }
 
+        }
+
+    }
+*/
     // Start is called before the first frame update
     void Start()
     {
-        
+        ItemExplosion();
     }
 
     // Update is called once per frame
@@ -34,7 +34,6 @@ public class Explosion : MonoBehaviour
 
     public void ItemExplosion()
     {
-        Destroy(this.gameObject);
         var particle1 = Instantiate(particle, transform.position, transform.rotation) as ParticleSystem;
 
     }

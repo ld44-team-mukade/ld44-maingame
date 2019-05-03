@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc73cccf4345f2a4a9872507305b75f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 0}
+  particle: {fileID: 7706546091871810442}
   deltime: 1
 --- !u!1001 &7706546091853851720
 PrefabInstance:
@@ -53,10 +53,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5237848929604255676}
     m_Modifications:
-    - target: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
-      propertyPath: m_Name
-      value: WFX_Nuke
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -113,11 +109,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
+      propertyPath: m_Name
+      value: WFX_Nuke
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
 --- !u!4 &7706546091853461194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 6ecf76dc4f268d340b2666896a954bcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7706546091853851720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7706546091871810442 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800002, guid: 6ecf76dc4f268d340b2666896a954bcc,
     type: 3}
   m_PrefabInstance: {fileID: 7706546091853851720}
   m_PrefabAsset: {fileID: 0}
