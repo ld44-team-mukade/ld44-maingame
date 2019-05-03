@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4144467879412477220}
   - component: {fileID: 7287628133924570328}
   - component: {fileID: 4104569260668411209}
+  - component: {fileID: 8555929562207142803}
+  - component: {fileID: 6856162532889953136}
   m_Layer: 0
   m_Name: FuelTankM
   m_TagString: Untagged
@@ -81,6 +83,58 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8555929562207142803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491911881635374556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8a90b96b5a9f448acf83859826b823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &6856162532889953136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491911881635374556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309afe6598442234893bf1b87de31c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 958ca0ea
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 77a941fd10d308e44a7f2091b17bed6f,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
 --- !u!1001 &3649459511897729669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88,10 +142,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6455677067359888419}
     m_Modifications:
-    - target: {fileID: 100004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
-      propertyPath: m_Name
-      value: DrumCan
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.005859375
@@ -136,6 +186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
+      propertyPath: m_Name
+      value: DrumCan
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
 --- !u!4 &3649459511897600001 stripped
@@ -151,10 +205,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6455677067359888419}
     m_Modifications:
-    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
-      propertyPath: m_Name
-      value: Parachute
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.15698242
@@ -211,6 +261,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7259107
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Name
+      value: Parachute
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
 --- !u!4 &4122779925722901746 stripped
@@ -226,10 +280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6455677067359888419}
     m_Modifications:
-    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
-      propertyPath: m_Name
-      value: Parachute (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -286,6 +336,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.29253
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Name
+      value: Parachute (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
 --- !u!4 &4729360037924225648 stripped
@@ -301,10 +355,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6455677067359888419}
     m_Modifications:
-    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
-      propertyPath: m_Name
-      value: Parachute (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.026000977
@@ -360,6 +410,10 @@ PrefabInstance:
     - target: {fileID: 400002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.67626023
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Name
+      value: Parachute (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
