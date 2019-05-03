@@ -36,5 +36,6 @@ public class Explosion : MonoBehaviour
     {
         var particle1 = Instantiate(particle, transform.position, transform.rotation) as ParticleSystem;
 
+        Destroy(this.gameObject, particle.main.duration);
     }
 }
