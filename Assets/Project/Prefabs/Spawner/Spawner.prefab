@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8101229210329009569}
   - component: {fileID: 1509544797079605303}
   m_Layer: 0
-  m_Name: Sponer
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -43,9 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sponed: {fileID: 3284278664849623250, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
-  _sponeInto: {fileID: 0}
-  _sponetime: 120
-  _sponelimit: 7
+  _spawned: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+    type: 3}
+  _spawnInto: {fileID: 6464846717655395977, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+    type: 3}
+  _spawntime: 45
+  _spawnlimit: 10
   _gameSpace: {fileID: 0}
   shipObj: {fileID: 0}
