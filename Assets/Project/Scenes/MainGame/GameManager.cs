@@ -66,7 +66,8 @@ public class GameManager : MonoBehaviour
     }
 
     void UpdateShipDict(){
-        var nullElemKeys = _shipIdDict.Keys.Select((key) => _shipIdDict[key]?-1:key).Where(key => key != -1).ToList();
+        var nullElemKeys = _shipIdDict.Keys.Where((key) => !_shipIdDict[key].IsLiving()).ToList();
+        // var nullElemKeys = _shipIdDict.Keys.Select((key) => _shipIdDict[key]?-1:key).Where(key => key != -1).ToList();
         foreach (var nullelemKey in nullElemKeys)
         {
             _shipIdDict.Remove(nullelemKey);
