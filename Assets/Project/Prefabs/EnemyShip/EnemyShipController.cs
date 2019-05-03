@@ -45,6 +45,7 @@ public class EnemyShipController : MonoBehaviour
             yield return new WaitForSeconds(_shotRate);
         }
     }
+
     void TryShot(){
         if(!_fcs.CurrentTarget()) return;
         var distance = Vector3.Distance(_fcs.CurrentTarget().transform.position, transform.position);
