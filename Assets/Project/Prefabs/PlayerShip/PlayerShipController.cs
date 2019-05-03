@@ -18,6 +18,11 @@ public class PlayerShipController : MonoBehaviour
     [SerializeField]
     private FCS _fcs;
 
+    [SerializeField]
+    private FuelTank _fuelTank;
+
+    public float fuelConsumption = 0f;
+
     void Awake(){
         _shipMovement.isManualControll = true;
     }
@@ -56,9 +61,8 @@ public class PlayerShipController : MonoBehaviour
         
         var targetPosition = input*50f;
         targetPosition.y = gameSpace.heights[currentHeightIndex] - transform.position.y;
+        _fuelTank.DecrementFuel((targetPosition.magnitude) * fuelConsumption*Time.deltaTime);
         _shipMovement.manualForce = targetPosition;
-
-
     }
 
     bool TryToChangeHeight(int index){

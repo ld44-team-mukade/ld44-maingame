@@ -28,6 +28,8 @@ public class FCS : MonoBehaviour
         if(0 < selectableShips.Count){
             var sorted = selectableShips.OrderBy(ship => Vector3.Distance(ship.transform.position, transform.position)).ToList();
             _currentTarget = sorted[0].transform;
+        }else{
+            _currentTarget = null;
         }
 
         if(_currentTarget){

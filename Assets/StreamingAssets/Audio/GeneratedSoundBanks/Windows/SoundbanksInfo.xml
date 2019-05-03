@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Users\nobut\git\ld44-maingame-wwise\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\nobut\git\ld44-maingame-wwise\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\nobut\git\ld44-maingame-wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\</ProjectRoot>
+		<SourceFilesRoot>C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\nobut\git\ld44-maingame-wwise\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -17,24 +17,24 @@
 			<Path>BGM.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2566031842" Name="ambient_wind_in" ObjectPath="\Events\Default Work Unit\ambient_wind_in"/>
-				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out"/>
+				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out" MaxAttenuation="0.000000"/>
 				<Event Id="1959420478" Name="BGMmaingame_in" ObjectPath="\Events\Default Work Unit\BGMmaingame_in"/>
-				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out"/>
+				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out" MaxAttenuation="0.000000"/>
 				<Event Id="506861093" Name="BGMtitle_in" ObjectPath="\Events\Default Work Unit\BGMtitle_in"/>
-				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out"/>
+				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="664104795" Language="SFX">
 					<ShortName>ld44-title.wav</ShortName>
 					<Path>SFX\ld44-title_D79FB2B7.wem</Path>
 				</File>
-				<File Id="939029829" Language="SFX">
-					<ShortName>ld44-battle.wav</ShortName>
-					<Path>SFX\ld44-battle_D79FB2B7.wem</Path>
-				</File>
 				<File Id="966066674" Language="SFX">
 					<ShortName>wind.wav</ShortName>
 					<Path>SFX\wind_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1007660806" Language="SFX">
+					<ShortName>ld44-test-bgm-fix.wav</ShortName>
+					<Path>SFX\ld44-test-bgm-fix_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -49,8 +49,9 @@
 			<Path>SE.bnk</Path>
 			<IncludedEvents>
 				<Event Id="203100670" Name="button1" ObjectPath="\Events\Default Work Unit\button1"/>
-				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon"/>
+				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon" MaxAttenuation="5000.000000"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
+				<Event Id="3729271750" Name="damage_player" ObjectPath="\Events\Default Work Unit\damage_player"/>
 				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
@@ -82,6 +83,10 @@
 				<File Id="934814011" Language="SFX">
 					<ShortName>getfuel.wav</ShortName>
 					<Path>SFX\getfuel_10C4C929.wem</Path>
+				</File>
+				<File Id="1007660806" Language="SFX">
+					<ShortName>ld44-test-bgm-fix.wav</ShortName>
+					<Path>SFX\ld44-test-bgm-fix_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -91,17 +96,20 @@
 			<Path>maingame.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2566031842" Name="ambient_wind_in" ObjectPath="\Events\Default Work Unit\ambient_wind_in"/>
-				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out"/>
+				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out" MaxAttenuation="0.000000"/>
 				<Event Id="1750617197" Name="BGMgameover_in" ObjectPath="\Events\Default Work Unit\BGMgameover_in"/>
-				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out"/>
+				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out" MaxAttenuation="0.000000"/>
 				<Event Id="1959420478" Name="BGMmaingame_in" ObjectPath="\Events\Default Work Unit\BGMmaingame_in"/>
-				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out"/>
+				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out" MaxAttenuation="0.000000"/>
 				<Event Id="506861093" Name="BGMtitle_in" ObjectPath="\Events\Default Work Unit\BGMtitle_in"/>
-				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out"/>
+				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out" MaxAttenuation="0.000000"/>
 				<Event Id="203100670" Name="button1" ObjectPath="\Events\Default Work Unit\button1"/>
-				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon"/>
+				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon" MaxAttenuation="5000.000000"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
+				<Event Id="3729271750" Name="damage_player" ObjectPath="\Events\Default Work Unit\damage_player"/>
 				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
+				<Event Id="1535604910" Name="eingine_off" ObjectPath="\Events\Default Work Unit\eingine_off" MaxAttenuation="0.000000"/>
+				<Event Id="3234335490" Name="engine_enemy" ObjectPath="\Events\Default Work Unit\engine_enemy" MaxAttenuation="2000.000000"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -141,13 +149,13 @@
 					<ShortName>getfuel.wav</ShortName>
 					<Path>SFX\getfuel_10C4C929.wem</Path>
 				</File>
-				<File Id="939029829" Language="SFX">
-					<ShortName>ld44-battle.wav</ShortName>
-					<Path>SFX\ld44-battle_D79FB2B7.wem</Path>
-				</File>
 				<File Id="966066674" Language="SFX">
 					<ShortName>wind.wav</ShortName>
 					<Path>SFX\wind_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1007660806" Language="SFX">
+					<ShortName>ld44-test-bgm-fix.wav</ShortName>
+					<Path>SFX\ld44-test-bgm-fix_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -157,16 +165,17 @@
 			<Path>title.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2566031842" Name="ambient_wind_in" ObjectPath="\Events\Default Work Unit\ambient_wind_in"/>
-				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out"/>
+				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out" MaxAttenuation="0.000000"/>
 				<Event Id="1750617197" Name="BGMgameover_in" ObjectPath="\Events\Default Work Unit\BGMgameover_in"/>
-				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out"/>
+				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out" MaxAttenuation="0.000000"/>
 				<Event Id="1959420478" Name="BGMmaingame_in" ObjectPath="\Events\Default Work Unit\BGMmaingame_in"/>
-				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out"/>
+				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out" MaxAttenuation="0.000000"/>
 				<Event Id="506861093" Name="BGMtitle_in" ObjectPath="\Events\Default Work Unit\BGMtitle_in"/>
-				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out"/>
+				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out" MaxAttenuation="0.000000"/>
 				<Event Id="203100670" Name="button1" ObjectPath="\Events\Default Work Unit\button1"/>
-				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon"/>
+				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon" MaxAttenuation="5000.000000"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
+				<Event Id="3729271750" Name="damage_player" ObjectPath="\Events\Default Work Unit\damage_player"/>
 				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
@@ -207,13 +216,13 @@
 					<ShortName>getfuel.wav</ShortName>
 					<Path>SFX\getfuel_10C4C929.wem</Path>
 				</File>
-				<File Id="939029829" Language="SFX">
-					<ShortName>ld44-battle.wav</ShortName>
-					<Path>SFX\ld44-battle_D79FB2B7.wem</Path>
-				</File>
 				<File Id="966066674" Language="SFX">
 					<ShortName>wind.wav</ShortName>
 					<Path>SFX\wind_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1007660806" Language="SFX">
+					<ShortName>ld44-test-bgm-fix.wav</ShortName>
+					<Path>SFX\ld44-test-bgm-fix_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -223,16 +232,17 @@
 			<Path>gameover.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2566031842" Name="ambient_wind_in" ObjectPath="\Events\Default Work Unit\ambient_wind_in"/>
-				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out"/>
+				<Event Id="2999521181" Name="ambient_wind_out" ObjectPath="\Events\Default Work Unit\ambient_wind_out" MaxAttenuation="0.000000"/>
 				<Event Id="1750617197" Name="BGMgameover_in" ObjectPath="\Events\Default Work Unit\BGMgameover_in"/>
-				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out"/>
+				<Event Id="3037581172" Name="BGMgameover_out" ObjectPath="\Events\Default Work Unit\BGMgameover_out" MaxAttenuation="0.000000"/>
 				<Event Id="1959420478" Name="BGMmaingame_in" ObjectPath="\Events\Default Work Unit\BGMmaingame_in"/>
-				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out"/>
+				<Event Id="61313377" Name="BGMmaingame_out" ObjectPath="\Events\Default Work Unit\BGMmaingame_out" MaxAttenuation="0.000000"/>
 				<Event Id="506861093" Name="BGMtitle_in" ObjectPath="\Events\Default Work Unit\BGMtitle_in"/>
-				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out"/>
+				<Event Id="3375630252" Name="BGMtitle_out" ObjectPath="\Events\Default Work Unit\BGMtitle_out" MaxAttenuation="0.000000"/>
 				<Event Id="203100670" Name="button1" ObjectPath="\Events\Default Work Unit\button1"/>
-				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon"/>
+				<Event Id="2393348022" Name="cannon" ObjectPath="\Events\Default Work Unit\cannon" MaxAttenuation="5000.000000"/>
 				<Event Id="1786804762" Name="damage" ObjectPath="\Events\Default Work Unit\damage"/>
+				<Event Id="3729271750" Name="damage_player" ObjectPath="\Events\Default Work Unit\damage_player"/>
 				<Event Id="71235304" Name="eingine" ObjectPath="\Events\Default Work Unit\eingine"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
@@ -273,13 +283,13 @@
 					<ShortName>getfuel.wav</ShortName>
 					<Path>SFX\getfuel_10C4C929.wem</Path>
 				</File>
-				<File Id="939029829" Language="SFX">
-					<ShortName>ld44-battle.wav</ShortName>
-					<Path>SFX\ld44-battle_D79FB2B7.wem</Path>
-				</File>
 				<File Id="966066674" Language="SFX">
 					<ShortName>wind.wav</ShortName>
 					<Path>SFX\wind_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1007660806" Language="SFX">
+					<ShortName>ld44-test-bgm-fix.wav</ShortName>
+					<Path>SFX\ld44-test-bgm-fix_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

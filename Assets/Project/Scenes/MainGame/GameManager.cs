@@ -7,8 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    static public GameManager main;
+
     [SerializeField]
     private Transform _playerShip;
+
+    [SerializeField]
+    private Transform spawnerPool;
 
     [SerializeField]
     private Transform shipPool;
@@ -23,21 +28,21 @@ public class GameManager : MonoBehaviour
     private float _startTime;
 
     void Awake(){
+        main = this;
         _shipIdDict = new Dictionary<int, ShipId>();
     }
     void Start()
     {
         _startTime = Time.time;
+        SetupShips();
+    }
+
+    void SetupShips(){
         _idCounter = 0;
         var shipIds = shipPool.GetComponentsInChildren<ShipId>().ToList();
         foreach (var shipId in shipIds)
         {
-            shipId.Id = _idCounter;
-            _shipIdDict[_idCounter] = shipId;
-            var enemyShipController = shipId.GetComponent<EnemyShipController>();
-            if(enemyShipController){
-                enemyShipController.gameSpace = _gameSpace;
-            }
+            RegisterShip(shipId);
             _idCounter++;
         }
     }
@@ -55,7 +60,8 @@ public class GameManager : MonoBehaviour
     }
 
     void UpdateShipDict(){
-        var nullElemKeys = _shipIdDict.Keys.Select((key) => _shipIdDict[key]?-1:key).Where(key => key != -1).ToList();
+        var nullElemKeys = _shipIdDict.Keys.Where((key) => !_shipIdDict[key].IsLiving()).ToList();
+        // var nullElemKeys = _shipIdDict.Keys.Select((key) => _shipIdDict[key]?-1:key).Where(key => key != -1).ToList();
         foreach (var nullelemKey in nullElemKeys)
         {
             _shipIdDict.Remove(nullelemKey);
@@ -83,5 +89,15 @@ public class GameManager : MonoBehaviour
 
     public float CurrentDuration(){
         return Mathf.FloorToInt((Time.time - _startTime));
+    }
+
+    public void RegisterShip(ShipId shipId){
+        shipId.Id = _idCounter;
+        _shipIdDict[_idCounter] = shipId;
+        var enemyShipController = shipId.GetComponent<EnemyShipController>();
+        if (enemyShipController)
+        {
+            enemyShipController.gameSpace = _gameSpace;
+        }
     }
 }

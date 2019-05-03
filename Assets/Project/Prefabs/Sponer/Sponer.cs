@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sponer : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _sponed;
+    private ShipId _sponed;
 
     [SerializeField]
     private Transform _sponeInto;
@@ -30,7 +30,6 @@ public class Sponer : MonoBehaviour
 
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -68,5 +67,6 @@ public class Sponer : MonoBehaviour
             sponedInstance.transform.parent = null;
         }
         sponedInstance.GetComponent<EnemyShipController>().gameSpace = _gameSpace;
+        GameManager.main.RegisterShip(sponedInstance);
     }
 }
