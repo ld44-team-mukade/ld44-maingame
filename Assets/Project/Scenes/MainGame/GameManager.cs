@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameSpace _gameSpace;
-    private List<Transform> _sponer;
+    private List<Transform> _spawner;
     // Start is called before the first frame update
     private int _idCounter = 0;
 

@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sponer : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField]
-    private ShipId _sponed;
+    private ShipId _spawned;
 
     [SerializeField]
-    private Transform _sponeInto;
+    private Transform _spawnInto;
 
     [SerializeField]
-    private float _sponetime;
+    private float _spawntime;
 
     private float timeElapsed;
 
     [SerializeField]
-    private int _sponelimit;
+    private int _spawnlimit;
 
     [SerializeField]
     private GameSpace _gameSpace;
@@ -37,13 +37,13 @@ public class Sponer : MonoBehaviour
     {
         timeElapsed += Time.deltaTime;
 
-        if(timeElapsed >= _sponetime)
+        if(timeElapsed >= _spawntime)
         {
-            SponeCheck();
+            SpawnCheck();
 
-            if(SponeCheck() < _sponelimit)
+            if(SpawnCheck() < _spawnlimit)
             {
-                Spone();
+                Spawn();
             }
             timeElapsed = 0.0f;
         }
@@ -51,7 +51,7 @@ public class Sponer : MonoBehaviour
 
     }
 
-    public int SponeCheck()
+    public int SpawnCheck()
     {
         int ObjCount = shipObj.transform.childCount - 1;
 
@@ -59,14 +59,14 @@ public class Sponer : MonoBehaviour
 
     }
 
-    public void Spone(){
-        var sponedInstance = Instantiate(_sponed, transform);
-        if(_sponeInto){
-            sponedInstance.transform.parent = _sponeInto;
+    public void Spawn(){
+        var spawnedInstance = Instantiate(_spawned, transform);
+        if(_spawnInto){
+            spawnedInstance.transform.parent = _spawnInto;
         }else{
-            sponedInstance.transform.parent = null;
+            spawnedInstance.transform.parent = null;
         }
-        sponedInstance.GetComponent<EnemyShipController>().gameSpace = _gameSpace;
-        GameManager.main.RegisterShip(sponedInstance);
+        spawnedInstance.GetComponent<EnemyShipController>().gameSpace = _gameSpace;
+        GameManager.main.RegisterShip(spawnedInstance);
     }
 }

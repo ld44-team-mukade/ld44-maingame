@@ -27,12 +27,12 @@ public class FuelDrop : MonoBehaviour
 
         if (_remaining <= 0 && dropItem == false)
         {
-            ItemSpone();
+            ItemSpawn();
         }
 
     }
 
-    void ItemSpone()
+    void ItemSpawn()
     {
 
         Vector3 itemPos = transform.position;

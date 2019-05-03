@@ -500,7 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 536525815}
   m_Layer: 0
-  m_Name: '[Sponers]'
+  m_Name: '[Spoawners]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1376,7 +1376,7 @@ PrefabInstance:
     - target: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
         type: 3}
       propertyPath: m_Name
-      value: EnemySponer (1)
+      value: EnemySpawner (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
         type: 3}
@@ -1444,8 +1444,17 @@ PrefabInstance:
       propertyPath: _gameSpace
       value: 
       objectReference: {fileID: 1716380639}
-    m_RemovedComponents:
-    - {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: shipObj
+      value: 
+      objectReference: {fileID: 1660628178}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: _spawnInto
+      value: 
+      objectReference: {fileID: 1660628179}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
 --- !u!4 &1450172650 stripped
 Transform:
@@ -1453,30 +1462,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1450172649}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1450172651 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450172649}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1450172652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450172651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sponed: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
-  _sponeInto: {fileID: 1660628179}
-  _sponetime: 45
-  _sponelimit: 10
-  _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 0}
 --- !u!1001 &1511714334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1755,7 +1740,7 @@ PrefabInstance:
     - target: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
         type: 3}
       propertyPath: m_Name
-      value: EnemySponer (3)
+      value: EnemySpawner (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
         type: 3}
@@ -1823,8 +1808,17 @@ PrefabInstance:
       propertyPath: _gameSpace
       value: 
       objectReference: {fileID: 1716380639}
-    m_RemovedComponents:
-    - {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: shipObj
+      value: 
+      objectReference: {fileID: 1660628178}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: _spawnInto
+      value: 
+      objectReference: {fileID: 1660628179}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
 --- !u!4 &1546395890 stripped
 Transform:
@@ -1832,30 +1826,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1546395889}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1546395891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
-    type: 3}
-  m_PrefabInstance: {fileID: 1546395889}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1546395892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546395891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sponed: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
-  _sponeInto: {fileID: 1660628179}
-  _sponetime: 45
-  _sponelimit: 10
-  _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 0}
 --- !u!1 &1550758675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,7 +2544,7 @@ PrefabInstance:
     - target: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
         type: 3}
       propertyPath: m_Name
-      value: EnemySponer (2)
+      value: EnemySpawner (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
         type: 3}
@@ -2642,8 +2612,17 @@ PrefabInstance:
       propertyPath: _gameSpace
       value: 
       objectReference: {fileID: 1716380639}
-    m_RemovedComponents:
-    - {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: shipObj
+      value: 
+      objectReference: {fileID: 1660628178}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: _spawnInto
+      value: 
+      objectReference: {fileID: 1660628179}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
 --- !u!4 &1800944799 stripped
 Transform:
@@ -2651,30 +2630,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1800944798}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1800944800 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
-    type: 3}
-  m_PrefabInstance: {fileID: 1800944798}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1800944801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800944800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sponed: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389, type: 3}
-  _sponeInto: {fileID: 1660628179}
-  _sponetime: 45
-  _sponelimit: 10
-  _gameSpace: {fileID: 1716380639}
-  shipObj: {fileID: 0}
 --- !u!1 &1803209995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,7 +3847,7 @@ PrefabInstance:
     - target: {fileID: 1509544797079605302, guid: c7e7b3736fc54804ca8fb8617f0e1059,
         type: 3}
       propertyPath: m_Name
-      value: EnemySponer
+      value: EnemySpawner
       objectReference: {fileID: 0}
     - target: {fileID: 8101229210329009569, guid: c7e7b3736fc54804ca8fb8617f0e1059,
         type: 3}
@@ -3980,6 +3935,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
         type: 3}
+    - target: {fileID: 1509544797079605303, guid: c7e7b3736fc54804ca8fb8617f0e1059,
+        type: 3}
+      propertyPath: _spawnInto
+      value: 
+      objectReference: {fileID: 1660628179}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e7b3736fc54804ca8fb8617f0e1059, type: 3}
 --- !u!1001 &8215645560617224096
@@ -4069,6 +4029,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1723377061749023199, guid: 467bb976f5083e9499cd0bde19f3b7b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 906646753586329819, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}
       propertyPath: m_Layer
@@ -4130,6 +4095,11 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 134077154627745231, guid: 467bb976f5083e9499cd0bde19f3b7b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752585667571606701, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}
       propertyPath: m_Layer
       value: 8
@@ -4264,6 +4234,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3184161817016116437, guid: 467bb976f5083e9499cd0bde19f3b7b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308059506145770373, guid: 467bb976f5083e9499cd0bde19f3b7b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3176577529182598797, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}
       propertyPath: m_Layer
@@ -4284,6 +4264,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 856305123994434915, guid: 467bb976f5083e9499cd0bde19f3b7b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7714376068554941505, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}
       propertyPath: m_Layer
@@ -4300,31 +4285,6 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5616988166503751786, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1723377061749023199, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752585667571606701, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3184161817016116437, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8308059506145770373, guid: 467bb976f5083e9499cd0bde19f3b7b1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 856305123994434915, guid: 467bb976f5083e9499cd0bde19f3b7b1,
         type: 3}
       propertyPath: m_Layer
       value: 8
