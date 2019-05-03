@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	71235304	eingine			\Default Work Unit\eingine	
 	203100670	button1			\Default Work Unit\button1	
 	506861093	BGMtitle_in			\Default Work Unit\BGMtitle_in	
+	1143111560	engine_enemy_off			\Default Work Unit\engine_enemy_off	
 	1535604910	eingine_off			\Default Work Unit\eingine_off	
 	1750617197	BGMgameover_in			\Default Work Unit\BGMgameover_in	
 	1786804762	damage			\Default Work Unit\damage	
