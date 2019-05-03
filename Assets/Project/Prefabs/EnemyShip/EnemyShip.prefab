@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 53297235704051399}
   - component: {fileID: 76552430979986940}
   - component: {fileID: 3304073847892358810}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 6934987394716973217}
   - component: {fileID: 7872196316931683142}
   - component: {fileID: 6973163499466273864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 5676639436331943616}
   - component: {fileID: 6995036259490436226}
   - component: {fileID: 41559206730782590}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyShip
   m_TagString: Enermy
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 7219086772373951615}
   - component: {fileID: 5291644782771710275}
   - component: {fileID: 6688080999869284405}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 5677200173080064611}
   - component: {fileID: 4559040657552703461}
   - component: {fileID: 2449322316761444830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 8526433121770842390}
   - component: {fileID: 7990984772203407974}
   - component: {fileID: 1822528275606532073}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,6 +1120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
 --- !u!1 &1229170383791134233 stripped
@@ -1195,6 +1199,70 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShip1
       objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4e6fa8e4c9eeeb4080bc45e36498878, type: 3}
 --- !u!4 &4811688304718281157 stripped
@@ -1214,6 +1282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764299069713921060, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4764299069713921057, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
         type: 3}
@@ -1269,6 +1342,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774402686398591278, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595429987316740438, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779798107972839576, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2790176327162850942, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607282345094368381, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b7da9dc2c0304640921dfd9307f4e3d, type: 3}

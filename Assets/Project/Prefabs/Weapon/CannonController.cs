@@ -71,6 +71,7 @@ public class CannonController : MonoBehaviour
         bulletInstance.tag = tag;
         bulletInstance.velocity = _muzzle.transform.forward * initSpeed;
         bulletInstance.transform.parent = null;
+        ChangeLayersRecursively(bulletInstance.transform, tag + "Bullet");
         return bulletInstance;
     }
 
@@ -97,5 +98,13 @@ public class CannonController : MonoBehaviour
 
     public float Cost(){
         return bulletPrefab.GetComponent<BulletAttack>().cost;
+    }
+    void ChangeLayersRecursively(Transform trans, string name)
+    {
+        trans.gameObject.layer = LayerMask.NameToLayer(name);
+        foreach (Transform child in trans)
+        {
+            ChangeLayersRecursively(child, name);
+        }
     }
 }
