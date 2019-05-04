@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     void Awake(){
         main = this;
         _shipIdDict = new Dictionary<int, ShipId>();
+        _idCounter = 0;
     }
     void Start()
     {
@@ -38,12 +39,10 @@ public class GameManager : MonoBehaviour
     }
 
     void SetupShips(){
-        _idCounter = 0;
         var shipIds = shipPool.GetComponentsInChildren<ShipId>().ToList();
         foreach (var shipId in shipIds)
         {
             RegisterShip(shipId);
-            _idCounter++;
         }
     }
 
@@ -99,5 +98,6 @@ public class GameManager : MonoBehaviour
         {
             enemyShipController.gameSpace = _gameSpace;
         }
+        _idCounter++;
     }
 }

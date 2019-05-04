@@ -23,9 +23,13 @@ public class PlayerShipController : MonoBehaviour
 
     public float fuelConsumption = 0f;
 
+    private Engine _engine;
+
     void Awake(){
         _shipMovement.isManualControll = true;
+        _engine = GetComponent<Engine>();
     }
+
     void Start()
     {
     }
@@ -58,7 +62,7 @@ public class PlayerShipController : MonoBehaviour
         var rightOnWorld = ScreenSpaceToPlaneSpace(rightOnScreen, planeHeight);
 
         Vector3 input = -(upOnWorld - transform.position).normalized*Input.GetAxis("Vertical") + (rightOnWorld - transform.position).normalized*Input.GetAxis("Horizontal");
-        
+        _engine.targetPower = input.magnitude;
         var targetPosition = input*50f;
         targetPosition.y = gameSpace.heights[currentHeightIndex] - transform.position.y;
         _fuelTank.DecrementFuel((targetPosition.magnitude) * fuelConsumption*Time.deltaTime);

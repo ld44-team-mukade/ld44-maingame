@@ -28,7 +28,6 @@ public class ShipMovement : MonoBehaviour
 
     private NavMeshAgent _targetAgentInstance;
     
-    
     [SerializeField]
     private float verticalMovementPower = 10f;
 
@@ -90,10 +89,13 @@ public class ShipMovement : MonoBehaviour
         }
 
         var velocityOnPlane = _rigidbody.velocity;
-        velocityOnPlane.y = velocityOnPlane.y * 0.5f;
-        Quaternion targetRot = Quaternion.LookRotation(velocityOnPlane);
-        var q = Quaternion.RotateTowards(_rigidbody.rotation, targetRot, 50f * Time.fixedDeltaTime);
-        _rigidbody.MoveRotation(q);
+        velocityOnPlane.y = 0f;
+        if(1.0f < velocityOnPlane.magnitude){
+            var fixedVelocity = _rigidbody.velocity; fixedVelocity.y = _rigidbody.velocity.y * 0.5f;
+            Quaternion targetRot = Quaternion.LookRotation(fixedVelocity);
+            var q = Quaternion.RotateTowards(_rigidbody.rotation, targetRot, 50f * Time.fixedDeltaTime);
+            _rigidbody.MoveRotation(q);
+        }
     }
 
     public void DestroyAgent(){
