@@ -7,7 +7,6 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private ShipId _spawned;
 
-    [SerializeField]
     private Transform _spawnInto;
 
     [SerializeField]
@@ -18,18 +17,15 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private int _spawnlimit;
 
-    [SerializeField]
     private GameSpace _gameSpace;
 
-    [SerializeField]
-    private GameObject shipObj;
-
     void Awake(){
-
     }
 
     void Start()
     {
+        _spawnInto = GameManager.main.shipPool;
+        _gameSpace = GameManager.main.gameSpace;
     }
 
     // Update is called once per frame
@@ -53,7 +49,7 @@ public class Spawner : MonoBehaviour
 
     public int SpawnCheck()
     {
-        int ObjCount = shipObj.transform.childCount - 1;
+        int ObjCount = _spawnInto.childCount - 1;
 
         return ObjCount;
 

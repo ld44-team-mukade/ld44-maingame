@@ -273,7 +273,7 @@ MonoBehaviour:
   _playerShip: {fileID: 1329624098}
   spawnerPool: {fileID: 536525815}
   shipPool: {fileID: 1660628179}
-  _gameSpace: {fileID: 1716380639}
+  gameSpace: {fileID: 1716380639}
 --- !u!4 &331116814
 Transform:
   m_ObjectHideFlags: 0
