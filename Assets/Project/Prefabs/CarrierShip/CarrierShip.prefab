@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 4844074299713573565}
   - component: {fileID: 1916604900062337199}
   - component: {fileID: 942446162633131503}
-  - component: {fileID: 8383202477071489145}
-  - component: {fileID: 3662512945429656918}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -29,11 +27,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543433728243573122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -800, y: 70, z: -700}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 1325106968796185545}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4844074299713573565
 MeshFilter:
@@ -93,38 +91,53 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8383202477071489145
+--- !u!1 &1634477140757059335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5020548480294759964}
+  - component: {fileID: 4017686312835154627}
+  m_Layer: 9
+  m_Name: EnemySpwaner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5020548480294759964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634477140757059335}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1325106968796185545}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4017686312835154627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543433728243573122}
+  m_GameObject: {fileID: 1634477140757059335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79b1195fd7917148ade58a2c29feb58, type: 3}
+  m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shipMovement: {fileID: 0}
-  gameSpace: {fileID: 0}
-  _fcs: {fileID: 0}
-  _shootableRange: 100
-  _shotRate: 0.5
---- !u!114 &3662512945429656918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543433728243573122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8b5049f86eb81143a9029f7bfd02811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fuelTankItem:
-  - {fileID: 0}
-  dropPos: 0
+  _spawned: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
+    type: 3}
+  _spawntime: 10
+  _spawnlimit: 5
 --- !u!1 &2361177243954927110
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +387,7 @@ Transform:
   m_Children:
   - {fileID: 5448720918742007468}
   m_Father: {fileID: 1325106968796185545}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6713455350616010334
 MonoBehaviour:
@@ -499,7 +512,6 @@ GameObject:
   - component: {fileID: 3347615524623501449}
   - component: {fileID: 1538921559484999417}
   - component: {fileID: 3027173129144446776}
-  - component: {fileID: 2029722125559402896}
   - component: {fileID: 365776112984583040}
   - component: {fileID: 3082531944566192578}
   - component: {fileID: 5424484539376024126}
@@ -519,9 +531,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7367919885832119698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -800, y: 70, z: -850}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5020548480294759964}
   - {fileID: 9056588026719844781}
   - {fileID: 6713455350616010330}
   m_Father: {fileID: 0}
@@ -549,6 +562,7 @@ MonoBehaviour:
   _agentTargetPosition: {x: 800, y: -210, z: 10}
   verticalMovementPower: 200
   verticalMovementDamper: 50
+  _floatingConsumption: 0
 --- !u!54 &7367919885832119702
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -674,25 +688,6 @@ MonoBehaviour:
   fuelTankItem:
   - {fileID: 330727313457562471, guid: 86bc896481a68ac4f82332bcc3cc8165, type: 3}
   dropPos: 100
---- !u!114 &2029722125559402896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7367919885832119698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211636576c2c61f4a854dbd0cb7195e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawned: {fileID: 4374441151256380647, guid: 9120ef98e7fb2634dbe4f6e4d0964389,
-    type: 3}
-  _spawnInto: {fileID: 0}
-  _spawntime: 0
-  _spawnlimit: 0
-  _gameSpace: {fileID: 0}
-  shipObj: {fileID: 0}
 --- !u!114 &365776112984583040
 MonoBehaviour:
   m_ObjectHideFlags: 0
