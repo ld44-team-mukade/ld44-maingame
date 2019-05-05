@@ -98,7 +98,7 @@ public class ShipMovement : MonoBehaviour
     }
 
     public void DestroyAgent(){
-        Destroy(_targetAgentInstance);
+        Destroy(_targetAgentInstance.gameObject);
     }
 
     public void ChangeCurrentAgentPosition(Vector3 position){
