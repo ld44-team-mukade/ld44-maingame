@@ -21,6 +21,8 @@ public class PlayerShipController : MonoBehaviour
     [SerializeField]
     private FuelTank _fuelTank;
 
+    [SerializeField]
+    private Vector3 _input;
     public float fuelConsumption = 0f;
 
     private Engine _engine;
@@ -55,15 +57,18 @@ public class PlayerShipController : MonoBehaviour
             Debug.Log(currentHeightIndex);
         }
 
+
+    }
+
+    void FixedUpdate(){
         float planeHeight = transform.position.y;
         Vector2 upOnScreen = new Vector2(Screen.width*0.5f,0);
         Vector2 rightOnScreen = new Vector2(Screen.width,Screen.height*0.5f);
         var upOnWorld = ScreenSpaceToPlaneSpace(upOnScreen, planeHeight);
         var rightOnWorld = ScreenSpaceToPlaneSpace(rightOnScreen, planeHeight);
-
-        Vector3 input = -(upOnWorld - transform.position).normalized*Input.GetAxis("Vertical") + (rightOnWorld - transform.position).normalized*Input.GetAxis("Horizontal");
-        _engine.targetPower = input.magnitude;
-        var targetPosition = input*50f;
+        _input = -(upOnWorld - transform.position).normalized*Input.GetAxis("Vertical") + (rightOnWorld - transform.position).normalized*Input.GetAxis("Horizontal");
+        _engine.targetPower = _input.magnitude;
+        var targetPosition = _input*50f;
         targetPosition.y = gameSpace.heights[currentHeightIndex] - transform.position.y;
         _fuelTank.DecrementFuel((targetPosition.magnitude) * (1f + _fuelTank.Remaining()/1000f) * fuelConsumption*Time.deltaTime);
         _shipMovement.manualForce = targetPosition/(1f + _fuelTank.Remaining()/1000f);
