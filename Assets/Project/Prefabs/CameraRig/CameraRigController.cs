@@ -39,7 +39,7 @@ public class CameraRigController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
