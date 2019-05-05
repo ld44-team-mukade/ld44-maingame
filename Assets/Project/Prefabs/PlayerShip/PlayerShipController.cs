@@ -65,8 +65,8 @@ public class PlayerShipController : MonoBehaviour
         _engine.targetPower = input.magnitude;
         var targetPosition = input*50f;
         targetPosition.y = gameSpace.heights[currentHeightIndex] - transform.position.y;
-        _fuelTank.DecrementFuel((targetPosition.magnitude) * fuelConsumption*Time.deltaTime);
-        _shipMovement.manualForce = targetPosition;
+        _fuelTank.DecrementFuel((targetPosition.magnitude) * (1f + _fuelTank.Remaining()/1000f) * fuelConsumption*Time.deltaTime);
+        _shipMovement.manualForce = targetPosition/(1f + _fuelTank.Remaining()/1000f);
     }
 
     bool TryToChangeHeight(int index){

@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d0f6ec1f351274d83c10e4122357b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuelCapacity: 200
+  fuelCapacity: 300
   delTime: 8
 --- !u!114 &6514528912786695365
 MonoBehaviour:

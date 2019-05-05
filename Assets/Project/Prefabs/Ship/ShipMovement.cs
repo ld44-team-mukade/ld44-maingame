@@ -34,6 +34,9 @@ public class ShipMovement : MonoBehaviour
     [SerializeField]
     private float verticalMovementDamper = 1f;
     private Vector3 _latestAgentPosition;
+
+    [SerializeField]
+    private float _floatingConsumption = 0f;
     void Awake(){
         _rigidbody = GetComponent<Rigidbody>();
         _targetAgentInstance = Instantiate(_targetAgentPrefab, transform.position, transform.rotation) as NavMeshAgent;
@@ -55,6 +58,7 @@ public class ShipMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _fuelTank.DecrementFuel((1f+_fuelTank.Remaining()/1000f)*_floatingConsumption * Time.deltaTime);
         // ChangeTargetAgentPosition(_agentTargetPosition);
     }
 
