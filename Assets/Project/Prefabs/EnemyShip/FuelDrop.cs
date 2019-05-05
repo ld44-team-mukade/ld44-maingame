@@ -34,15 +34,9 @@ public class FuelDrop : MonoBehaviour
 
     void ItemSpawn()
     {
-
         Vector3 itemPos = transform.position;
-
-        Debug.Log("OK");
-        itemPos.x += dropPos;
-
         num = Random.Range(0, fuelTankItem.Length);
-        Instantiate(fuelTankItem[num], itemPos, transform.rotation);
-
+        Instantiate(fuelTankItem[num], transform.position, transform.rotation);
         dropItem = true;
     }
 }
