@@ -102,7 +102,6 @@ public class ShipMovement : MonoBehaviour
     }
 
     public void ChangeCurrentAgentPosition(Vector3 position){
-        // _targetAgentInstance.transform.position = position;
         _targetAgentInstance.Warp(position);
     }
 

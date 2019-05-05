@@ -16,11 +16,11 @@ public class GameManager : MonoBehaviour
     private Transform spawnerPool;
 
     [SerializeField]
-    private Transform shipPool;
+    public Transform shipPool;
     private Dictionary<int, ShipId> _shipIdDict;
 
     [SerializeField]
-    private GameSpace _gameSpace;
+    public GameSpace gameSpace;
     private List<Transform> _spawner;
     // Start is called before the first frame update
     private int _idCounter = 0;
@@ -96,8 +96,9 @@ public class GameManager : MonoBehaviour
         var enemyShipController = shipId.GetComponent<EnemyShipController>();
         if (enemyShipController)
         {
-            enemyShipController.gameSpace = _gameSpace;
+            enemyShipController.gameSpace = gameSpace;
         }
         _idCounter++;
     }
+
 }
