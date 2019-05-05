@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5491915209179048699}
   - component: {fileID: 8891808942934352771}
   - component: {fileID: 2009376150209770499}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4104569260668411209}
   - component: {fileID: 8555929562207142803}
   - component: {fileID: 6856162532889953136}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FuelTankM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,6 +310,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DrumCan
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.005859375
@@ -372,6 +384,18 @@ PrefabInstance:
     - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_Name
       value: Parachute
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -448,6 +472,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parachute (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -522,6 +558,18 @@ PrefabInstance:
     - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_Name
       value: Parachute (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d0fcf92e344f4944484fbf6ec8b3fd4e, type: 3}
       propertyPath: m_LocalPosition.x
