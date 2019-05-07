@@ -49,6 +49,7 @@ MonoBehaviour:
   shipController: {fileID: 0}
   white: {fileID: 2100000, guid: f06129897d2950b42a776cf9370803a3, type: 2}
   blue: {fileID: 2100000, guid: 2cfb5d6eb6f8eda4282ede025d53c217, type: 2}
+  _scaleSize: 1.1
   _ringRenderers:
   - {fileID: 4388068409229979186}
   - {fileID: 6881769582079583555}
