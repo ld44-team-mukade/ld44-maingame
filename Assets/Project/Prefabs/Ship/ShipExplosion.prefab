@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5237848929604255676}
   - component: {fileID: 4007228366094799477}
+  - component: {fileID: 675939347945679938}
+  - component: {fileID: 497693097155680586}
   m_Layer: 0
   m_Name: ShipExplosion
   m_TagString: Untagged
@@ -45,7 +47,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 7706546091871810442}
-  deltime: 1
+--- !u!114 &675939347945679938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205944732457833177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8a90b96b5a9f448acf83859826b823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &497693097155680586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205944732457833177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e613cf30c61b24aa1f676d0aa6fe71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7d9b6d2b28fa2ea4da2e2ca55c546f45,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
 --- !u!1001 &7706546091853851720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53,6 +110,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5237848929604255676}
     m_Modifications:
+    - target: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
+      propertyPath: m_Name
+      value: WFX_Nuke
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -108,10 +169,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
       propertyPath: m_LocalScale.z
       value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
-      propertyPath: m_Name
-      value: WFX_Nuke
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}

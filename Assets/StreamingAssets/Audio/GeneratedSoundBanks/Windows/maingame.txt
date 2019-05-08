@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	13776098	explosion			\Default Work Unit\explosion	
 	61313377	BGMmaingame_out			\Default Work Unit\BGMmaingame_out	
 	71235304	eingine			\Default Work Unit\eingine	
 	1143111560	engine_enemy_off			\Default Work Unit\engine_enemy_off	
@@ -20,6 +21,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	642920646	Wwise_Compressor_(Custom)	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11282524	explosion	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\explosion		1290304
 	150300601	engine idle	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\engine idle_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\engines\engine idle		483048
 	244845627	engine middle	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\engine middle_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\engines\engine middle		335936
 	357058105	damages_P	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\ld44-damage1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\damages_P		384064
