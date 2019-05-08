@@ -10,12 +10,12 @@ public class Spawner : MonoBehaviour
     private Transform _spawnInto;
 
     [SerializeField]
-    private float _spawntime;
+    private float _spawntime = 10;
 
     private float timeElapsed;
 
     [SerializeField]
-    private int _spawnlimit;
+    private int _spawnlimit = 5;
 
     private GameSpace _gameSpace;
 
@@ -56,7 +56,7 @@ public class Spawner : MonoBehaviour
     }
 
     public void Spawn(){
-        var spawnedInstance = Instantiate(_spawned, transform);
+        var spawnedInstance = Instantiate(_spawned, transform.position, transform.rotation);
         if(_spawnInto){
             spawnedInstance.transform.parent = _spawnInto;
         }else{
