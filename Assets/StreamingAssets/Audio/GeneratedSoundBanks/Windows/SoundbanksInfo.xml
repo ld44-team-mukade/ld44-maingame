@@ -42,9 +42,14 @@
 				<Event Id="1535604910" Name="eingine_off" ObjectPath="\Events\Default Work Unit\eingine_off" MaxAttenuation="0.000000"/>
 				<Event Id="3234335490" Name="engine_enemy" ObjectPath="\Events\Default Work Unit\engine_enemy" MaxAttenuation="2000.000000"/>
 				<Event Id="1143111560" Name="engine_enemy_off" ObjectPath="\Events\Default Work Unit\engine_enemy_off" MaxAttenuation="0.000000"/>
+				<Event Id="13776098" Name="explosion" ObjectPath="\Events\Default Work Unit\explosion"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="11282524" Language="SFX">
+					<ShortName>explosion.wav</ShortName>
+					<Path>SFX\explosion_10C4C929.wem</Path>
+				</File>
 				<File Id="150300601" Language="SFX">
 					<ShortName>engine idle.wav</ShortName>
 					<Path>SFX\engine idle_D79FB2B7.wem</Path>
