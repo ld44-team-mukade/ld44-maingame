@@ -5,11 +5,20 @@ using UnityEngine;
 public class DayNightCycle : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 1f;
+    private Gradient color;
+
+    [SerializeField]
+    private AnimationCurve intensity;
+
+    [SerializeField, Range(0,1)]
+    private float _currentTime = 1f;
 
     [SerializeField]
     private float _maxIntensity;
-    private float _currentTime = 1f;
+
+    [SerializeField]
+    private float _speed = 1f;
+
     private Light _light;
     // Start is called before the first frame update
     void Awake(){
@@ -24,8 +33,9 @@ public class DayNightCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dayNightRatio = (Mathf.Sin(_currentTime)*0.5f+0.5f);
-        _light.intensity = dayNightRatio * _maxIntensity;
-        _currentTime += _speed*Time.deltaTime;
+        _light.color = color.Evaluate((_currentTime)%1.0f);
+        _light.intensity = intensity.Evaluate((_currentTime)%1.0f) * _maxIntensity;
+        // Debug.Log(_light.);
+        _currentTime = (_currentTime + _speed*Time.deltaTime)%1.0f;
     }
 }

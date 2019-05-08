@@ -2355,8 +2355,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f907fc46c54d87c4f838fa9079ad75a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.1
-  _maxIntensity: 30
+  color:
+    serializedVersion: 2
+    key0: {r: 0.12941177, g: 0.08235294, b: 0.16862746, a: 1}
+    key1: {r: 1, g: 0.740566, b: 0.7514667, a: 1}
+    key2: {r: 0.8156863, g: 0.99999994, b: 1, a: 1}
+    key3: {r: 0.97647065, g: 1, b: 0.81568635, a: 0}
+    key4: {r: 1, g: 0.7677988, b: 0.6650944, a: 0}
+    key5: {r: 0.32050785, g: 0.2995283, b: 0.5, a: 0}
+    key6: {r: 0.12941177, g: 0.08235294, b: 0.16862746, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 4819
+    ctime1: 9830
+    ctime2: 15420
+    ctime3: 46646
+    ctime4: 51272
+    ctime5: 55512
+    ctime6: 59560
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
+  intensity:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 6.4380937
+      outSlope: 6.4380937
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04469271
+    - serializedVersion: 3
+      time: 0.5
+      value: 1.0001343
+      inSlope: 0.023180172
+      outSlope: 0.023180172
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.21508425
+      outWeight: 0.13687086
+    - serializedVersion: 3
+      time: 1
+      value: 0.009433985
+      inSlope: -6.1916466
+      outSlope: -6.1916466
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.041900635
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _speed: 0.01
+  _maxIntensity: 35
+  _currentTime: 0.264
 --- !u!114 &1731467687 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,
