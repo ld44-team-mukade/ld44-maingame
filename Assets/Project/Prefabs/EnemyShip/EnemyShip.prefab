@@ -311,7 +311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3284278664849623250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -362.36304, y: 13.562403, z: 329.46277}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4811688304718281157}
@@ -346,6 +346,7 @@ MonoBehaviour:
   _agentTargetPosition: {x: 800, y: -210, z: 10}
   verticalMovementPower: 200
   verticalMovementDamper: 50
+  _floatingConsumption: 0
 --- !u!54 &3284278664849623254
 Rigidbody:
   m_ObjectHideFlags: 0
