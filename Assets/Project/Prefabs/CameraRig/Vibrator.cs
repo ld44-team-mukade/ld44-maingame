@@ -36,11 +36,11 @@ public class Vibrator : MonoBehaviour
     }
 
     public void AddForce(Vector3 force){
-        // var localForce = (transform.position - position).normalized*force.magnitude;
         _velocity += force / _mass * Time.deltaTime;
     }
 
     void Integrate(){
+        _velocity = _velocity.normalized*Mathf.Clamp(_velocity.magnitude, 0f, 400f);
         _position += _velocity*Time.deltaTime;
     }
 }
