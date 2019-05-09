@@ -2417,9 +2417,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _speed: 0.01
-  _maxIntensity: 35
   _currentTime: 0.264
+  _maxIntensity: 35
+  _speed: 0.01
 --- !u!114 &1731467687 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2032121256693859085, guid: 467bb976f5083e9499cd0bde19f3b7b1,

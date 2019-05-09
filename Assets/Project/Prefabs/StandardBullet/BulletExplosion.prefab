@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5237848929604255676}
   - component: {fileID: 4007228366094799477}
   m_Layer: 0
-  m_Name: ExplosionEffect
+  m_Name: BulletExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc73cccf4345f2a4a9872507305b75f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _power: 100000000
   particle: {fileID: 3293996129283484858}
-  deltime: 1
 --- !u!1001 &3293996129265005436
 PrefabInstance:
   m_ObjectHideFlags: 0

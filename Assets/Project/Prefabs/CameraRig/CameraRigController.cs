@@ -9,7 +9,8 @@ public class CameraRigController : MonoBehaviour
     public GameObject rcamera;
 
     [SerializeField]
-    private Camera _camera;
+    private Transform _camera;
+
 
     [SerializeField]
     private float distance;
@@ -45,9 +46,9 @@ public class CameraRigController : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel");
 
         if (!target) return;
-        var direction = _camera.transform.rotation * Vector3.forward;
+        var direction = _camera.rotation * Vector3.forward;
         // _camera.transform.position = target.position - direction * distance;
-        _camera.transform.position = Vector3.SmoothDamp(_camera.transform.position, target.position - direction * distance, ref _velocity, _smoothTime);
+        _camera.position = Vector3.SmoothDamp(_camera.position, target.position - direction * distance, ref _velocity, _smoothTime);
         // _camera.transform.position = target.position - direction * distance;
 
         rcamera.GetComponent<CameraRotate>().CameraMove(target,_rotatespeed);

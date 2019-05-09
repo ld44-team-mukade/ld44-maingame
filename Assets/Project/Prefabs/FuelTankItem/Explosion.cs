@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    [SerializeField]
+    private float _power = 100000000f;
 
     public ParticleSystem particle;
 
@@ -37,5 +39,11 @@ public class Explosion : MonoBehaviour
         var particle1 = Instantiate(particle, transform.position, transform.rotation) as ParticleSystem;
 
         Destroy(this.gameObject, particle.main.duration);
+
+        var diffToCameraPos = (Camera.main.transform.position - transform.position);
+        var distance = Mathf.Clamp(diffToCameraPos.magnitude, 50f, Mathf.Infinity);
+        var direction = diffToCameraPos.normalized;
+
+        Vibrator.instance.AddForce(_power/(distance*distance)*direction);
     }
 }
