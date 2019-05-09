@@ -41,7 +41,7 @@ public class Explosion : MonoBehaviour
         Destroy(this.gameObject, particle.main.duration);
 
         var diffToCameraPos = (Camera.main.transform.position - transform.position);
-        var distance = Mathf.Clamp(diffToCameraPos.magnitude, 50f, Mathf.Infinity);
+        var distance = Mathf.Clamp(diffToCameraPos.magnitude, 200f, Mathf.Infinity);
         var direction = diffToCameraPos.normalized;
 
         Vibrator.instance.AddForce(_power/(distance*distance)*direction);
