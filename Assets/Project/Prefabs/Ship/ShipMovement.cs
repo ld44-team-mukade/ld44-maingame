@@ -89,14 +89,41 @@ public class ShipMovement : MonoBehaviour
 
         var velocityOnPlane = _rigidbody.velocity;
         velocityOnPlane.y = 0f;
+
+        var fixedVelocity = _rigidbody.velocity; fixedVelocity.y = 0f;
+        Vector3 yaw = Vector3.Project(Vector3.Cross(fixedVelocity.normalized, transform.forward), Vector3.up);
+        var yawForce = -yaw * 100000f;
+        _rigidbody.AddTorque(Clamp(yawForce, 0, 20000f));
+
+        // Vector3 pitch = Vector3.ProjectOnPlane(Vector3.Cross(fixedVelocity*0.1f, transform.forward), transform.right);
+        // Vector3 pitch = Vector3.ProjectOnPlane(Vector3.Cross(fixedVelocity*0.1f, transform.forward), transform.right);
+        Vector3 pitch = -Vector3.Project(Vector3.Cross(Vector3.up, transform.up), transform.right) - transform.right*_rigidbody.velocity.y*0.002f;
+        var pitchForce = pitch* 100000f;
+        _rigidbody.AddTorque(Clamp(pitchForce, 0, 20000f));
+
+
         if(1.0f < velocityOnPlane.magnitude){
-            var fixedVelocity = _rigidbody.velocity; fixedVelocity.y = _rigidbody.velocity.y * 0.5f;
-            Quaternion targetRot = Quaternion.LookRotation(fixedVelocity);
-            var q = Quaternion.RotateTowards(_rigidbody.rotation, targetRot, 50f * Time.fixedDeltaTime);
-            _rigidbody.MoveRotation(q);
+            // Quaternion targetRot = Quaternion.LookRotation(fixedVelocity, Vector3.up);
+            // float y = Vector3.Project(fixedVelocity.normalized, transform.up);
+            // Quaternion targetRot = Quaternion.FromToRotation(transform.forward, fixedVelocity);
+            // _rigidbody.AddTorque(targetRot.eulerAngles*10f);
+            // _rigidbody.AddTorque(-targetRot.eulerAngles*10f);
+            // var q = Quaternion.RotateTowards(_rigidbody.rotation, targetRot, 50f * Time.fixedDeltaTime);
+            // _rigidbody.MoveRotation(q);
         }
+        Vector3 rollBaseVector = Vector3.ProjectOnPlane(Vector3.up, transform.forward).normalized;
+        Vector3 roll = Vector3.Project(Vector3.Cross(rollBaseVector, transform.up), transform.forward);
+        var rollForce = -roll* 100000f;
+        _rigidbody.AddTorque(Clamp(rollForce, 0, 20000f));
+
+        _rigidbody.AddTorque(-_rigidbody.angularVelocity * 20000f);
     }
 
+    Vector3 Clamp(Vector3 vec, float min, float max){
+        var dir = vec.normalized;
+        var mag = Mathf.Clamp(vec.magnitude, min, max);
+        return dir * mag;
+    }
     public void DestroyAgent(){
         Destroy(_targetAgentInstance.gameObject);
     }
