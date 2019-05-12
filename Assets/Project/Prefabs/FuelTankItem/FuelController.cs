@@ -25,6 +25,7 @@ public class FuelController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             ship.IncrementFuel(fuelCapacity);
+            
             Destroy(this.gameObject);
         }
     }

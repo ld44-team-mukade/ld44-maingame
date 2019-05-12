@@ -17,6 +17,9 @@ public class FuelTank: MonoBehaviour
     [SerializeField]
     private GameObject particle;
 
+    [SerializeField]
+    private GameObject _itemGetUI;
+
     private bool _shouldExlode = false;
 
     private Rigidbody _rigidbody;
@@ -57,6 +60,11 @@ public class FuelTank: MonoBehaviour
 
     public void IncrementFuel(float amount){
         _fuelAmount = Mathf.Max(0f, _fuelAmount + amount);
+        var itemGetInfo =_itemGetUI.GetComponent<ItemGetInfo>();
+        if (itemGetInfo == null) return;
+        itemGetInfo.ItemGetAnime(amount);
+        Debug.Log("ItemGetInfo =" + amount);
+
     }
 
     public float Remaining(){
