@@ -79,7 +79,9 @@ public class BulletAttack : MonoBehaviour
                 
                 ship.DecrementFuel(blastDamage);
 
-                Debug.Log("爆風ダメージ　＝　" + blastDamage + colliderParent.name);
+                if(DebugFlag.IsDebug()){
+                    Debug.Log("爆風ダメージ　＝　" + blastDamage + colliderParent.name);
+                }
 
             }else if (ship == null) return;
 
