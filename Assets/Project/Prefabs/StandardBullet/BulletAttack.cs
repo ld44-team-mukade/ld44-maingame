@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BulletAttack : MonoBehaviour
 {
-    //unityから直接値を変更できるように
-    public float fuelparam;
+
+    public float fuelparam = 50;
+
     public float lifeTime = 4f;
+
     public float cost = 1f;
 
     [SerializeField]
@@ -15,9 +17,14 @@ public class BulletAttack : MonoBehaviour
     [SerializeField]
     private Collider collider;
 
+    [SerializeField]
+    private float _blastRadius = 5;
+
     public int age = 0;
+
     private void OnCollisionEnter(Collision collision)
     {
+
         //相手のShipにあたった時にShipの「DecrementFuel」を呼び出す
         TryOnCollisionEnterShip(collision);
 
@@ -31,10 +38,11 @@ public class BulletAttack : MonoBehaviour
         if (ship == null) return;
         if (ship.tag == tag) return;
 
-        //Shipの燃料減らす
-        ship.DecrementFuel(fuelparam);
-    }
+        BlastDamage(transform.position);
 
+        //Shipの燃料減らす
+        ship.DecrementFuel(fuelparam);   
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +55,38 @@ public class BulletAttack : MonoBehaviour
         if(5 < age) collider.enabled = true;
         age++;
     }
+
+    //爆風のダメージ計算
+    public void BlastDamage(Vector3 blastCenter)
+    {
+        Collider[] colliders = Physics.OverlapSphere(blastCenter, _blastRadius);
+        
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i] == null) return;
+
+            GameObject colliderParent = colliders[i].attachedRigidbody.gameObject;
+            var ship = colliderParent.GetComponent<FuelTank>();
+
+ //           if (colliderParent == null) return;
+            if (ship != null)
+            {
+
+                Vector3 playerPos = colliders[i].ClosestPoint(blastCenter);
+                float distance = Vector3.Distance(blastCenter, playerPos);
+                
+                float blastDamage = _blastRadius - distance;
+                
+                ship.DecrementFuel(blastDamage);
+
+                Debug.Log("爆風ダメージ　＝　" + blastDamage + colliderParent.name);
+
+            }else if (ship == null) return;
+
+        }
+        
+    }
+
     public void StartParticle(Collision col)
     {
         GameObject particle1 = Instantiate(particle, col.transform.position, transform.rotation);
