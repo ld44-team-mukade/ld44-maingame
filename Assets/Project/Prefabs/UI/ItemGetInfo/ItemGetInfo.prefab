@@ -75,7 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c1adc54a0e82f43a95cf99ebb31955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _FuelIncText: {fileID: 3916988104032926218}
+  _fuelIncText: {fileID: 3916988104032926218}
+  _fuelAmount: 0
 --- !u!1 &8426684533228231275
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +154,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8426684533228231275}
-  m_Text: +150
+  m_Text: Hello Wolrd
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1

@@ -380,6 +380,8 @@ MonoBehaviour:
   _shipMovement: {fileID: 3284278664849623251}
   particle: {fileID: 8205944732457833177, guid: 001b4e63aba7feb4da95b832aa4e2366,
     type: 3}
+  _itemGetUI: {fileID: 7244299888760266605, guid: e4103da1a053c3c4d92282a4f6e58c82,
+    type: 3}
 --- !u!114 &9137083530515733374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,6 +1076,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4811688304718281157}
     m_Modifications:
+    - target: {fileID: 100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
+      propertyPath: m_Name
+      value: Prop
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1129,14 +1139,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
       propertyPath: m_LocalScale.z
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
-      propertyPath: m_Name
-      value: Prop
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4429b6bed70712e448e9fca616ef78e3, type: 3}
@@ -1352,6 +1354,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6464846717655395977}
     m_Modifications:
+    - target: {fileID: 4764299069713921060, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
+        type: 3}
+      propertyPath: m_Name
+      value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764299069713921060, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4764299069713921057, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1406,16 +1418,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4764299069713921060, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
-        type: 3}
-      propertyPath: m_Name
-      value: Cannon
-      objectReference: {fileID: 0}
-    - target: {fileID: 4764299069713921060, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5595429987316740438, guid: 4b7da9dc2c0304640921dfd9307f4e3d,
         type: 3}

@@ -5,7 +5,12 @@ using UnityEngine;
 public class ItemGetInfo : MonoBehaviour
 {
     [SerializeField]
-    TextMesh _FuelIncText;
+    TextMesh _fuelIncText;
+
+    [SerializeField]
+    FuelTank _fuelTank;
+
+    private float _fuelAmount;
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +23,7 @@ public class ItemGetInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void ItemGetAnime(float fuelamount)
-    {
-        _FuelIncText.text = "+" + fuelamount.ToString();
-
+        _fuelIncText.text = "+" + (_fuelTank.GetFuelAmount()).ToString();
     }
 
 }
