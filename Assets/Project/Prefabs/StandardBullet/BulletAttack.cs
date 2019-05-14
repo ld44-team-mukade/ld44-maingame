@@ -11,6 +11,8 @@ public class BulletAttack : MonoBehaviour
 
     public float cost = 1f;
 
+    public float initSpeed = 100f;
+
     [SerializeField]
     private GameObject particle;
 
@@ -21,6 +23,9 @@ public class BulletAttack : MonoBehaviour
     private float _blastRadius = 5;
 
     public int age = 0;
+
+    [SerializeField]
+    Rigidbody _rigidbody;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -48,6 +53,7 @@ public class BulletAttack : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, lifeTime);
+        _rigidbody = GetComponent<Rigidbody>();
     }
     // Update is called once per frame
     void Update()
@@ -55,6 +61,7 @@ public class BulletAttack : MonoBehaviour
         if(5 < age) collider.enabled = true;
         age++;
     }
+
 
     //爆風のダメージ計算
     public void BlastDamage(Vector3 blastCenter)
