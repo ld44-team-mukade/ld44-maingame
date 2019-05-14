@@ -47,9 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbda9a09718f3f419343594c23eedac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 993458795952875121, guid: 5a88dd332f3d81e4397e4db90cfb7628,
+  bulletPrefab: {fileID: 8948730784827041082, guid: 5a88dd332f3d81e4397e4db90cfb7628,
     type: 3}
-  initSpeed: 150
   target: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   _turret: {fileID: 6100532643478594775}
@@ -241,10 +240,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6100532643478594775}
     m_Modifications:
-    - target: {fileID: 100000, guid: 80873ec48ae421344a970db55abb5ed5, type: 3}
-      propertyPath: m_Name
-      value: GunBase
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 80873ec48ae421344a970db55abb5ed5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -289,6 +284,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 80873ec48ae421344a970db55abb5ed5, type: 3}
+      propertyPath: m_Name
+      value: GunBase
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80873ec48ae421344a970db55abb5ed5, type: 3}
 --- !u!4 &2790176327162491486 stripped
@@ -304,10 +303,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4045303744048006237}
     m_Modifications:
-    - target: {fileID: 100000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}
-      propertyPath: m_Name
-      value: Gun
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -351,6 +346,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}
+      propertyPath: m_Name
+      value: Gun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}

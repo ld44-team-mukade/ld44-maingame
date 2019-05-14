@@ -5,10 +5,7 @@ using UnityEngine;
 public class CannonController : MonoBehaviour
 {
     // 発射するもの
-    public Rigidbody bulletPrefab;
-
-    // 弾の初速
-    public float initSpeed = 100f;
+    public BulletAttack bulletPrefab;
 
     // 狙う相手(まだ何も使ってない)
     [SerializeField]
@@ -29,9 +26,12 @@ public class CannonController : MonoBehaviour
 
     private AkAmbient akAmbient;
 
+    private Vector3 _prevPosition;
+
     void Awake()
     {
         akAmbient = GetComponent<AkAmbient>();
+        _prevPosition = transform.position;
     }
     
     // Start is called before the first frame update
@@ -49,7 +49,10 @@ public class CannonController : MonoBehaviour
             targetDirection = targetPosition - _turret.transform.position;
         }
         RotateTurret(targetDirection);
-        // Test();
+    }
+
+    void LateUpdate(){
+        _prevPosition = transform.position;
     }
 
     private void Test()
@@ -61,15 +64,19 @@ public class CannonController : MonoBehaviour
         }
     }
 
-    public Rigidbody Fire(string tag)
+    public BulletAttack Fire(string tag)
     {
         if(akAmbient != null)
         {
             akAmbient.HandleEvent(gameObject);
         }
-        var bulletInstance = Instantiate(bulletPrefab, _muzzle.transform) as Rigidbody;
+
+        var cannonVelocity = (transform.position - _prevPosition)/Time.deltaTime;
+
+        var bulletInstance = Instantiate(bulletPrefab, _muzzle.position, _muzzle.rotation) as BulletAttack;
         bulletInstance.tag = tag;
-        bulletInstance.velocity = _muzzle.transform.forward * initSpeed;
+        var bulletRigidbody = bulletInstance.GetComponent<Rigidbody>();
+        bulletRigidbody.velocity = _muzzle.transform.forward * bulletInstance.initSpeed;// + cannonVelocity;
         bulletInstance.transform.parent = null;
         ChangeLayersRecursively(bulletInstance.transform, tag + "Bullet");
         StartParticle();

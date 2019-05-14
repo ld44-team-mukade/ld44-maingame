@@ -321,8 +321,10 @@ MonoBehaviour:
   fuelparam: 50
   lifeTime: 4
   cost: 5
+  initSpeed: 200
   particle: {fileID: 8205944732457833177, guid: da8370f475b89f9429703995f0fa95ce,
     type: 3}
   collider: {fileID: 6128592624049304216}
   _blastRadius: 40
   age: 0
+  _rigidbody: {fileID: 0}
