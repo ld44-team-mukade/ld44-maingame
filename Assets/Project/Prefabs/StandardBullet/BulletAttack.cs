@@ -27,6 +27,9 @@ public class BulletAttack : MonoBehaviour
     [SerializeField]
     Rigidbody _rigidbody;
 
+    [SerializeField]
+    float _maxDamage = 40f;
+
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -82,14 +85,13 @@ public class BulletAttack : MonoBehaviour
                 Vector3 playerPos = colliders[i].ClosestPoint(blastCenter);
                 float distance = Vector3.Distance(blastCenter, playerPos);
                 
-                float blastDamage = _blastRadius - distance;
+                float blastDamage = (_blastRadius - distance)/_blastRadius*_maxDamage;
                 
                 ship.DecrementFuel(blastDamage);
 
                 if(DebugFlag.IsDebug()){
                     Debug.Log("爆風ダメージ　＝　" + blastDamage + colliderParent.name);
                 }
-
             }else if (ship == null) return;
 
         }
