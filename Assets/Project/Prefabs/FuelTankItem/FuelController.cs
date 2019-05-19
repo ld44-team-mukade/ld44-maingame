@@ -9,9 +9,6 @@ public class FuelController : MonoBehaviour
     [SerializeField]
     private float delTime;
 
-    [SerializeField]
-    ItemGetInfo _itemGetUI;
-
     //[SerializeField]
     //private GameObject explosionPrefab;
 
@@ -28,22 +25,22 @@ public class FuelController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             ship.IncrementFuel(fuelCapacity);
-            _itemGetUI.ItemGetAnime();
-
+            
             Destroy(this.gameObject);
         }
     }
-/*
-    private void TryOnCollisionEnterBullet(Collision collision)
-    {
-        var bullet = collision.gameObject.GetComponent<BulletAttack>();
-        if(!bullet)return;
-        Destroy(this.gameObject);
-        var explosionInstance = Instantiate(explosionPrefab, transform);
-    }
- */
+
+    /*
+        private void TryOnCollisionEnterBullet(Collision collision)
+        {
+            var bullet = collision.gameObject.GetComponent<BulletAttack>();
+            if(!bullet)return;
+            Destroy(this.gameObject);
+            var explosionInstance = Instantiate(explosionPrefab, transform);
+        }
+     */
     // Start is called before the first frame update
-        void Start()
+    void Start()
     {
         Destroy(this.gameObject, delTime);
     }

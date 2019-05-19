@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelCapacity: 75
   delTime: 8
-  _itemGetUI: {fileID: 7670643841848675954, guid: e4103da1a053c3c4d92282a4f6e58c82,
+  _itemGetUI: {fileID: 7244299888760266605, guid: e4103da1a053c3c4d92282a4f6e58c82,
     type: 3}
 --- !u!114 &3100405655100625680
 MonoBehaviour:

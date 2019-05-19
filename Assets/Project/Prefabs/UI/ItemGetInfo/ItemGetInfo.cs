@@ -13,7 +13,7 @@ public class ItemGetInfo : MonoBehaviour
     [SerializeField]
     Animator _itemGetAnime;
 
-    private float _fuelAmount;
+    private bool _itemGetTrigger = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,20 +21,19 @@ public class ItemGetInfo : MonoBehaviour
         transform.parent = Camera.main.transform;
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
-        _itemGetAnime = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _fuelIncText.text = "+" + (_fuelTank.GetFuelAmount()).ToString();
-    }
 
-    public void ItemGetAnime()
-    {
-        _itemGetAnime.SetTrigger("ItemGet");
-        Debug.Log(_itemGetAnime);
-        Debug.Log("PlayAnimation");
+        _fuelIncText.text = "+" + (_fuelTank.GetFuelAmount()).ToString();
+        
+        if (_fuelTank.ItemGetCheck() == true) 
+        {
+            Debug.Log("Test");
+            _itemGetAnime.SetTrigger("ItemGet");
+        }
     }
 
 }
