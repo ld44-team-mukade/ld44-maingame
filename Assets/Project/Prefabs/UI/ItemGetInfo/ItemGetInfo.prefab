@@ -76,7 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuelIncText: {fileID: 3916988104032926218}
-  _fuelAmount: 0
+  _fuelTank: {fileID: 0}
+  _itemGetAnime: {fileID: 5142054494554451147}
 --- !u!1 &8426684533228231275
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +89,7 @@ GameObject:
   - component: {fileID: 4176833222827445280}
   - component: {fileID: 5539652643973029071}
   - component: {fileID: 3916988104032926218}
+  - component: {fileID: 5142054494554451147}
   m_Layer: 0
   m_Name: FuelIncText
   m_TagString: Untagged
@@ -104,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 8426684533228231275}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1775404646476746985}
   m_RootOrder: 0
@@ -167,4 +169,23 @@ TextMesh:
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4294479685
+--- !u!95 &5142054494554451147
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8426684533228231275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1368d859c9b8e964085da29bd3fe9b2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -9,6 +9,9 @@ public class FuelController : MonoBehaviour
     [SerializeField]
     private float delTime;
 
+    [SerializeField]
+    ItemGetInfo _itemGetUI;
+
     //[SerializeField]
     //private GameObject explosionPrefab;
 
@@ -25,7 +28,8 @@ public class FuelController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             ship.IncrementFuel(fuelCapacity);
-            
+            _itemGetUI.ItemGetAnime();
+
             Destroy(this.gameObject);
         }
     }
