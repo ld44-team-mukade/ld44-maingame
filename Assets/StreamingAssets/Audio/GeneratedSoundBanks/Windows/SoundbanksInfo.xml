@@ -44,6 +44,7 @@
 				<Event Id="1143111560" Name="engine_enemy_off" ObjectPath="\Events\Default Work Unit\engine_enemy_off" MaxAttenuation="0.000000"/>
 				<Event Id="13776098" Name="explosion" ObjectPath="\Events\Default Work Unit\explosion"/>
 				<Event Id="1825690395" Name="getfuel" ObjectPath="\Events\Default Work Unit\getfuel"/>
+				<Event Id="3946225093" Name="hplow" ObjectPath="\Events\Default Work Unit\hplow"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="11282524" Language="SFX">
@@ -65,6 +66,10 @@
 				<File Id="629988404" Language="SFX">
 					<ShortName>engine high.wav</ShortName>
 					<Path>SFX\engine high_D79FB2B7.wem</Path>
+				</File>
+				<File Id="636476598" Language="SFX">
+					<ShortName>ld44-hplow.wav</ShortName>
+					<Path>SFX\ld44-hplow_D79FB2B7.wem</Path>
 				</File>
 				<File Id="745958935" Language="SFX">
 					<ShortName>Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick.wav</ShortName>

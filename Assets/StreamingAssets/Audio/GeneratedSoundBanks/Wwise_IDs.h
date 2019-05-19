@@ -31,6 +31,7 @@ namespace AK
         static const AkUniqueID ENGINE_ENEMY_OFF = 1143111560U;
         static const AkUniqueID EXPLOSION = 13776098U;
         static const AkUniqueID GETFUEL = 1825690395U;
+        static const AkUniqueID HPLOW = 3946225093U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

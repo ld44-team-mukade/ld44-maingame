@@ -12,6 +12,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2999521181	ambient_wind_out			\Default Work Unit\ambient_wind_out	
 	3234335490	engine_enemy			\Default Work Unit\engine_enemy	
 	3729271750	damage_player			\Default Work Unit\damage_player	
+	3946225093	hplow			\Default Work Unit\hplow	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2391494160	power			\Default Work Unit\power	
@@ -26,6 +27,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	244845627	engine middle	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\engine middle_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\engines\engine middle		335936
 	357058105	damages_P	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\ld44-damage1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\damages_P		384064
 	629988404	engine high	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\engine high_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\engines\engine high		351104
+	636476598	ld44-hplow	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\ld44-hplow_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\ld44-hplow		384064
 	745958935	cannons	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\Howitzer,M101,C1,105 mm,Distant,Right Side,Shot,Pound,Thick_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\cannons		848452
 	934814011	getfuel	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\getfuel_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\getfuel		384064
 	966066674	wind	C:\Dev\wwise Projects\ld-44mukade-maingame\ld44-mukade-maingame\.cache\Windows\SFX\wind_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music playlist-wind\wind\wind		994740
