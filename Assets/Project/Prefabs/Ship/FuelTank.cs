@@ -17,7 +17,15 @@ public class FuelTank: MonoBehaviour
     [SerializeField]
     private GameObject particle;
 
+    /*
+    [SerializeField]
+    private GameObject _itemGetUI;
+    */
+    
+    private float _fuelItem;
+
     private bool _shouldExlode = false;
+    private bool _itemGetCheck  = false;
 
     private Rigidbody _rigidbody;
 
@@ -34,6 +42,10 @@ public class FuelTank: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(_itemGetCheck != false)
+        {
+            _itemGetCheck = false;
+        }
     }
 
     void FixedUpdate(){
@@ -57,6 +69,18 @@ public class FuelTank: MonoBehaviour
 
     public void IncrementFuel(float amount){
         _fuelAmount = Mathf.Max(0f, _fuelAmount + amount);
+        _fuelItem = amount;
+        _itemGetCheck = true;
+        Debug.Log("ItemGetInfo =" + amount);
+    }
+
+    public bool ItemGetCheck()
+    {
+        return _itemGetCheck;
+    }
+
+    public float GetFuelAmount() {
+        return _fuelItem;
     }
 
     public float Remaining(){

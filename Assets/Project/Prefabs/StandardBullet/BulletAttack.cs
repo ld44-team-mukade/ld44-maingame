@@ -78,7 +78,7 @@ public class BulletAttack : MonoBehaviour
             GameObject colliderParent = colliders[i].attachedRigidbody.gameObject;
             var ship = colliderParent.GetComponent<FuelTank>();
 
- //           if (colliderParent == null) return;
+            if (colliderParent == null) return;
             if (ship != null)
             {
 
