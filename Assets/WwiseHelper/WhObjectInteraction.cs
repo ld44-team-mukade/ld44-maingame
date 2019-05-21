@@ -5,13 +5,18 @@
 //
 //////////////////////////////////////////////////////////////////////
 using UnityEngine;
+
+public enum InteractionType{
+    None,
+    Enter,
+    Exit
+}
 public class WhObjectInteraction : AkTriggerBase
 {
     [Header("Events")]
-	public bool enableCollisionEnter = false;
-	public bool enableCollisionExit= false;
-	public bool enableTriggerEnter = false;
-	public bool enableTriggerExit= false;
+    public InteractionType interactionType = InteractionType.Enter;
+	public bool enableTriggerOnly = false;
+
     [Header("TargetFilter")]
 	public UnityEngine.GameObject triggerObject = null;
     public string targetNameIncluded = "";
@@ -21,7 +26,8 @@ public class WhObjectInteraction : AkTriggerBase
 	private void OnCollisionEnter(UnityEngine.Collision in_other)
 	{
 		if (triggerDelegate == null)return;
-		if (!enableCollisionEnter)return;
+		if (enableTriggerOnly)return;
+        if (interactionType != InteractionType.Enter)return;
 		if (IsTargetObject(in_other.gameObject)){
 			triggerDelegate(in_other.gameObject);
         }
@@ -30,7 +36,8 @@ public class WhObjectInteraction : AkTriggerBase
 	private void OnCollisionExit(UnityEngine.Collision in_other)
 	{
 		if (triggerDelegate == null)return;
-		if (!enableCollisionExit)return;
+		if (enableTriggerOnly)return;
+        if (interactionType != InteractionType.Exit)return;
 		if (IsTargetObject(in_other.gameObject)){
 			triggerDelegate(in_other.gameObject);
         }
@@ -39,7 +46,7 @@ public class WhObjectInteraction : AkTriggerBase
 	private void OnTriggerEnter(UnityEngine.Collider in_other)
 	{
 		if (triggerDelegate == null)return;
-		if (!enableTriggerEnter)return;
+        if (interactionType != InteractionType.Enter)return;
 		if (IsTargetObject(in_other.gameObject)){
 			triggerDelegate(in_other.gameObject);
         }
@@ -48,7 +55,7 @@ public class WhObjectInteraction : AkTriggerBase
 	private void OnTriggerExit(UnityEngine.Collider in_other)
 	{
 		if (triggerDelegate == null)return;
-		if (!enableTriggerEnter)return;
+        if (interactionType != InteractionType.Exit)return;
 		if (IsTargetObject(in_other.gameObject)){
 			triggerDelegate(in_other.gameObject);
         }
