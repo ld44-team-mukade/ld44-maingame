@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4764299069713921057}
   - component: {fileID: 4764299069713921061}
-  - component: {fileID: 2221500933137723656}
-  - component: {fileID: 4075934879802438835}
-  - component: {fileID: 7472439796733639406}
+  - component: {fileID: 6001044739273503413}
+  - component: {fileID: 3698355771395420582}
+  - component: {fileID: 301240314852975612}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -56,7 +56,7 @@ MonoBehaviour:
   _muzzle: {fileID: 8422063109347829739}
   particle: {fileID: 9148158362662173743, guid: b8ef02cb43ef7a14b94be0681cf9c52d,
     type: 3}
---- !u!114 &2221500933137723656
+--- !u!114 &6001044739273503413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,34 +78,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &4075934879802438835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4764299069713921060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378b012654ed3a0439259f43d4824635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reflectAuxBus:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  reflectionMaxPathLength: 1000
-  reflectionsAuxBusGain: 1
-  reflectionsOrder: 1
-  roomReverbAuxBusGain: 1
-  diffractionMaxEdges: 0
-  diffractionMaxPaths: 0
-  diffractionMaxPathLength: 0
-  drawFirstOrderReflections: 0
-  drawSecondOrderReflections: 0
-  drawHigherOrderReflections: 0
-  drawDiffractionPaths: 0
---- !u!114 &7472439796733639406
+--- !u!114 &3698355771395420582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,6 +112,34 @@ MonoBehaviour:
   multiPositionTypeLabel: 0
   LargeModePositions: []
   multiPositionArray: []
+--- !u!114 &301240314852975612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764299069713921060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378b012654ed3a0439259f43d4824635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectAuxBus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cf2b139a1648f8149ae009154972de20,
+      type: 2}
+  reflectionMaxPathLength: 1000
+  reflectionsAuxBusGain: 1
+  reflectionsOrder: 1
+  roomReverbAuxBusGain: 1
+  diffractionMaxEdges: 1
+  diffractionMaxPaths: 1
+  diffractionMaxPathLength: 1000
+  drawFirstOrderReflections: 0
+  drawSecondOrderReflections: 0
+  drawHigherOrderReflections: 0
+  drawDiffractionPaths: 0
 --- !u!1 &5595429987316740438
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6100532643478594775}
     m_Modifications:
+    - target: {fileID: 100000, guid: 80873ec48ae421344a970db55abb5ed5, type: 3}
+      propertyPath: m_Name
+      value: GunBase
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 80873ec48ae421344a970db55abb5ed5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -284,10 +289,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 80873ec48ae421344a970db55abb5ed5, type: 3}
-      propertyPath: m_Name
-      value: GunBase
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80873ec48ae421344a970db55abb5ed5, type: 3}
 --- !u!4 &2790176327162491486 stripped
@@ -303,6 +304,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4045303744048006237}
     m_Modifications:
+    - target: {fileID: 100000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}
+      propertyPath: m_Name
+      value: Gun
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -346,10 +351,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}
-      propertyPath: m_Name
-      value: Gun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db868c1c5cc8a594fa2ecbb316491bbf, type: 3}

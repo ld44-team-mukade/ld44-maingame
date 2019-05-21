@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1780532706657532078}
+  - component: {fileID: 7852613347111139879}
+  - component: {fileID: 7434877923826689177}
   m_Layer: 0
   m_Name: Island2
   m_TagString: Untagged
@@ -56,6 +58,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7852613347111139879
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780532706657532079}
+  m_Mesh: {fileID: 0}
+--- !u!114 &7434877923826689177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780532706657532079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc99331aba8da944aa24514605a0f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AcousticTexture:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0d713f167598a6b4ab77491e38edec99,
+      type: 2}
+  EnableDiffraction: 0
+  EnableDiffractionOnBoundaryEdges: 0
+  AssociatedRoom: {fileID: 0}
 --- !u!1001 &1780532706074911047
 PrefabInstance:
   m_ObjectHideFlags: 0
