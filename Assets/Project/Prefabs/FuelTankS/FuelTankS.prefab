@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 6711013121031355463}
   - component: {fileID: 5253132671877698477}
   - component: {fileID: 1852990818073065194}
+  - component: {fileID: 2915271120778522715}
   m_Layer: 12
   m_Name: FuelTankS
   m_TagString: Untagged
@@ -218,8 +219,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelCapacity: 75
   delTime: 8
-  _itemGetUI: {fileID: 7244299888760266605, guid: e4103da1a053c3c4d92282a4f6e58c82,
-    type: 3}
 --- !u!114 &3100405655100625680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309afe6598442234893bf1b87de31c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: 958ca0ea
+  triggerList: 471a27c9
   useOtherObject: 0
   actionOnEventType: 0
   curveInterpolation: 4
@@ -313,6 +312,24 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &2915271120778522715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8383650889173326468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b7121f41910e248a17da4f3440b64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 1
+  enableTriggerOnly: 0
+  triggerObject: {fileID: 0}
+  targetNameIncluded: PlayerShip
+  exactMatchName: 0
+  targetTag: 
 --- !u!1001 &2139305016809874659
 PrefabInstance:
   m_ObjectHideFlags: 0

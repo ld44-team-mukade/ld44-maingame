@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 4104569260668411209}
   - component: {fileID: 8555929562207142803}
   - component: {fileID: 6856162532889953136}
+  - component: {fileID: 2267939171793987958}
   m_Layer: 12
   m_Name: FuelTankM
   m_TagString: Untagged
@@ -219,8 +220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelCapacity: 150
   delTime: 8
-  _itemGetUI: {fileID: 7244299888760266605, guid: e4103da1a053c3c4d92282a4f6e58c82,
-    type: 3}
 --- !u!114 &7287628133924570328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309afe6598442234893bf1b87de31c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: 958ca0ea
+  triggerList: 471a27c9
   useOtherObject: 0
   actionOnEventType: 0
   curveInterpolation: 4
@@ -301,6 +300,24 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &2267939171793987958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491911881635374556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b7121f41910e248a17da4f3440b64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 1
+  enableTriggerOnly: 0
+  triggerObject: {fileID: 0}
+  targetNameIncluded: PlayerShip
+  exactMatchName: 0
+  targetTag: 
 --- !u!1001 &3649459511897729669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,22 +325,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6455677067359888419}
     m_Modifications:
-    - target: {fileID: 100004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
-      propertyPath: m_Name
-      value: DrumCan
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.005859375
@@ -367,6 +368,22 @@ PrefabInstance:
     - target: {fileID: 400004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
+      propertyPath: m_Name
+      value: DrumCan
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d34ae74f8451c4c8268ad42182d725, type: 3}
