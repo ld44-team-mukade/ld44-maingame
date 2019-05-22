@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2391494160	power			\Default Work Unit\power	
+	2661514705	fuel			\Default Work Unit\fuel	
 
 Effect plug-ins	ID	Name	Type				Notes
 	428915495	Wwise_Compressor_(Custom)	Wwise Compressor			
