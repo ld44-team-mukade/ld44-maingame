@@ -29,6 +29,8 @@ public class FuelTank: MonoBehaviour
 
     private Rigidbody _rigidbody;
 
+    public AK.Wwise.RTPC FuelRTPC;
+
     void Awake(){
         _shouldExlode = false;
         _rigidbody = GetComponent<Rigidbody>();
@@ -50,6 +52,7 @@ public class FuelTank: MonoBehaviour
 
     void FixedUpdate(){
         _rigidbody.mass = 1f + Remaining()/1000f;
+        FuelRTPC.SetGlobalValue(_fuelAmount);
     }
 
     public void DecrementFuel(float amount){
