@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 6995036259490436226}
   - component: {fileID: 8624626152519868309}
   - component: {fileID: 6005194146776070589}
+  - component: {fileID: 984775577163337732}
   m_Layer: 9
   m_Name: EnemyShip
   m_TagString: Enermy
@@ -379,8 +380,6 @@ MonoBehaviour:
   _durationTimeToDestroy: 5
   _shipMovement: {fileID: 3284278664849623251}
   particle: {fileID: 8205944732457833177, guid: 001b4e63aba7feb4da95b832aa4e2366,
-    type: 3}
-  _itemGetUI: {fileID: 7670643841848675954, guid: e4103da1a053c3c4d92282a4f6e58c82,
     type: 3}
 --- !u!114 &9137083530515733374
 MonoBehaviour:
@@ -574,6 +573,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e283bc81e85cde458389162f7cac67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &984775577163337732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284278664849623250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378b012654ed3a0439259f43d4824635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectAuxBus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2c51cd766cc26e44bb91bac177be9277,
+      type: 2}
+  reflectionMaxPathLength: 1500
+  reflectionsAuxBusGain: 1
+  reflectionsOrder: 1
+  roomReverbAuxBusGain: 1
+  diffractionMaxEdges: 2
+  diffractionMaxPaths: 2
+  diffractionMaxPathLength: 1500
+  drawFirstOrderReflections: 1
+  drawSecondOrderReflections: 1
+  drawHigherOrderReflections: 1
+  drawDiffractionPaths: 1
 --- !u!1 &3441433449806954135
 GameObject:
   m_ObjectHideFlags: 0

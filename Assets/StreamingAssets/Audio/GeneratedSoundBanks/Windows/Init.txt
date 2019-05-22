@@ -17,6 +17,15 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	13776098	explosion			\Default Work Unit\Master Audio Bus\explosion	
+	1819748220	ER			\Default Work Unit\Master Audio Bus\ER	
+	2328457365	player_down			\Default Work Unit\Master Audio Bus\player_down	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1144018367	Plate_Large	Wwise RoomVerb			
+	3838583292	player_boom	Wwise RoomVerb			
+
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
 	3859886410	System	System			

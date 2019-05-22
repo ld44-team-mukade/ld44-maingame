@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5237848929604255676}
   - component: {fileID: 4007228366094799477}
   - component: {fileID: 675939347945679938}
-  - component: {fileID: 497693097155680586}
+  - component: {fileID: 5898699621404298647}
+  - component: {fileID: 8189578692557335050}
   m_Layer: 0
   m_Name: ShipExplosion
   m_TagString: Untagged
@@ -70,7 +71,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &497693097155680586
+--- !u!114 &5898699621404298647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,6 +105,34 @@ MonoBehaviour:
   multiPositionTypeLabel: 0
   LargeModePositions: []
   multiPositionArray: []
+--- !u!114 &8189578692557335050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205944732457833177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378b012654ed3a0439259f43d4824635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectAuxBus:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 99b1e553a1899de44bd8fe5695bcb20e,
+      type: 2}
+  reflectionMaxPathLength: 5000
+  reflectionsAuxBusGain: 1
+  reflectionsOrder: 1
+  roomReverbAuxBusGain: 1
+  diffractionMaxEdges: 4
+  diffractionMaxPaths: 4
+  diffractionMaxPathLength: 5000
+  drawFirstOrderReflections: 1
+  drawSecondOrderReflections: 1
+  drawHigherOrderReflections: 1
+  drawDiffractionPaths: 1
 --- !u!1001 &7706546091853851720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,10 +140,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5237848929604255676}
     m_Modifications:
-    - target: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
-      propertyPath: m_Name
-      value: WFX_Nuke
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -170,6 +195,10 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
       propertyPath: m_LocalScale.z
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
+      propertyPath: m_Name
+      value: WFX_Nuke
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}

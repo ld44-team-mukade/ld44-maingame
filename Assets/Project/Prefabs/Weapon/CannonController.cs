@@ -68,7 +68,7 @@ public class CannonController : MonoBehaviour
     {
         if(akAmbient != null)
         {
-            akAmbient.HandleEvent(gameObject);
+            akAmbient.HandleEvent(null);
         }
 
         var cannonVelocity = (transform.position - _prevPosition)/Time.deltaTime;
