@@ -36,6 +36,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID FUEL = 2661514705U;
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
         static const AkUniqueID POWER = 2391494160U;
         static const AkUniqueID RPM = 796049864U;
