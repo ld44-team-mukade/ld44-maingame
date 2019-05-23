@@ -73,26 +73,30 @@ public class BulletAttack : MonoBehaviour
         
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i] == null) return;
-
-            GameObject colliderParent = colliders[i].attachedRigidbody.gameObject;
-            var ship = colliderParent.GetComponent<FuelTank>();
-
-            if (colliderParent == null) return;
-            if (ship != null)
+            if (colliders[i].attachedRigidbody != null)
             {
 
-                Vector3 playerPos = colliders[i].ClosestPoint(blastCenter);
-                float distance = Vector3.Distance(blastCenter, playerPos);
-                
-                float blastDamage = (_blastRadius - distance)/_blastRadius*_maxDamage;
-                
-                ship.DecrementFuel(blastDamage);
+                GameObject colliderParent = colliders[i].attachedRigidbody.gameObject;
+                var ship = colliderParent.GetComponent<FuelTank>();
 
-                if(DebugFlag.IsDebug()){
-                    Debug.Log("爆風ダメージ　＝　" + blastDamage + colliderParent.name);
+                if (colliderParent == null) return;
+                if (ship != null)
+                {
+
+                    Vector3 playerPos = colliders[i].ClosestPoint(blastCenter);
+                    float distance = Vector3.Distance(blastCenter, playerPos);
+
+                    float blastDamage = (_blastRadius - distance) / _blastRadius * _maxDamage;
+
+                    ship.DecrementFuel(blastDamage);
+
+                    if (DebugFlag.IsDebug())
+                    {
+                        Debug.Log("爆風ダメージ　＝　" + blastDamage + colliderParent.name);
+                    }
                 }
-            }else if (ship == null) return;
+                else if (ship == null) return;
+            }
 
         }
         
