@@ -146,7 +146,7 @@ public class AkAmbient : AkEvent
 		UnityEngine.Gizmos.DrawIcon(transform.position, "WwiseAudioSpeaker.png", false);
 
 #if UNITY_EDITOR
-		if (multiPositionTypeLabel != MultiPositionTypeLabel.Large_Mode)
+		if (multiPositionTypeLabel == MultiPositionTypeLabel.Large_Mode)
 		{
 			foreach (var entry in LargeModePositions)
 			{

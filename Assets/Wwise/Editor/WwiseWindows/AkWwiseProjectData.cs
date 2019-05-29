@@ -253,8 +253,8 @@ public class AkWwiseProjectData : UnityEngine.ScriptableObject
 	public class Event : AkInformation
 	{
 		public float maxAttenuation;
-		public float maxDuration;
-		public float minDuration;
+		public float maxDuration = -1;
+		public float minDuration = -1;
 	}
 
 	[System.Serializable]
@@ -270,7 +270,7 @@ public class AkWwiseProjectData : UnityEngine.ScriptableObject
 		[UnityEngine.HideInInspector]
 		[UnityEngine.SerializeField]
 		[UnityEngine.Serialization.FormerlySerializedAs("Guid")]
-		private string GuidInternal;
+		private string GuidInternal = string.Empty;
 
 		public System.Guid Guid
 		{
@@ -314,9 +314,18 @@ public class AkWwiseProjectData : UnityEngine.ScriptableObject
 	}
 
 	[System.Serializable]
-	public class GenericWorkUnit<T> : WorkUnit
+	public class GenericWorkUnit<T> : WorkUnit where T : AkBaseInformation
 	{
 		public System.Collections.Generic.List<T> List = new System.Collections.Generic.List<T>();
+
+		public T Find(string name)
+		{
+			foreach (var item in List)
+				if (item.Name == name)
+					return item;
+
+			return null;
+		}
 	}
 
 	[System.Serializable]

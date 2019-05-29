@@ -5,30 +5,30 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-public class AkTriangleArray : AkBaseArray<AkTriangle>
+public class AkVertexArray : AkBaseArray<AkVertex>
 {
-	public AkTriangleArray(int count) : base(count)
+	public AkVertexArray(int count) : base(count)
 	{
 	}
 
 	protected override int StructureSize
 	{
-		get { return AkSoundEnginePINVOKE.CSharp_AkTriangle_GetSizeOf(); }
+		get { return AkSoundEnginePINVOKE.CSharp_AkVertex_GetSizeOf(); }
 	}
 
-	protected override void ClearAtIntPtr(System.IntPtr address)
+	protected override void DefaultConstructAtIntPtr(System.IntPtr address)
 	{
-		AkSoundEnginePINVOKE.CSharp_AkTriangle_Clear(address);
+		AkSoundEnginePINVOKE.CSharp_AkVertex_Clear(address);
 	}
 
-	protected override AkTriangle CreateNewReferenceFromIntPtr(System.IntPtr address)
+	protected override AkVertex CreateNewReferenceFromIntPtr(System.IntPtr address)
 	{
-		return new AkTriangle(address, false);
+		return new AkVertex(address, false);
 	}
 
-	protected override void CloneIntoReferenceFromIntPtr(System.IntPtr address, AkTriangle other)
+	protected override void CloneIntoReferenceFromIntPtr(System.IntPtr address, AkVertex other)
 	{
-		AkSoundEnginePINVOKE.CSharp_AkTriangle_Clone(address, AkTriangle.getCPtr(other));
+		AkSoundEnginePINVOKE.CSharp_AkVertex_Clone(address, AkVertex.getCPtr(other));
 	}
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

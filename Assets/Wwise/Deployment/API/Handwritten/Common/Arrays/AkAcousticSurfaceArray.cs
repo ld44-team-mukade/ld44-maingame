@@ -16,7 +16,7 @@ public class AkAcousticSurfaceArray : AkBaseArray<AkAcousticSurface>
 		get { return AkSoundEnginePINVOKE.CSharp_AkAcousticSurface_GetSizeOf(); }
 	}
 
-	protected override void ClearAtIntPtr(System.IntPtr address)
+	protected override void DefaultConstructAtIntPtr(System.IntPtr address)
 	{
 		AkSoundEnginePINVOKE.CSharp_AkAcousticSurface_Clear(address);
 	}

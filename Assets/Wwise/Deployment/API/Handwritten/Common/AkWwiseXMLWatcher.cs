@@ -4,9 +4,11 @@
 // Copyright (c) 2014 Audiokinetic Inc. / All Rights Reserved
 //
 //////////////////////////////////////////////////////////////////////
+
 public class AkWwiseXMLWatcher
 {
 	private static readonly AkWwiseXMLWatcher instance = new AkWwiseXMLWatcher();
+	public static AkWwiseXMLWatcher Instance { get { return instance; } }
 
 	private readonly string SoundBankFolder;
 	private readonly System.IO.FileSystemWatcher XmlWatcher;
@@ -16,19 +18,6 @@ public class AkWwiseXMLWatcher
 	public event System.Action XMLUpdated;
 
 	public System.Func<bool> PopulateXML;
-	public System.Func<uint, float?> GetEventMaxDuration;
-
-	public static AkWwiseXMLWatcher Instance
-	{
-		get
-		{
-			return instance;
-		}
-	}
-
-	static AkWwiseXMLWatcher()
-	{
-	}
 
 	private AkWwiseXMLWatcher()
 	{
@@ -58,29 +47,22 @@ public class AkWwiseXMLWatcher
 
 	void onEditorUpdate()
 	{
-		if (fireEvent)
+		if (!fireEvent)
+			return;
+
+		fireEvent = false;
+
+		var populate = PopulateXML;
+		if (populate == null || !populate())
+			return;
+
+		var callback = XMLUpdated;
+		if (callback != null)
 		{
-			bool doXmlUpdated = false;
-
-			var populate = PopulateXML;
-			if (populate != null)
-			{
-				doXmlUpdated = populate();
-			}
-
-			if (doXmlUpdated)
-			{
-				var callback = XMLUpdated;
-				if (callback != null)
-				{
-					callback();
-				}
-
-				AkBankManager.ReloadAllBanks();
-			}
-
-			fireEvent = false;
+			callback();
 		}
+
+		AkBankManager.ReloadAllBanks();
 	}
 
 	private void RaisePopulateFlag(object sender, System.IO.FileSystemEventArgs e)

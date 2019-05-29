@@ -99,8 +99,7 @@ public class AkAuxSendArray : System.IDisposable
 
 		for (var i = 0; i < m_Count; i++)
 		{
-			if (AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_IsSame(GetObjectPtr(i), AkSoundEngine.AK_INVALID_GAME_OBJECT,
-				in_AuxBusID))
+			if (AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_IsSame(GetObjectPtr(i), AkSoundEngine.AK_INVALID_GAME_OBJECT, in_AuxBusID))
 				return true;
 		}
 
@@ -109,15 +108,13 @@ public class AkAuxSendArray : System.IDisposable
 
 	public AKRESULT SetValues(UnityEngine.GameObject gameObject)
 	{
-		return (AKRESULT) AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_SetGameObjectAuxSendValues(m_Buffer,
-			AkSoundEngine.GetAkGameObjectID(gameObject), (uint) m_Count);
+		return (AKRESULT) AkSoundEnginePINVOKE.CSharp_SetGameObjectAuxSendValues(AkSoundEngine.GetAkGameObjectID(gameObject), m_Buffer, (uint) m_Count);
 	}
 
 	public AKRESULT GetValues(UnityEngine.GameObject gameObject)
 	{
 		uint count = MAX_COUNT;
-		var res = (AKRESULT) AkSoundEnginePINVOKE.CSharp_AkAuxSendValue_GetGameObjectAuxSendValues(m_Buffer,
-			AkSoundEngine.GetAkGameObjectID(gameObject), ref count);
+		var res = (AKRESULT) AkSoundEnginePINVOKE.CSharp_GetGameObjectAuxSendValues(AkSoundEngine.GetAkGameObjectID(gameObject), m_Buffer, ref count);
 		m_Count = (int) count;
 		return res;
 	}
