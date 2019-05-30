@@ -9,6 +9,8 @@
 [UnityEditor.CustomEditor(typeof(AkRoomPortal))]
 public class AkRoomPortalInspector : UnityEditor.Editor
 {
+	private UnityEditor.SerializedProperty initialState;
+
 	private readonly AkUnityEventHandlerInspector m_ClosePortalEventHandlerInspector = new AkUnityEventHandlerInspector();
 	private readonly AkUnityEventHandlerInspector m_OpenPortalEventHandlerInspector = new AkUnityEventHandlerInspector();
 
@@ -30,6 +32,8 @@ public class AkRoomPortalInspector : UnityEditor.Editor
 
 	private void OnEnable()
 	{
+		initialState = serializedObject.FindProperty("initialState");
+
 		m_OpenPortalEventHandlerInspector.Init(serializedObject, "triggerList", "Open On: ", false);
 		m_ClosePortalEventHandlerInspector.Init(serializedObject, "closePortalTriggerList", "Close On: ", false);
 
@@ -47,8 +51,12 @@ public class AkRoomPortalInspector : UnityEditor.Editor
 	{
 		serializedObject.Update();
 
-		m_OpenPortalEventHandlerInspector.OnGUI();
-		m_ClosePortalEventHandlerInspector.OnGUI();
+		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
+		{
+			UnityEditor.EditorGUILayout.PropertyField(initialState);
+			m_OpenPortalEventHandlerInspector.OnGUI();
+			m_ClosePortalEventHandlerInspector.OnGUI();
+		}
 
 		m_roomPortal.FindOverlappingRooms(roomList);
 

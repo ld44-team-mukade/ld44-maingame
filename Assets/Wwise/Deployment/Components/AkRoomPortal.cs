@@ -8,6 +8,13 @@ public class AkRoomPortal : AkTriggerHandler
 {
 	/// AkRoomPortals can only connect a maximum of 2 rooms.
 	public const int MAX_ROOMS_PER_PORTAL = 2;
+	public enum State
+	{
+		Closed,
+		Open
+	}
+
+	public State initialState = State.Closed;
 
 	private AkVector extent;
 	private AkTransform portalTransform;
@@ -91,6 +98,9 @@ public class AkRoomPortal : AkTriggerHandler
 		extent.X = collider.size.x * transform.localScale.x / 2;
 		extent.Y = collider.size.y * transform.localScale.y / 2;
 		extent.Z = collider.size.z * transform.localScale.z / 2;
+
+		// set portal in it's initial state
+		portalActive = initialState != State.Closed;
 
 		RegisterTriggers(closePortalTriggerList, ClosePortal);
 

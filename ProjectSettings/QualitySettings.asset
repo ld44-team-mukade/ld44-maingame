@@ -160,8 +160,8 @@ QualitySettings:
     shadowmaskMode: 1
     blendWeights: 4
     textureQuality: 0
-    anisotropicTextures: 1
-    antiAliasing: 0
+    anisotropicTextures: 2
+    antiAliasing: 2
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 1
@@ -195,8 +195,8 @@ QualitySettings:
     shadowmaskMode: 1
     blendWeights: 4
     textureQuality: 0
-    anisotropicTextures: 1
-    antiAliasing: 0
+    anisotropicTextures: 2
+    antiAliasing: 2
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 1
@@ -218,14 +218,11 @@ QualitySettings:
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
     Android: 2
-    Nintendo 3DS: 5
+    Lumin: 5
     Nintendo Switch: 5
     PS4: 5
-    PSP2: 2
     Standalone: 5
-    Tizen: 2
     WebGL: 3
-    WiiU: 5
     Windows Store Apps: 5
     XboxOne: 5
     iPhone: 2

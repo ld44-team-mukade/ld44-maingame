@@ -248,6 +248,20 @@ public class AkCommonUserSettings : AkSettingsValidationHandler
 	[UnityEngine.Tooltip("Main output device settings.")]
 	public AkCommonOutputSettings m_MainOutputSettings;
 
+	protected static string GetPluginPath()
+	{
+#if UNITY_EDITOR || UNITY_ANDROID || UNITY_WSA
+		return null;
+#elif PLATFORM_LUMIN
+		var dataPath = UnityEngine.Application.dataPath;
+		var find = "Data";
+		var index = dataPath.LastIndexOf(find);
+		return index == -1 ? dataPath : dataPath.Remove(index, find.Length).Insert(index, "bin");
+#else
+		return System.IO.Path.Combine(UnityEngine.Application.dataPath, "Plugins" + System.IO.Path.DirectorySeparatorChar);
+#endif
+	}
+
 	public virtual void CopyTo(AkInitSettings settings)
 	{
 		settings.uMaxNumPaths = m_MaximumNumberOfPositioningPaths;
@@ -256,13 +270,7 @@ public class AkCommonUserSettings : AkSettingsValidationHandler
 		settings.uCommandQueueSize = m_CommandQueueSize;
 		settings.uNumSamplesPerFrame = m_SamplesPerFrame;
 		m_MainOutputSettings.CopyTo(settings.settingsMainOutput);
-#if PLATFORM_LUMIN && !UNITY_EDITOR
-		settings.szPluginDLLPath = UnityEngine.Application.dataPath.Replace("Data", "bin") + System.IO.Path.DirectorySeparatorChar;
-#elif (!UNITY_ANDROID && !UNITY_WSA) || UNITY_EDITOR
-		settings.szPluginDLLPath = System.IO.Path.Combine(UnityEngine.Application.dataPath, "Plugins" + System.IO.Path.DirectorySeparatorChar);
-#else
-		settings.szPluginDLLPath = null;
-#endif
+		settings.szPluginDLLPath = GetPluginPath();
 	}
 
 	[UnityEngine.Tooltip("Multiplication factor for all streaming look-ahead heuristic values.")]

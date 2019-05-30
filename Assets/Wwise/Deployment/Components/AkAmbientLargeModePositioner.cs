@@ -1,4 +1,9 @@
 #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+
+/// @brief Use this component to add a Large Mode position to any AkAmbient in a Scene.
+/// \sa
+/// - \ref unity_use_AkEvent_AkAmbient
+/// - \ref AkAmbient
 public class AkAmbientLargeModePositioner : UnityEngine.MonoBehaviour
 {
 	public UnityEngine.Vector3 Position
